@@ -1,0 +1,88 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_NET_PURE_PRODUCT_MARGIN_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "MONTH"
+    },
+    "lastUpdatedDate" : "2026-09-25",
+    "dataStartTime" : "2026-07-01",
+    "dataEndTime" : "2026-07-31",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "netPureProductMarginAggregate" : [ {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "netPureProductMargin" : 0.0163
+  } ],
+  "netPureProductMarginByAsin" : [ {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CP5TLM",
+    "netPureProductMargin" : -0.291
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CS6WFR",
+    "netPureProductMargin" : -0.0513
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CWGW45",
+    "netPureProductMargin" : 0.1754
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CVY6MC",
+    "netPureProductMargin" : -0.2236
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CM284G",
+    "netPureProductMargin" : 0.1785
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CSKDWP",
+    "netPureProductMargin" : 0.2099
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CSN9BM",
+    "netPureProductMargin" : 0.2498
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CRCG16",
+    "netPureProductMargin" : 0.1484
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CX7RTQ",
+    "netPureProductMargin" : -0.0418
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CV4RWX",
+    "netPureProductMargin" : -0.0477
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CQ7C37",
+    "netPureProductMargin" : -0.1593
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CT3QBX",
+    "netPureProductMargin" : -0.249
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CYWJZQ",
+    "netPureProductMargin" : 0.0588
+  }, {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0G1CR26M4",
+    "netPureProductMargin" : 0.3008
+  } ]
+}

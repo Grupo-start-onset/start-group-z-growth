@@ -1,0 +1,336 @@
+[
+  {
+    "purchaseOrderNumber": "5TLQSG7W",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-05-04T06:17:54Z",
+    "lastUpdatedDate": "2026-05-09T00:14:22Z",
+    "sellingParty": {
+      "partyId": "RD8QP"
+    },
+    "shipToParty": {
+      "partyId": "GRU8"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0FJMT5M4V",
+        "vendorProductIdentifier": "7908573428142",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "48.82"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "54.24"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-05-04T06:42:59Z",
+              "orderedQuantity": {
+                "amount": 12,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-05-09T00:14:22Z",
+              "orderedQuantity": {
+                "amount": 12,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 12,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "REJECTED",
+          "rejectedQuantity": {
+            "amount": 12,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      }
+    ]
+  },
+  {
+    "purchaseOrderNumber": "5YE1V4KJ",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-05-04T06:17:54Z",
+    "lastUpdatedDate": "2026-05-09T00:07:21Z",
+    "sellingParty": {
+      "partyId": "RD8QP"
+    },
+    "shipToParty": {
+      "partyId": "XCV9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0FJMXPNGB",
+        "vendorProductIdentifier": "7908573438417",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "600.03"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "666.7"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-05-04T06:42:56Z",
+              "orderedQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-05-09T00:07:21Z",
+              "orderedQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "REJECTED",
+          "rejectedQuantity": {
+            "amount": 1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      }
+    ]
+  },
+  {
+    "purchaseOrderNumber": "8AXNH38O",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2025-11-10T05:47:44Z",
+    "lastUpdatedDate": "2026-05-04T00:10:43Z",
+    "sellingParty": {
+      "partyId": "RD8QP"
+    },
+    "shipToParty": {
+      "partyId": "XCV9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0FJMTC2C4",
+        "vendorProductIdentifier": "7908573438318",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "227.9"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "253.22"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-05-04T00:10:44Z",
+              "orderedQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      },
+      {
+        "itemSequenceNumber": "2",
+        "buyerProductIdentifier": "B0FJMZ7ZSJ",
+        "vendorProductIdentifier": "7908573437298",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "311.59"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "346.21"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-05-04T00:10:44Z",
+              "orderedQuantity": {
+                "amount": 3,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 3,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 3,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      },
+      {
+        "itemSequenceNumber": "3",
+        "buyerProductIdentifier": "B0FJMTS3QQ",
+        "vendorProductIdentifier": "7908573438462",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "961.48"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "1068.31"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-05-04T00:10:44Z",
+              "orderedQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      },
+      {
+        "itemSequenceNumber": "4",
+        "buyerProductIdentifier": "B0FJMS3VKY",
+        "vendorProductIdentifier": "7908573426704",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "640.99"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "712.21"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-05-04T00:10:44Z",
+              "orderedQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      }
+    ]
+  }
+]

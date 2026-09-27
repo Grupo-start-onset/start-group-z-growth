@@ -1,0 +1,224 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_SALES_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "WEEK",
+      "sellingProgram" : "RETAIL",
+      "distributorView" : "MANUFACTURING"
+    },
+    "lastUpdatedDate" : "2026-09-25",
+    "dataStartTime" : "2026-08-23",
+    "dataEndTime" : "2026-08-29",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "salesAggregate" : [ {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 2968.33,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 17,
+    "shippedCogs" : {
+      "amount" : 1300.68,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 1203.25,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 20
+  } ],
+  "salesByAsin" : [ {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0F1BST3Z4",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 2035.18,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 0,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 0,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 0
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0CLM1H75W",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 122.22,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 206.61,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 90.38,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0BJVSTBZC",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 0.00,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 0,
+    "shippedCogs" : {
+      "amount" : 94.39,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 89.95,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0CLM372SY",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 106.62,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 118.52,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 79.35,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0BQ62M3DR",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 98.51,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 226.52,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 192.06,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 2
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0BQ625G43",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 181.30,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 2,
+    "shippedCogs" : {
+      "amount" : 61.30,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 76.73,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0BPSTQZKG",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 62.36,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 65.03,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 46.13,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0BQ64PF95",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 0.00,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 0,
+    "shippedCogs" : {
+      "amount" : 0,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 0,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 0
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0CSMG92FG",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 362.14,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 10,
+    "shippedCogs" : {
+      "amount" : 321.70,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 372.02,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 12
+  }, {
+    "startDate" : "2026-08-23",
+    "endDate" : "2026-08-29",
+    "asin" : "B0CLM2QWZQ",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 0.00,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 0,
+    "shippedCogs" : {
+      "amount" : 206.61,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 256.63,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  } ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "purchaseOrderNumber": "4JRMWDWU",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-06-22T05:50:36Z",
+    "lastUpdatedDate": "2026-07-09T13:03:33Z",
+    "sellingParty": {
+      "partyId": "UM8O1"
+    },
+    "shipToParty": {
+      "partyId": "XCV9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0GS7MD19N",
+        "vendorProductIdentifier": "7898977819373",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "200.25"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "222.5"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-06-22T05:52:42Z",
+              "orderedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-06-22T14:07:02Z",
+              "acceptedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-07-09T11:44:29.073Z"
+        }
+      }
+    ]
+  }
+]

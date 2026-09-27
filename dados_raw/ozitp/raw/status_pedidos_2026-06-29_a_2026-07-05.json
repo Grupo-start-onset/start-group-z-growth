@@ -1,0 +1,77 @@
+[
+  {
+    "purchaseOrderNumber": "1GDQNJ9J",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-06-29T06:12:27Z",
+    "lastUpdatedDate": "2026-09-19T03:27:24Z",
+    "sellingParty": {
+      "partyId": "OZITV"
+    },
+    "shipToParty": {
+      "partyId": "GRU8"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0CSMG92FG",
+        "vendorProductIdentifier": "7898996281502",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "27.65"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "30.72"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-06-29T06:21:15Z",
+              "orderedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-06-29T13:01:18Z",
+              "acceptedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 82,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        }
+      }
+    ]
+  }
+]

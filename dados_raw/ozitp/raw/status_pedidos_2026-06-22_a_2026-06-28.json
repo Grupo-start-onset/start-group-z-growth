@@ -1,0 +1,78 @@
+[
+  {
+    "purchaseOrderNumber": "3LW9LXXJ",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-06-22T05:38:58Z",
+    "lastUpdatedDate": "2026-07-21T19:04:22Z",
+    "sellingParty": {
+      "partyId": "OZITV"
+    },
+    "shipToParty": {
+      "partyId": "GRU8"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0CSJT11FR",
+        "vendorProductIdentifier": "7898996281519",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "27.65"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "30.72"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-06-22T05:39:52Z",
+              "orderedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-06-22T13:37:26Z",
+              "acceptedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-07-21T14:07:34.022Z"
+        }
+      }
+    ]
+  }
+]

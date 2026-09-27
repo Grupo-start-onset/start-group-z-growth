@@ -1,0 +1,153 @@
+[
+  {
+    "purchaseOrderNumber": "1YI1QYHY",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-07-08T22:02:08Z",
+    "lastUpdatedDate": "2026-08-28T16:47:36Z",
+    "sellingParty": {
+      "partyId": "OZITV"
+    },
+    "shipToParty": {
+      "partyId": "GRU8"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0CSMG92FG",
+        "vendorProductIdentifier": "7898996281502",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "26.78"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "29.76"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 79,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-07-08T22:02:23Z",
+              "orderedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-08-28T16:47:36Z",
+              "orderedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-07-10T08:11:55Z",
+              "acceptedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 79,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-08-17T14:26:04.026Z"
+        }
+      },
+      {
+        "itemSequenceNumber": "2",
+        "buyerProductIdentifier": "B0CSJT11FR",
+        "vendorProductIdentifier": "7898996281519",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "26.78"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "29.76"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 40,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-07-08T22:02:23Z",
+              "orderedQuantity": {
+                "amount": 40,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 40,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-07-10T08:11:55Z",
+              "acceptedQuantity": {
+                "amount": 40,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 41,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-08-04T00:22:36.449Z"
+        }
+      }
+    ]
+  }
+]

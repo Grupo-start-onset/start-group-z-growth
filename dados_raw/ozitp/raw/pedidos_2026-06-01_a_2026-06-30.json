@@ -1,0 +1,90 @@
+[
+  {
+    "purchaseOrderNumber": "1GDQNJ9J",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-06-29T06:12:27Z",
+      "purchaseOrderStateChangedDate": "2026-08-28T13:01:14Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "GRU8"
+      },
+      "sellingParty": {
+        "partyId": "OZITV"
+      },
+      "shipToParty": {
+        "partyId": "GRU8"
+      },
+      "billToParty": {
+        "partyId": "GRU8"
+      },
+      "deliveryWindow": "2026-06-29T07:00:00Z--2026-07-20T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0CSMG92FG",
+          "vendorProductIdentifier": "7898996281502",
+          "orderedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "27.65"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "30.72"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "3LW9LXXJ",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-06-22T05:38:58Z",
+      "purchaseOrderStateChangedDate": "2026-07-21T19:04:22Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "GRU8"
+      },
+      "sellingParty": {
+        "partyId": "OZITV"
+      },
+      "shipToParty": {
+        "partyId": "GRU8"
+      },
+      "billToParty": {
+        "partyId": "GRU8"
+      },
+      "deliveryWindow": "2026-06-22T07:00:00Z--2026-07-14T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0CSJT11FR",
+          "vendorProductIdentifier": "7898996281519",
+          "orderedQuantity": {
+            "amount": 80,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "27.65"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "30.72"
+          }
+        }
+      ]
+    }
+  }
+]

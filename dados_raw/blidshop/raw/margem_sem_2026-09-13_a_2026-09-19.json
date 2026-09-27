@@ -1,0 +1,48 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_NET_PURE_PRODUCT_MARGIN_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "WEEK"
+    },
+    "lastUpdatedDate" : "2026-09-25",
+    "dataStartTime" : "2026-09-13",
+    "dataEndTime" : "2026-09-19",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "netPureProductMarginAggregate" : [ {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "netPureProductMargin" : -0.1028
+  } ],
+  "netPureProductMarginByAsin" : [ {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0GQNQ88TW",
+    "netPureProductMargin" : 0.0511
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0FKQ2LKDR",
+    "netPureProductMargin" : 0.0093
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0FKQ5Z8MR",
+    "netPureProductMargin" : -0.1909
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0FKPKCS47",
+    "netPureProductMargin" : -0.2402
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0GKJ176M1",
+    "netPureProductMargin" : 0.1408
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0GS41T28Q",
+    "netPureProductMargin" : 0.0111
+  } ]
+}

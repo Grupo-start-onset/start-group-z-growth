@@ -1,0 +1,91 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_SALES_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "WEEK",
+      "sellingProgram" : "RETAIL",
+      "distributorView" : "MANUFACTURING"
+    },
+    "lastUpdatedDate" : "2026-09-25",
+    "dataStartTime" : "2026-09-13",
+    "dataEndTime" : "2026-09-19",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "salesAggregate" : [ {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 1084.18,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 31,
+    "shippedCogs" : {
+      "amount" : 848.75,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 803.20,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 32
+  } ],
+  "salesByAsin" : [ {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0CSJT11FR",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 797.51,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 28,
+    "shippedCogs" : {
+      "amount" : 793.45,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 742.40,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 30
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0CLLZ8FCM",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 210.67,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 0,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 0,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 0
+  }, {
+    "startDate" : "2026-09-13",
+    "endDate" : "2026-09-19",
+    "asin" : "B0CSMG92FG",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 76.00,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 2,
+    "shippedCogs" : {
+      "amount" : 55.30,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 60.80,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 2
+  } ]
+}

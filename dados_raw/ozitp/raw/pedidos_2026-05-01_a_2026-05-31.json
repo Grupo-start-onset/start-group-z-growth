@@ -1,0 +1,92 @@
+[
+  {
+    "purchaseOrderNumber": "3XHYAXQJ",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-05-18T05:29:38Z",
+      "purchaseOrderChangedDate": "2026-06-11T23:55:50Z",
+      "purchaseOrderStateChangedDate": "2026-06-11T23:55:50Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "OZITV"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-05-18T07:00:00Z--2026-06-08T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0GFHSLYP6",
+          "vendorProductIdentifier": "7901041310215",
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "140.94"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "156.6"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "8GWC3O5D",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-05-04T06:10:37Z",
+      "purchaseOrderChangedDate": "2026-05-29T00:20:18Z",
+      "purchaseOrderStateChangedDate": "2026-05-29T00:20:18Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "GRU8"
+      },
+      "sellingParty": {
+        "partyId": "OZITV"
+      },
+      "shipToParty": {
+        "partyId": "GRU8"
+      },
+      "billToParty": {
+        "partyId": "GRU8"
+      },
+      "deliveryWindow": "2026-05-04T07:00:00Z--2026-05-25T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0F1BST3Z4",
+          "vendorProductIdentifier": "683370887350",
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "1890"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "2100"
+          }
+        }
+      ]
+    }
+  }
+]
