@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Segredos - NUNCA commitar valores reais
+.env
+.env.*
+!.env.example
+
+# Rascunhos locais (cópias temporárias do Google Drive, não fazem parte do código)
+scripts/_colab_original/
