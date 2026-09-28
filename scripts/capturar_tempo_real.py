@@ -70,6 +70,14 @@ try:
     EM_COLAB = True
 except ImportError:          # rodando fora do Colab (ex.: GitHub Actions)
     EM_COLAB = False
+    # Fora do Colab, carrega o .env local (override=True: o .env sempre
+    # vence sobre variavel de ambiente antiga/residual do shell -- mesma
+    # logica de config.py/colab_shim.py, para nunca divergirem).
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(override=True)
+    except ImportError:
+        pass
 
 try:
     from sp_api.api import Reports
