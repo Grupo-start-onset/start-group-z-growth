@@ -1,5 +1,87 @@
 [
   {
+    "purchaseOrderNumber": "64529UTU",
+    "purchaseOrderState": "New",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-09-28T06:45:04Z",
+      "purchaseOrderStateChangedDate": "2026-09-28T06:45:28Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "UM8O1"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-09-28T07:00:00Z--2026-10-14T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0GQNQ88TW",
+          "vendorProductIdentifier": "7898977819137",
+          "orderedQuantity": {
+            "amount": 5,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "971.19"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "1079.1"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B0FZMDHL1G",
+          "vendorProductIdentifier": "7898977819304",
+          "orderedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "1079.1"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "1199"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B0FXBQ944Y",
+          "vendorProductIdentifier": "7898977819106",
+          "orderedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "1079.1"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "1199"
+          }
+        }
+      ]
+    }
+  },
+  {
     "purchaseOrderNumber": "142IKBLU",
     "purchaseOrderState": "Closed",
     "orderDetails": {

@@ -1,5 +1,144 @@
 [
   {
+    "purchaseOrderNumber": "33RWCL8I",
+    "purchaseOrderState": "Acknowledged",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-09-27T21:32:04Z",
+      "purchaseOrderStateChangedDate": "2026-09-28T01:44:44Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "GRU8"
+      },
+      "sellingParty": {
+        "partyId": "A470C"
+      },
+      "shipToParty": {
+        "partyId": "GRU8"
+      },
+      "billToParty": {
+        "partyId": "GRU8"
+      },
+      "deliveryWindow": "2026-09-28T07:00:00Z--2026-10-13T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0FYS3NMJX",
+          "vendorProductIdentifier": "7898104091375",
+          "orderedQuantity": {
+            "amount": 120,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "5.71"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "6.72"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B091D3PBPZ",
+          "vendorProductIdentifier": "7898104092549",
+          "orderedQuantity": {
+            "amount": 12,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "29.8"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "35.06"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B08B2JGZ84",
+          "vendorProductIdentifier": "7898104093522",
+          "orderedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "6.96"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "8.19"
+          }
+        },
+        {
+          "itemSequenceNumber": "4",
+          "amazonProductIdentifier": "B08W6RJXD8",
+          "vendorProductIdentifier": "7898104093027",
+          "orderedQuantity": {
+            "amount": 6,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "38.93"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "45.8"
+          }
+        },
+        {
+          "itemSequenceNumber": "5",
+          "amazonProductIdentifier": "B0FRNLDJKL",
+          "vendorProductIdentifier": "7898104095311",
+          "orderedQuantity": {
+            "amount": 12,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "11.59"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "13.63"
+          }
+        },
+        {
+          "itemSequenceNumber": "6",
+          "amazonProductIdentifier": "B0CSXG81HC",
+          "vendorProductIdentifier": "7898104098831",
+          "orderedQuantity": {
+            "amount": 2,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "64.31"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "75.66"
+          }
+        }
+      ]
+    }
+  },
+  {
     "purchaseOrderNumber": "8PPL8YPG",
     "purchaseOrderState": "Acknowledged",
     "orderDetails": {

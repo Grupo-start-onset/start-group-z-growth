@@ -3,7 +3,7 @@
     "purchaseOrderNumber": "7GULE3OR",
     "purchaseOrderStatus": "OPEN",
     "purchaseOrderDate": "2026-09-07T05:55:33Z",
-    "lastUpdatedDate": "2026-09-24T01:21:59Z",
+    "lastUpdatedDate": "2026-09-27T14:07:25Z",
     "sellingParty": {
       "partyId": "R88OM"
     },
@@ -368,12 +368,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 23,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
-          }
+          },
+          "lastReceiveDate": "2026-09-27T14:07:25.100Z"
         }
       },
       {

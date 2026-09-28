@@ -3,7 +3,7 @@
     "purchaseOrderNumber": "5MZXEDUY",
     "purchaseOrderStatus": "OPEN",
     "purchaseOrderDate": "2026-09-14T05:29:40Z",
-    "lastUpdatedDate": "2026-09-26T22:43:40Z",
+    "lastUpdatedDate": "2026-09-27T16:38:33Z",
     "sellingParty": {
       "partyId": "76I78"
     },
@@ -312,7 +312,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 12,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-27T16:38:33.816Z"
         }
       },
       {
@@ -3128,7 +3134,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 12,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-27T16:38:33.816Z"
         }
       },
       {
@@ -3984,7 +3996,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 12,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-27T16:38:33.817Z"
         }
       },
       {
