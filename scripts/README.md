@@ -45,7 +45,23 @@ python scripts/test_conexao.py
 
 ## Como rodar a atualização de rotina
 
-Na ordem (equivalente ao `rodar_tudo.py` do Colab):
+Forma recomendada — roda tudo, sempre na ordem certa, e publica no final:
+
+```bash
+python scripts/rodar_tudo.py
+```
+
+Também aceita `--sem-captura` (só transforma + publica, usa o que já está em
+`dados_raw/`) e `--sem-publicar` (roda tudo, não publica).
+
+**Atenção**: `transformar_vendor.py` reconstrói `dados_vendor.json` do zero a
+partir de `dados_raw/`; `transformar_semanas.py`, `transformar_destaque.py` e
+`transformar_brand.py` são complementos que *leem* esse arquivo e acrescentam
+informação. Rodar `transformar_vendor.py` sozinho, sem rodar os três
+complementos logo em seguida, apaga do arquivo publicado o que eles tinham
+adicionado (mês em andamento por semana, oferta em destaque, extras de Brand
+Analytics) — use sempre `rodar_tudo.py`, ou, se for rodar manualmente,
+sempre na mesma ordem abaixo:
 
 ```bash
 python scripts/capturar_mensal.py
