@@ -639,7 +639,7 @@ async function iniciarDashboard() {
     const linha = el.closest('tr');
     const faturadoEl = linha.querySelector('.pedFaturadoInput');
     const statusEl = linha.querySelector('.pedStatusInput');
-    const bruto = (faturadoEl.value || '').trim().replace(',', '.');
+    const bruto = (faturadoEl.value || '').trim();
     const valorFaturado = bruto === '' ? null : Number(bruto);
     salvarAnotacaoPedido(k, po, isNaN(valorFaturado) ? null : valorFaturado, (statusEl.value || '').trim());
   });
@@ -1575,7 +1575,7 @@ async function iniciarDashboard() {
         <td class="num">${NUM(t.itens)}</td><td class="num">${NUM(t.pedido)}</td><td class="num">${NUM(t.conf)}</td>
         <td class="num">${NUM(t.rej)}</td><td class="num">${NUM(t.recebido)}</td>
         <td class="num">${MOEDA2(t.custo)}</td><td class="num">${MOEDA2(t.custoRecebido)}</td>
-        <td class="num"><input type="text" inputmode="decimal" class="pedManualInput pedFaturadoInput" data-chave="${esc(chave)}"
+        <td class="num"><input type="number" step="0.01" min="0" class="pedManualInput pedFaturadoInput" data-chave="${esc(chave)}"
           value="${anot.valorFaturado != null ? esc(String(anot.valorFaturado)) : ''}" placeholder="—" onclick="event.stopPropagation()"></td>
         <td><input type="text" class="pedManualInput pedStatusInput" data-chave="${esc(chave)}"
           value="${esc(anot.status || '')}" placeholder="—" onclick="event.stopPropagation()"></td>
