@@ -46,6 +46,7 @@ CONTAS_CONFIG = {
     'jolitex':   'jolitex/raw',
     'balboa':    'balboa/raw',
     'riomaster': 'riomaster/raw',
+    'plastpet':  'plastpet/raw',
 }
 
 MAX_COMPRADO_JUNTO = 5      # por ASIN

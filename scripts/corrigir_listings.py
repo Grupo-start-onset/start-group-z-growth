@@ -63,6 +63,7 @@ CONTAS_CONFIG = {
     'jolitex':   {'nome': 'Jolitex',         'secret': 'SP_API_REFRESH_TOKEN_JOLITEX',  'seller_id': 'R88OM'},
     'balboa':    {'nome': 'Balboa',          'secret': 'SP_API_REFRESH_TOKEN_BALBOA',   'seller_id': '6R8TT'},
     'riomaster': {'nome': 'BR - Rio Master', 'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER','seller_id': 'RD8QP'},
+    'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET', 'seller_id': 'SY933'},
 }
 # nome de exibicao (como sai na planilha) -> chave interna da conta
 NOME_PARA_CHAVE = {cfg['nome']: chave for chave, cfg in CONTAS_CONFIG.items()}

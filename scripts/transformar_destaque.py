@@ -38,6 +38,7 @@ CONTAS_CONFIG = {
     'jolitex':   'jolitex/raw',
     'balboa':    'balboa/raw',
     'riomaster': 'riomaster/raw',
+    'plastpet':  'plastpet/raw',
 }
 
 

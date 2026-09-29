@@ -108,6 +108,7 @@ CONTAS_CONFIG = {
     'jolitex':   {'nome': 'Jolitex',         'secret': 'SP_API_REFRESH_TOKEN_JOLITEX'},
     'balboa':    {'nome': 'Balboa',          'secret': 'SP_API_REFRESH_TOKEN_BALBOA'},
     'riomaster': {'nome': 'BR - Rio Master', 'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER'},
+    'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
 }
 
 # tipo interno -> (reportType da Amazon, campo da linha -> chave curta no arquivo)

@@ -36,6 +36,7 @@ RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 CONTA_NOME = {
     'alfa_jf': 'ALFA JF', 'blidshop': 'Blid Shop', 'petclean': 'Petclean BR',
     'ozitp': 'OZITP', 'jolitex': 'Jolitex', 'balboa': 'Balboa', 'riomaster': 'BR - Rio Master',
+    'plastpet': 'Pet Factory Brazil Industria Ltda',
 }
 
 # codigo da Amazon -> categoria de correcao
