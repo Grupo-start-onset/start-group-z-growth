@@ -569,7 +569,7 @@
     "purchaseOrderNumber": "2RSP6KGP",
     "purchaseOrderStatus": "OPEN",
     "purchaseOrderDate": "2026-08-31T06:10:36Z",
-    "lastUpdatedDate": "2026-09-25T23:49:22Z",
+    "lastUpdatedDate": "2026-09-29T12:47:09Z",
     "sellingParty": {
       "partyId": "OZITV"
     },
@@ -699,7 +699,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T12:02:11.067Z"
         }
       },
       {
@@ -893,7 +899,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T12:07:35.168Z"
         }
       },
       {
@@ -1156,7 +1168,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T12:47:09.754Z"
         }
       },
       {
@@ -1212,7 +1230,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T11:52:07.578Z"
         }
       },
       {
@@ -1337,7 +1361,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T11:52:07.578Z"
         }
       },
       {
@@ -1462,7 +1492,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receivedQuantity": {
+            "amount": 25,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T12:12:04.368Z"
         }
       }
     ]

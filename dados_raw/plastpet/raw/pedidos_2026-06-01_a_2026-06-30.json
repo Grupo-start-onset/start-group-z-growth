@@ -1,0 +1,46 @@
+[
+  {
+    "purchaseOrderNumber": "3P9N54FW",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-06-16T16:53:21Z",
+      "purchaseOrderStateChangedDate": "2026-06-29T13:01:19Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "SY933"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-06-18T03:00:00Z--2026-07-21T03:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0FG99FYDR",
+          "vendorProductIdentifier": "7897572143623",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "85.11"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "96.71"
+          }
+        }
+      ]
+    }
+  }
+]

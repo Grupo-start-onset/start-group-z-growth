@@ -1,9 +1,9 @@
 [
   {
     "purchaseOrderNumber": "2SY11TNC",
-    "purchaseOrderStatus": "OPEN",
+    "purchaseOrderStatus": "CLOSED",
     "purchaseOrderDate": "2026-09-11T05:31:49Z",
-    "lastUpdatedDate": "2026-09-11T09:56:23Z",
+    "lastUpdatedDate": "2026-09-28T23:54:24Z",
     "sellingParty": {
       "partyId": "UM8O1"
     },
@@ -25,7 +25,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 10,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -33,6 +33,19 @@
             {
               "updatedDate": "2026-09-11T05:31:56Z",
               "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-09-28T23:54:24Z",
+              "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 10,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1

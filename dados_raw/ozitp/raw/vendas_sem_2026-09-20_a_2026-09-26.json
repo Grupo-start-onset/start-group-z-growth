@@ -6,7 +6,7 @@
       "sellingProgram" : "RETAIL",
       "distributorView" : "MANUFACTURING"
     },
-    "lastUpdatedDate" : "2026-09-26",
+    "lastUpdatedDate" : "2026-09-27",
     "dataStartTime" : "2026-09-20",
     "dataEndTime" : "2026-09-26",
     "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
@@ -33,6 +33,25 @@
   "salesByAsin" : [ {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
+    "asin" : "B0BQ62NZN2",
+    "customerReturns" : 0,
+    "orderedRevenue" : {
+      "amount" : 65.60,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 1,
+    "shippedCogs" : {
+      "amount" : 78.28,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 56.49,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-09-20",
+    "endDate" : "2026-09-26",
     "asin" : "B0CSMG92FG",
     "customerReturns" : 0,
     "orderedRevenue" : {
@@ -49,25 +68,6 @@
       "currencyCode" : "BRL"
     },
     "shippedUnits" : 4
-  }, {
-    "startDate" : "2026-09-20",
-    "endDate" : "2026-09-26",
-    "asin" : "B0H4M4NZGD",
-    "customerReturns" : 0,
-    "orderedRevenue" : {
-      "amount" : 0.00,
-      "currencyCode" : "BRL"
-    },
-    "orderedUnits" : 0,
-    "shippedCogs" : {
-      "amount" : 0,
-      "currencyCode" : "BRL"
-    },
-    "shippedRevenue" : {
-      "amount" : 0,
-      "currencyCode" : "BRL"
-    },
-    "shippedUnits" : 0
   }, {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
@@ -90,22 +90,22 @@
   }, {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
-    "asin" : "B0BQ62NZN2",
+    "asin" : "B0H4M4NZGD",
     "customerReturns" : 0,
     "orderedRevenue" : {
-      "amount" : 65.60,
+      "amount" : 0.00,
       "currencyCode" : "BRL"
     },
-    "orderedUnits" : 1,
+    "orderedUnits" : 0,
     "shippedCogs" : {
-      "amount" : 78.28,
+      "amount" : 0,
       "currencyCode" : "BRL"
     },
     "shippedRevenue" : {
-      "amount" : 56.49,
+      "amount" : 0,
       "currencyCode" : "BRL"
     },
-    "shippedUnits" : 1
+    "shippedUnits" : 0
   }, {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",

@@ -241,7 +241,7 @@
     "purchaseOrderNumber": "3VS35Y9F",
     "purchaseOrderStatus": "OPEN",
     "purchaseOrderDate": "2026-09-07T05:58:49Z",
-    "lastUpdatedDate": "2026-09-19T01:05:51Z",
+    "lastUpdatedDate": "2026-09-29T11:44:05Z",
     "sellingParty": {
       "partyId": "OZITV"
     },
@@ -302,7 +302,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receivedQuantity": {
+            "amount": 9,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T11:44:05.164Z"
         }
       },
       {
@@ -358,7 +364,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-09-29T11:44:05.164Z"
         }
       }
     ]

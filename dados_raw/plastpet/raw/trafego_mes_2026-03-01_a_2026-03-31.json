@@ -1,0 +1,58 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_TRAFFIC_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "MONTH"
+    },
+    "lastUpdatedDate" : "2026-09-27",
+    "dataStartTime" : "2026-03-01",
+    "dataEndTime" : "2026-03-31",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "trafficAggregate" : [ {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "glanceViews" : 1
+  } ],
+  "trafficByAsin" : [ {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0FG99FYDR",
+    "glanceViews" : 1
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0F68R49Y5",
+    "glanceViews" : 0
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0CJWLMFW8",
+    "glanceViews" : 0
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0F5L1DW5Q",
+    "glanceViews" : 0
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0FG994BY8",
+    "glanceViews" : 0
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0G67JTH74",
+    "glanceViews" : 0
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0G67HTCCJ",
+    "glanceViews" : 0
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0G67583YG",
+    "glanceViews" : 0
+  } ]
+}
