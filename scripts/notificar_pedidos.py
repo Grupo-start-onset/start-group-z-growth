@@ -32,8 +32,10 @@
 #                                                                 ver o formato que o cliente vai receber)
 # ==================================================================
 
-import os, sys, json, smtplib, ssl, subprocess
+import os, sys, json, smtplib, ssl, subprocess, tempfile, shutil
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
 from datetime import datetime
 
 try:
@@ -41,6 +43,8 @@ try:
     load_dotenv(override=True)
 except ImportError:
     pass
+
+from gerar_pedido_xlsx import gerar_xlsx_pedido
 
 RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir))
 ARQUIVO_VENDOR = os.path.join(RAIZ, 'dados_vendor.json')
@@ -77,30 +81,62 @@ def destinatarios(lista_ou_str):
     return list(lista_ou_str)
 
 
+def _fmt_data_curta(iso):
+    if not iso:
+        return '—'
+    return iso[:10][8:10] + '/' + iso[5:7] + '/' + iso[:4]
+
+
+def _num_br(v):
+    return f'{v:,.0f}'.replace(',', '.')
+
+
 def montar_corpo(conta_nome, pos_novos):
     linhas = [f'{len(pos_novos)} pedido(s) de compra novo(s) para {conta_nome}:\n']
     total_un = 0
     for p in pos_novos:
         un = (p.get('tot') or {}).get('pedido', 0)
         total_un += un
-        data = (p.get('data') or '')[:10]
-        linhas.append(f"  - PO {p['po']} | emitido em {data} | {un:,.0f} unidade(s) pedidas | "
+        data = _fmt_data_curta(p.get('data'))
+        janela = (f"{_fmt_data_curta(p.get('janelaIni'))} a {_fmt_data_curta(p.get('janelaFim'))}"
+                  if p.get('janelaFim') else '—')
+        linhas.append(f"  - PO {p['po']} | emitido em {data} | {_num_br(un)} unidade(s) pedidas | "
                        f"{len((p.get('itens') or []))} item(ns)")
-    linhas.append(f'\nTotal: {total_un:,.0f} unidade(s) pedidas nesses pedidos.')
+        linhas.append(f"      >>> JANELA DE ENTREGA: {janela} <<<")
+    linhas.append(f'\nTotal: {_num_br(total_un)} unidade(s) pedidas nesses pedidos.')
+    linhas.append('\nO detalhamento completo de cada pedido (itens, custos, janela de entrega) esta')
+    linhas.append('nos arquivos Excel em anexo, um por pedido.')
     linhas.append('\n--\nEnviado automaticamente pelo pipeline START Vendor Analytics.')
-    return '\n'.join(linhas).replace(',', '.')
+    return '\n'.join(linhas)
 
 
-def enviar_email(destinatarios_lista, assunto, corpo):
+def gerar_anexos(pasta_tmp, chave, conta_nome, catalogo, pos_novos):
+    """Gera um .xlsx por PO em pasta_tmp e devolve a lista de caminhos."""
+    caminhos = []
+    for p in pos_novos:
+        caminho = os.path.join(pasta_tmp, f"Pedido_{p['po']}_{chave}.xlsx")
+        gerar_xlsx_pedido(chave, conta_nome, p, catalogo, caminho)
+        caminhos.append(caminho)
+    return caminhos
+
+
+def enviar_email(destinatarios_lista, assunto, corpo, anexos=None):
     user = os.environ.get('GMAIL_USER')
     pw = os.environ.get('GMAIL_APP_PASSWORD')
     if not user or not pw:
         raise RuntimeError('GMAIL_USER / GMAIL_APP_PASSWORD nao configurados (.env ou Secrets do GitHub Actions).')
 
-    msg = MIMEText(corpo, 'plain', 'utf-8')
+    msg = MIMEMultipart()
     msg['Subject'] = assunto
     msg['From'] = user
     msg['To'] = ', '.join(destinatarios_lista)
+    msg.attach(MIMEText(corpo, 'plain', 'utf-8'))
+
+    for caminho in (anexos or []):
+        with open(caminho, 'rb') as f:
+            parte = MIMEApplication(f.read(), _subtype='xlsx')
+        parte.add_header('Content-Disposition', 'attachment', filename=os.path.basename(caminho))
+        msg.attach(parte)
 
     ctx = ssl.create_default_context()
     with smtplib.SMTP('smtp.gmail.com', 587, timeout=30) as s:
@@ -150,8 +186,13 @@ def main():
         assunto = f'{len(amostra)} pedido(s) de compra novo(s) — {conta_nome} [PREVIA]'
         corpo = montar_corpo(conta_nome, amostra)
         dest = destinatarios(DESTINATARIOS_CONTA.get(chave, EMAIL_TESTE))
-        enviar_email(dest, assunto, corpo)
-        print(f'[preview] email enviado para {dest} com {len(amostra)} pedido(s) reais de {conta_nome}.')
+        pasta_tmp = tempfile.mkdtemp(prefix='pedidos_preview_')
+        try:
+            anexos = gerar_anexos(pasta_tmp, chave, conta_nome, contas.get(chave, {}).get('catalogo'), amostra)
+            enviar_email(dest, assunto, corpo, anexos)
+        finally:
+            shutil.rmtree(pasta_tmp, ignore_errors=True)
+        print(f'[preview] email enviado para {dest} com {len(amostra)} pedido(s) reais de {conta_nome} ({len(amostra)} anexo(s)).')
         print(corpo)
         return
 
@@ -179,7 +220,7 @@ def main():
         if novos and not primeira_vez:
             algo_novo = True
             for dest in destinatarios(DESTINATARIOS_CONTA.get(chave, EMAIL_TESTE)):
-                por_destinatario.setdefault(dest, []).append((conta_nome, novos))
+                por_destinatario.setdefault(dest, []).append((chave, conta_nome, novos))
             print(f'[{chave}] {len(novos)} pedido(s) novo(s) -- notificando {DESTINATARIOS_CONTA.get(chave)}')
         elif novos and primeira_vez:
             print(f'[{chave}] primeira execucao -- {len(novos)} pedido(s) existente(s) marcado(s) como ja notificado(s), sem email.')
@@ -199,14 +240,20 @@ def main():
         return
 
     for dest, blocos in por_destinatario.items():
-        total_pos = sum(len(novos) for _, novos in blocos)
-        assunto = f'{total_pos} pedido(s) de compra novo(s) — ' + ', '.join(nome for nome, _ in blocos)
-        corpo = '\n\n'.join(montar_corpo(nome, novos) for nome, novos in blocos)
+        total_pos = sum(len(novos) for _, nome, novos in blocos)
+        assunto = f'{total_pos} pedido(s) de compra novo(s) — ' + ', '.join(nome for _, nome, _ in blocos)
+        corpo = '\n\n'.join(montar_corpo(nome, novos) for _, nome, novos in blocos)
+        pasta_tmp = tempfile.mkdtemp(prefix='pedidos_notif_')
         try:
-            enviar_email([dest], assunto, corpo)
-            print(f'[email] enviado para {dest}: {assunto}')
+            anexos = []
+            for chave, nome, novos in blocos:
+                anexos += gerar_anexos(pasta_tmp, chave, nome, contas.get(chave, {}).get('catalogo'), novos)
+            enviar_email([dest], assunto, corpo, anexos)
+            print(f'[email] enviado para {dest}: {assunto} ({len(anexos)} anexo(s))')
         except Exception as e:
             print(f'[ERRO] falha ao enviar para {dest}: {e}')
+        finally:
+            shutil.rmtree(pasta_tmp, ignore_errors=True)
 
     salvar_estado(estado)
     commitar_estado()
