@@ -363,7 +363,30 @@ let CONTAS = null;
 let RAW = {};      // dados originais por conta; CONTAS[k] vira a visão da marca quando há filtro de marca
 let INDICE = null; // índice do modo por conta: { geradoEm, contas: { <id>: {nome, meses, futuros, sellin, pedidos} } }
 
+// Anotações manuais da aba "Pedidos" (valor faturado + status), compartilhadas
+// entre todos via Cloudflare Pages Function + KV (functions/api/pedidos-anotacoes.js).
+// Chave: "<contaKey>|<numeroDoPedido>".
+let PED_ANOTACOES = {};
+async function salvarAnotacaoPedido(k, po, valorFaturado, status) {
+  const chave = k + '|' + po;
+  try {
+    const r = await fetch('/api/pedidos-anotacoes', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ conta: k, po, valorFaturado, status }),
+    });
+    if (r.ok) PED_ANOTACOES[chave] = await r.json();
+  } catch (e) { /* fica o que foi digitado na tela mesmo se a gravação falhar */ }
+}
+
 async function iniciarDashboard() {
+  // anotações manuais de pedidos: não bloqueia o carregamento principal; re-renderiza
+  // a aba de pedidos quando chegar (renderPedidos é hoisted, existe assim que a função inicia)
+  fetch('/api/pedidos-anotacoes').then(r => r.ok ? r.json() : {}).then(d => {
+    PED_ANOTACOES = d || {};
+    if (CONTAS && typeof renderPedidos === 'function') renderPedidos();
+  }).catch(() => {});
+
   // modo rápido: só o índice (poucos KB); cada conta é baixada quando escolhida
   try {
     const ri = await fetch('dados/index.json');
@@ -606,6 +629,19 @@ async function iniciarDashboard() {
     const chave = tr.dataset.chave;
     if (state.pedAbertos.has(chave)) state.pedAbertos.delete(chave); else state.pedAbertos.add(chave);
     renderPedidos();
+  });
+  // anotações manuais (valor faturado / status): salva ao sair do campo, sem re-renderizar a tabela toda
+  document.querySelector('#tblPedidos tbody').addEventListener('change', e => {
+    const el = e.target;
+    if (!el.classList || !el.classList.contains('pedManualInput')) return;
+    const chave = el.dataset.chave;
+    const [k, po] = chave.split('|');
+    const linha = el.closest('tr');
+    const faturadoEl = linha.querySelector('.pedFaturadoInput');
+    const statusEl = linha.querySelector('.pedStatusInput');
+    const bruto = (faturadoEl.value || '').trim();
+    const valorFaturado = bruto === '' ? null : Number(bruto);
+    salvarAnotacaoPedido(k, po, isNaN(valorFaturado) ? null : valorFaturado, (statusEl.value || '').trim());
   });
 
   // abas (Retenção e Tempo real): cada botão aponta para o painel por data-panel;
@@ -1308,12 +1344,50 @@ async function iniciarDashboard() {
     };
   }
 
+  // dia (yyyy-mm-dd) de um ISO timestamp no fuso de Brasília -- usado pros
+  // alertas de "pedidos que chegaram", pra bater com DATA_BR (mesmo fuso).
+  function diaYMD_SP(iso){
+    if (!iso) return null;
+    const d = new Date(iso);
+    if (isNaN(d)) return null;
+    const partes = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Sao_Paulo', year:'numeric', month:'2-digit', day:'2-digit'}).formatToParts(d);
+    const obj = {}; partes.forEach(p => obj[p.type] = p.value);
+    return `${obj.year}-${obj.month}-${obj.day}`;
+  }
+
+  // Pedidos de compra com item recebido (dataReceb) hoje / nesta semana (domingo a
+  // sábado, mesma convenção usada no resto do dashboard). Olha TODOS os pedidos das
+  // contas selecionadas, sem filtro de período -- "hoje"/"semana" é sempre o atual.
+  function pedidosRecebidosResumo(){
+    const hoje = diaYMD_SP(new Date().toISOString());
+    const dHoje = new Date(hoje + 'T12:00:00Z');
+    const inicioSemana = new Date(dHoje);
+    inicioSemana.setUTCDate(dHoje.getUTCDate() - dHoje.getUTCDay()); // domingo desta semana
+    const inicioSemanaStr = inicioSemana.toISOString().slice(0, 10);
+
+    const posHoje = new Set(), posSemana = new Set();
+    let unHoje = 0, unSemana = 0;
+    state.contas.forEach(k => {
+      (CONTAS[k].pedidos || []).forEach(p => {
+        (p.itens || []).forEach(i => {
+          if (!i.recebido || !i.dataReceb) return;
+          const dia = diaYMD_SP(i.dataReceb);
+          if (!dia) return;
+          if (dia === hoje) { posHoje.add(k + '|' + p.po); unHoje += i.recebido; }
+          if (dia >= inicioSemanaStr && dia <= hoje) { posSemana.add(k + '|' + p.po); unSemana += i.recebido; }
+        });
+      });
+    });
+    return { hoje: { pos: posHoje.size, un: unHoje }, semana: { pos: posSemana.size, un: unSemana } };
+  }
+
   function renderKPIs(tot, meses, diagGrupos){
     const npmBlend = tot.npmDen>0 ? tot.npmNum/tot.npmDen : null;
     const conv = tot.glanceViews>0 ? tot.shippedUnits/tot.glanceViews : null;
     const ticket = tot.shippedUnits>0 ? tot.shippedRevenue/tot.shippedUnits : null;
     const skusAtivos = topAsinsPeriodo(meses).length;
     const impactoTotal = diagGrupos.reduce((s,g) => s + (g.tipo === 'oportunidade' ? 0 : g.impacto), 0);
+    const receb = pedidosRecebidosResumo();
 
     document.getElementById('kpiRow').innerHTML = `
       <div class="kpi"><div class="lab">Faturamento</div><div class="val">${MOEDA(tot.shippedRevenue)}</div><div class="hint">receita enviada · ${meses.length} mês(es) · ${state.contas.length} conta(s)</div></div>
@@ -1322,6 +1396,8 @@ async function iniciarDashboard() {
       <div class="kpi"><div class="lab">Margem líquida (NPM)</div><div class="val">${PCT(npmBlend)}</div><div class="hint">ponderada por faturamento</div></div>
       <div class="kpi"><div class="lab">Conversão</div><div class="val">${PCT(conv)}</div><div class="hint">${NUM(tot.glanceViews)} visitas</div></div>
       <div class="kpi alert"><div class="lab">Impacto de problemas</div><div class="val">${MOEDA(impactoTotal)}</div><div class="hint">soma dos diagnósticos (exceto oportunidades)</div></div>
+      <div class="kpi${receb.hoje.pos ? ' alert' : ''}"><div class="lab">Pedidos chegaram hoje</div><div class="val">${NUM(receb.hoje.pos)}</div><div class="hint">${NUM(receb.hoje.un)} unidade(s) recebida(s) hoje</div></div>
+      <div class="kpi${receb.semana.pos ? ' alert' : ''}"><div class="lab">Pedidos chegaram na semana</div><div class="val">${NUM(receb.semana.pos)}</div><div class="hint">${NUM(receb.semana.un)} unidade(s) · semana de domingo a sábado, até hoje</div></div>
     `;
   }
 
@@ -1520,14 +1596,15 @@ async function iniciarDashboard() {
     document.getElementById('pedRodape').textContent = infos.length
       ? `Status de recebimento conforme a última captura (mais recente: ${DATA_BR(infos[infos.length-1])}). Atrasado = pedido aberto, janela de entrega vencida e quantidade confirmada ainda não recebida.`
       : '';
-    if (!temDado) { renderEmptyRow(tbody, 13, 'Sem pedidos no dados_vendor.json para as contas selecionadas (rode o transformar_vendor.py atualizado).'); return; }
-    if (!linhas.length) { renderEmptyRow(tbody, 13, 'Nenhum pedido com esses filtros.'); return; }
+    if (!temDado) { renderEmptyRow(tbody, 15, 'Sem pedidos no dados_vendor.json para as contas selecionadas (rode o transformar_vendor.py atualizado).'); return; }
+    if (!linhas.length) { renderEmptyRow(tbody, 15, 'Nenhum pedido com esses filtros.'); return; }
 
-    tbody.innerHTML = tbodyHTML('pedidos', linhas, 13, p => {
+    tbody.innerHTML = tbodyHTML('pedidos', linhas, 15, p => {
       const t = p.tot || {};
       const chave = p.k + '|' + p.po;
       const aberto = state.pedAbertos.has(chave);
       const janela = p.janelaIni || p.janelaFim ? `${DATA_CURTA(p.janelaIni)} a ${DATA_BR(p.janelaFim)}` : '—';
+      const anot = PED_ANOTACOES[chave] || {};
       let html = `<tr class="pedrow${aberto ? ' aberto' : ''}" data-chave="${esc(chave)}">
         <td><span class="caret">▶</span></td>
         <td>${DATA_BR(p.data)}</td>
@@ -1538,6 +1615,10 @@ async function iniciarDashboard() {
         <td class="num">${NUM(t.itens)}</td><td class="num">${NUM(t.pedido)}</td><td class="num">${NUM(t.conf)}</td>
         <td class="num">${NUM(t.rej)}</td><td class="num">${NUM(t.recebido)}</td>
         <td class="num">${MOEDA2(t.custo)}</td><td class="num">${MOEDA2(t.custoRecebido)}</td>
+        <td class="num"><input type="number" step="0.01" min="0" class="pedManualInput pedFaturadoInput" data-chave="${esc(chave)}"
+          value="${anot.valorFaturado != null ? esc(String(anot.valorFaturado)) : ''}" placeholder="—" onclick="event.stopPropagation()"></td>
+        <td><input type="text" class="pedManualInput pedStatusInput" data-chave="${esc(chave)}"
+          value="${esc(anot.status || '')}" placeholder="—" onclick="event.stopPropagation()"></td>
       </tr>`;
       if (aberto) {
         const itens = (p.itens || []).map(i => {
@@ -1552,7 +1633,7 @@ async function iniciarDashboard() {
             <td class="num">${MOEDA2((i.confValido ?? i.conf ?? i.pedido ?? 0) * (i.custoUn || 0))}</td>
           </tr>`;
         }).join('');
-        html += `<tr class="peddet"><td colspan="13">
+        html += `<tr class="peddet"><td colspan="15">
           <div class="pedmeta">Última atualização do status: ${DATA_BR(p.atualizado)}${p.estado ? ' · Estado: ' + esc(p.estado) : ''}${p.tipo ? ' · Tipo: ' + esc(p.tipo) : ''}${p.destino ? ' · Destino: ' + esc(p.destino) : ''}</div>
           <table class="tbl itens"><thead><tr>
             <th>Produto</th><th class="num">Pedido</th><th class="num">Cancelado</th><th class="num">Confirmado</th><th class="num">Rejeitado</th>
