@@ -13,8 +13,9 @@
 #
 # Uso:
 #   python scripts/rodar_tudo.py                 # tudo, na ordem
-#   python scripts/rodar_tudo.py --sem-captura    # so transforma + publica
+#   python scripts/rodar_tudo.py --sem-captura    # so transforma + notifica + publica
 #                                                  # (usa o que ja esta em dados_raw/)
+#   python scripts/rodar_tudo.py --sem-notificar  # roda tudo, pula o email de pedido novo
 #   python scripts/rodar_tudo.py --sem-publicar   # roda tudo, nao publica
 # ==================================================================
 
@@ -39,6 +40,9 @@ TRANSFORMA = [
     'transformar_destaque.py',
     'transformar_brand.py',
 ]
+# roda depois do transformar_vendor.py (precisa do bloco `pedidos` atualizado) e
+# antes de publicar -- manda email quando aparece PO novo desde a ultima execucao.
+NOTIFICA = ['notificar_pedidos.py']
 PUBLICA = ['publicar_github.py']
 
 
@@ -57,6 +61,8 @@ def main():
     if '--sem-captura' not in args:
         etapas += CAPTURA
     etapas += TRANSFORMA
+    if '--sem-notificar' not in args:
+        etapas += NOTIFICA
     if '--sem-publicar' not in args:
         etapas += PUBLICA
 
