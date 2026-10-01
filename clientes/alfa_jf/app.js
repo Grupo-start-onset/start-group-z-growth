@@ -1355,10 +1355,13 @@ async function iniciarDashboard() {
     return `${obj.year}-${obj.month}-${obj.day}`;
   }
 
-  // Pedidos de compra com item recebido (dataReceb) hoje / nesta semana (domingo a
-  // sábado, mesma convenção usada no resto do dashboard). Olha TODOS os pedidos das
-  // contas selecionadas, sem filtro de período -- "hoje"/"semana" é sempre o atual.
-  function pedidosRecebidosResumo(){
+  // Pedidos de compra NOVOS (PO emitido pela Amazon, campo `data` = purchaseOrderDate)
+  // hoje / nesta semana (domingo a sábado, mesma convenção usada no resto do
+  // dashboard). "Chegou" aqui é o pedido ter sido emitido pra gente -- não o produto
+  // ter sido recebido fisicamente no CD (isso é outro dado, `recebido`/`dataReceb`,
+  // que normalmente vem bem depois). Olha TODOS os pedidos das contas selecionadas,
+  // sem filtro de período -- "hoje"/"semana" é sempre o atual.
+  function pedidosNovosResumo(){
     const hoje = diaYMD_SP(new Date().toISOString());
     const dHoje = new Date(hoje + 'T12:00:00Z');
     const inicioSemana = new Date(dHoje);
@@ -1369,13 +1372,11 @@ async function iniciarDashboard() {
     let unHoje = 0, unSemana = 0;
     state.contas.forEach(k => {
       (CONTAS[k].pedidos || []).forEach(p => {
-        (p.itens || []).forEach(i => {
-          if (!i.recebido || !i.dataReceb) return;
-          const dia = diaYMD_SP(i.dataReceb);
-          if (!dia) return;
-          if (dia === hoje) { posHoje.add(k + '|' + p.po); unHoje += i.recebido; }
-          if (dia >= inicioSemanaStr && dia <= hoje) { posSemana.add(k + '|' + p.po); unSemana += i.recebido; }
-        });
+        const dia = diaYMD_SP(p.data);
+        if (!dia) return;
+        const un = (p.tot || {}).pedido || 0;
+        if (dia === hoje) { posHoje.add(k + '|' + p.po); unHoje += un; }
+        if (dia >= inicioSemanaStr && dia <= hoje) { posSemana.add(k + '|' + p.po); unSemana += un; }
       });
     });
     return { hoje: { pos: posHoje.size, un: unHoje }, semana: { pos: posSemana.size, un: unSemana } };
@@ -1387,7 +1388,7 @@ async function iniciarDashboard() {
     const ticket = tot.shippedUnits>0 ? tot.shippedRevenue/tot.shippedUnits : null;
     const skusAtivos = topAsinsPeriodo(meses).length;
     const impactoTotal = diagGrupos.reduce((s,g) => s + (g.tipo === 'oportunidade' ? 0 : g.impacto), 0);
-    const receb = pedidosRecebidosResumo();
+    const novos = pedidosNovosResumo();
 
     document.getElementById('kpiRow').innerHTML = `
       <div class="kpi"><div class="lab">Faturamento</div><div class="val">${MOEDA(tot.shippedRevenue)}</div><div class="hint">receita enviada · ${meses.length} mês(es) · ${state.contas.length} conta(s)</div></div>
@@ -1396,8 +1397,8 @@ async function iniciarDashboard() {
       <div class="kpi"><div class="lab">Margem líquida (NPM)</div><div class="val">${PCT(npmBlend)}</div><div class="hint">ponderada por faturamento</div></div>
       <div class="kpi"><div class="lab">Conversão</div><div class="val">${PCT(conv)}</div><div class="hint">${NUM(tot.glanceViews)} visitas</div></div>
       <div class="kpi alert"><div class="lab">Impacto de problemas</div><div class="val">${MOEDA(impactoTotal)}</div><div class="hint">soma dos diagnósticos (exceto oportunidades)</div></div>
-      <div class="kpi${receb.hoje.pos ? ' alert' : ''}"><div class="lab">Pedidos chegaram hoje</div><div class="val">${NUM(receb.hoje.pos)}</div><div class="hint">${NUM(receb.hoje.un)} unidade(s) recebida(s) hoje</div></div>
-      <div class="kpi${receb.semana.pos ? ' alert' : ''}"><div class="lab">Pedidos chegaram na semana</div><div class="val">${NUM(receb.semana.pos)}</div><div class="hint">${NUM(receb.semana.un)} unidade(s) · semana de domingo a sábado, até hoje</div></div>
+      <div class="kpi${novos.hoje.pos ? ' alert' : ''}"><div class="lab">Pedidos chegaram hoje</div><div class="val">${NUM(novos.hoje.pos)}</div><div class="hint">${NUM(novos.hoje.un)} unidade(s) pedidas · PO emitido hoje</div></div>
+      <div class="kpi${novos.semana.pos ? ' alert' : ''}"><div class="lab">Pedidos chegaram na semana</div><div class="val">${NUM(novos.semana.pos)}</div><div class="hint">${NUM(novos.semana.un)} unidade(s) · semana de domingo a sábado, até hoje</div></div>
     `;
   }
 
