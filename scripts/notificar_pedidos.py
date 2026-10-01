@@ -24,7 +24,12 @@
 # notificacao e feito pelo proprio script, no final).
 #
 # Uso: python scripts/notificar_pedidos.py
-#      python scripts/notificar_pedidos.py --teste   (manda um email de teste e sai, sem mexer no estado)
+#      python scripts/notificar_pedidos.py --teste              (manda um email de teste generico e sai, sem mexer no estado)
+#      python scripts/notificar_pedidos.py --preview <conta>    (manda o email no formato REAL, com os
+#                                                                 PO mais recentes de verdade dessa conta,
+#                                                                 marcado [PREVIA] no assunto -- NAO mexe
+#                                                                 no estado de notificados, so serve pra
+#                                                                 ver o formato que o cliente vai receber)
 # ==================================================================
 
 import os, sys, json, smtplib, ssl, subprocess
@@ -119,12 +124,35 @@ def commitar_estado():
 
 
 def main():
-    teste = '--teste' in sys.argv[1:]
+    args = sys.argv[1:]
+    teste = '--teste' in args
 
     if teste:
         enviar_email([EMAIL_TESTE], 'Teste - alertas de pedidos START',
                      'Este e um email de teste do notificar_pedidos.py. Se voce recebeu isso, o envio esta funcionando.')
         print(f'Email de teste enviado para {EMAIL_TESTE}.')
+        return
+
+    if '--preview' in args:
+        idx = args.index('--preview')
+        chave = args[idx + 1] if idx + 1 < len(args) else None
+        if not chave or chave not in CONTA_NOME:
+            print(f"[erro] uso: --preview <conta>, onde <conta> e uma de: {', '.join(CONTA_NOME)}")
+            sys.exit(1)
+        contas = json.load(open(ARQUIVO_VENDOR, encoding='utf-8'))
+        pedidos = [p for p in (contas.get(chave, {}).get('pedidos') or []) if p.get('po') and p.get('data')]
+        pedidos.sort(key=lambda p: p['data'], reverse=True)
+        amostra = pedidos[:3]
+        if not amostra:
+            print(f'[erro] nenhum pedido com data encontrado para {chave}.')
+            sys.exit(1)
+        conta_nome = CONTA_NOME[chave]
+        assunto = f'{len(amostra)} pedido(s) de compra novo(s) — {conta_nome} [PREVIA]'
+        corpo = montar_corpo(conta_nome, amostra)
+        dest = destinatarios(DESTINATARIOS_CONTA.get(chave, EMAIL_TESTE))
+        enviar_email(dest, assunto, corpo)
+        print(f'[preview] email enviado para {dest} com {len(amostra)} pedido(s) reais de {conta_nome}.')
+        print(corpo)
         return
 
     if not os.path.exists(ARQUIVO_VENDOR):
