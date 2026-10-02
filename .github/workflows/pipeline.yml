@@ -22,7 +22,7 @@ concurrency:
 jobs:
   rodar_tudo:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150  # viradas de mes pedem relatorio novo pra TODAS as contas de uma vez (pode passar de 1h)
     steps:
       - uses: actions/checkout@v4
         with:
