@@ -1,0 +1,51 @@
+name: Tempo real (hora a hora)
+
+on:
+  schedule:
+    # Horarios em UTC. Brasil = UTC-3 o ano todo. 4x/dia (sugestao do proprio
+    # script), espalhados ao longo do dia e fora dos horarios do pipeline
+    # completo (04:00 e 18:00 BRT), pra nao competir por quota da API.
+    - cron: '0 10 * * *'  # 07:00 BRT
+    - cron: '0 14 * * *'  # 11:00 BRT
+    - cron: '0 18 * * *'  # 15:00 BRT
+    - cron: '0 22 * * *'  # 19:00 BRT
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # publica a pasta tempo_real/ direto (commit + push)
+
+concurrency:
+  group: tempo-real-start-vendor-analytics
+  cancel-in-progress: false
+
+jobs:
+  capturar_tempo_real:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instala dependencias
+        run: pip install -r requirements.txt
+
+      - name: Captura e publica tempo real
+        env:
+          SP_API_LWA_CLIENT_ID: ${{ secrets.SP_API_LWA_CLIENT_ID }}
+          SP_API_LWA_CLIENT_SECRET: ${{ secrets.SP_API_LWA_CLIENT_SECRET }}
+          SP_API_MARKETPLACE_ID: A2Q3Y263D00KWC
+          SP_API_REGION: NA
+          SP_API_REFRESH_TOKEN_ALFAJF: ${{ secrets.SP_API_REFRESH_TOKEN_ALFAJF }}
+          SP_API_REFRESH_TOKEN_BALBOA: ${{ secrets.SP_API_REFRESH_TOKEN_BALBOA }}
+          SP_API_REFRESH_TOKEN_BLIDSHOP: ${{ secrets.SP_API_REFRESH_TOKEN_BLIDSHOP }}
+          SP_API_REFRESH_TOKEN_JOLITEX: ${{ secrets.SP_API_REFRESH_TOKEN_JOLITEX }}
+          SP_API_REFRESH_TOKEN_OZITP: ${{ secrets.SP_API_REFRESH_TOKEN_OZITP }}
+          SP_API_REFRESH_TOKEN_PETCLEAN: ${{ secrets.SP_API_REFRESH_TOKEN_PETCLEAN }}
+          SP_API_REFRESH_TOKEN_RIOMASTER: ${{ secrets.SP_API_REFRESH_TOKEN_RIOMASTER }}
+          SP_API_REFRESH_TOKEN_PLASTPET: ${{ secrets.SP_API_REFRESH_TOKEN_PLASTPET }}
+        run: python scripts/capturar_tempo_real.py
