@@ -164,7 +164,19 @@ if 'nothing to commit' in (r.stdout + r.stderr):
     print('Nada mudou desde a ultima publicacao -- nada a enviar.')
 else:
     print(r.stdout)
-    rodar(['git', '-C', PASTA_REPO, 'push'])
+    push = rodar(['git', '-C', PASTA_REPO, 'push'])
+    if push.returncode != 0:
+        # alguem (outro processo, outra sessao) publicou no meio do caminho --
+        # muito provavel numa rodada longa (captura pesada). Tenta reconciliar
+        # com um rebase e publicar de novo, uma vez, antes de desistir.
+        print('\n[aviso] push rejeitado -- provavelmente alguem publicou enquanto esta rodada capturava. '
+              'Tentando reconciliar com pull --rebase e publicar de novo...')
+        rodar(['git', '-C', PASTA_REPO, 'pull', '--rebase'])
+        push = rodar(['git', '-C', PASTA_REPO, 'push'])
+        if push.returncode != 0:
+            print('\n[ERRO] nao consegui publicar mesmo depois do rebase -- os dados desta rodada '
+                  'NAO foram ao ar. Rode publicar_github.py de novo manualmente.')
+            raise SystemExit(1)
     print(f'\nPublicado! Em 1-2 minutos os links devem refletir os dados novos:')
     print(f'https://{GITHUB_USUARIO.lower()}.github.io/{GITHUB_REPO}/dashboard_base.html')
     for conta_id in contas_isoladas:

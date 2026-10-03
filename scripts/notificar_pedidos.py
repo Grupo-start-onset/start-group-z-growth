@@ -155,7 +155,17 @@ def commitar_estado():
     if 'nothing to commit' in (r.stdout + r.stderr):
         print('[estado] nada mudou no arquivo de notificados -- nada a commitar.')
         return
-    git(['push'])
+    push = git(['push'])
+    if push.returncode != 0:
+        # mesma situacao do publicar_github.py: outro processo pode ter publicado
+        # no meio da captura. Reconcilia com rebase e tenta mais uma vez.
+        print('[aviso] push do estado rejeitado -- tentando pull --rebase e push de novo...')
+        git(['pull', '--rebase'])
+        push = git(['push'])
+        if push.returncode != 0:
+            print('[ERRO] nao consegui publicar dados_raw/pedidos_notificados.json mesmo apos rebase -- '
+                  'o estado fica so local nesta execucao (risco de reenviar o mesmo PO na proxima rodada).')
+            return
     print('[estado] dados_raw/pedidos_notificados.json commitado e enviado.')
 
 
