@@ -49,6 +49,7 @@ CONTAS_CONFIG = {
     'balboa':    'balboa/raw',
     'riomaster': 'riomaster/raw',
     'plastpet':  'plastpet/raw',
+    'wiwu':      'wiwu/raw',
 }
 
 

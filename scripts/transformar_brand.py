@@ -47,6 +47,7 @@ CONTAS_CONFIG = {
     'balboa':    'balboa/raw',
     'riomaster': 'riomaster/raw',
     'plastpet':  'plastpet/raw',
+    'wiwu':      'wiwu/raw',
 }
 
 MAX_COMPRADO_JUNTO = 5      # por ASIN

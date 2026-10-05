@@ -61,6 +61,7 @@ CONTAS_CONFIG = {
     'balboa':    {'nome': 'Balboa',    'pasta': 'balboa/raw'},
     'riomaster': {'nome': 'BR - Rio Master', 'pasta': 'riomaster/raw'},
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'pasta': 'plastpet/raw'},
+    'wiwu':      {'nome': 'WIWU', 'pasta': 'wiwu/raw'},
 }
 
 SAIDA = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, 'dados_vendor.json'))

@@ -65,6 +65,7 @@ CONTAS_CONFIG = {
     'balboa':    {'pasta': 'balboa/raw',     'secret': 'SP_API_REFRESH_TOKEN_BALBOA'},
     'riomaster': {'pasta': 'riomaster/raw',  'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER'},
     'plastpet':  {'pasta': 'plastpet/raw',   'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
+    'wiwu':      {'pasta': 'wiwu/raw',       'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
 }
 
 SELLER_IDS = {
@@ -76,6 +77,7 @@ SELLER_IDS = {
     'balboa':    '6R8TT',
     'riomaster': 'RD8QP',
     'plastpet':  'SY933',   # Pet Factory Brazil Industria Ltda
+    'wiwu':      '4E8ND',
 }
 
 # Nome da aba na planilha por conta (None = conta sem aba, usa fallback antigo)
@@ -88,6 +90,7 @@ ABA_PLANILHA = {
     'balboa':    None,      # mantido fora de proposito -- fica com cache atual (446)
     'riomaster': 'Rio Master',
     'plastpet':  None,      # sem aba na planilha -- usa fallback local
+    'wiwu':      None,      # sem aba na planilha -- usa fallback local
 }
 
 LWA_CLIENT_ID = userdata.get('SP_API_LWA_CLIENT_ID')

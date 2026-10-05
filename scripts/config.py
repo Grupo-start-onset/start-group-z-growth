@@ -48,6 +48,7 @@ CONTAS = {
     "balboa": "BALBOA",
     "riomaster": "RIOMASTER",
     "plastpet": "PLASTPET",  # nome de exibição: "Pet Factory Brazil Industria Ltda"
+    "wiwu": "WIWU",
 }
 
 _VARS_OBRIGATORIAS = ["SP_API_LWA_CLIENT_ID", "SP_API_LWA_CLIENT_SECRET"]
