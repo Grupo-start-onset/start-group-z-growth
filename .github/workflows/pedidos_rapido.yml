@@ -1,0 +1,59 @@
+name: Pedidos novos (rapido)
+
+on:
+  schedule:
+    # 03:10 BRT = 06:10 UTC. So captura pedidos (PO) e dispara email de PO
+    # novo -- nao roda captura mensal/semanal/previsao/marcas nem publica o
+    # dashboard inteiro (isso fica para as rodadas de 04:00 e 18:00 em
+    # pipeline.yml). Ideia: um check rapido de madrugada, bem mais leve.
+    - cron: '10 6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # notificar_pedidos.py comita o estado de notificados
+
+concurrency:
+  group: pipeline-start-vendor-analytics  # mesmo grupo do pipeline.yml: nunca roda junto com o completo
+  cancel-in-progress: false
+
+jobs:
+  pedidos_rapido:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instala dependencias
+        run: pip install -r requirements.txt
+
+      - name: Configura identidade do git (para os commits automaticos)
+        run: |
+          git config --global user.email "pipeline@startgrupo.com"
+          git config --global user.name "START Vendor Analytics (pipeline)"
+
+      - name: Captura pedidos + atualiza dados_vendor.json + notifica PO novo
+        env:
+          SP_API_LWA_CLIENT_ID: ${{ secrets.SP_API_LWA_CLIENT_ID }}
+          SP_API_LWA_CLIENT_SECRET: ${{ secrets.SP_API_LWA_CLIENT_SECRET }}
+          SP_API_MARKETPLACE_ID: A2Q3Y263D00KWC
+          SP_API_REGION: NA
+          SP_API_REFRESH_TOKEN_ALFAJF: ${{ secrets.SP_API_REFRESH_TOKEN_ALFAJF }}
+          SP_API_REFRESH_TOKEN_BALBOA: ${{ secrets.SP_API_REFRESH_TOKEN_BALBOA }}
+          SP_API_REFRESH_TOKEN_BLIDSHOP: ${{ secrets.SP_API_REFRESH_TOKEN_BLIDSHOP }}
+          SP_API_REFRESH_TOKEN_JOLITEX: ${{ secrets.SP_API_REFRESH_TOKEN_JOLITEX }}
+          SP_API_REFRESH_TOKEN_OZITP: ${{ secrets.SP_API_REFRESH_TOKEN_OZITP }}
+          SP_API_REFRESH_TOKEN_PETCLEAN: ${{ secrets.SP_API_REFRESH_TOKEN_PETCLEAN }}
+          SP_API_REFRESH_TOKEN_RIOMASTER: ${{ secrets.SP_API_REFRESH_TOKEN_RIOMASTER }}
+          SP_API_REFRESH_TOKEN_PLASTPET: ${{ secrets.SP_API_REFRESH_TOKEN_PLASTPET }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python scripts/capturar_pedidos.py
+          python scripts/transformar_vendor.py
+          python scripts/notificar_pedidos.py
