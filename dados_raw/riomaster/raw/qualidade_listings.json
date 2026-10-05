@@ -11457,5 +11457,117 @@
       "DISCOVERABLE"
     ],
     "issues": []
+  },
+  "B0G3CY7SSG": {
+    "sku": "XK5801",
+    "status": [],
+    "issues": [
+      {
+        "code": "18320",
+        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
+        "severity": "ERROR",
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "MISSING_IMAGE",
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      }
+    ]
+  },
+  "B09DR9SF94": {
+    "sku": "YS8394",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMT6T9K": {
+    "sku": "BV1280",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMV3KJY": {
+    "sku": "WF1622",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_depth_width_height, item_weight. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_depth_width_height",
+          "item_weight"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FJMSSRN4": {
+    "sku": "CX1506",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMTS9QK": {
+    "sku": "XTX3734",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMY8H9V": {
+    "sku": "XTX3735",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMV9ZC4": {
+    "sku": "XTX3722",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMSL4Z6": {
+    "sku": "KX4380",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJN568F8": {
+    "sku": "HY5386",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FJMWXX38": {
+    "sku": "SR5562",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
   }
 }

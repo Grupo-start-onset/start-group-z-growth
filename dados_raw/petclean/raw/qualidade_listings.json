@@ -3397,5 +3397,28 @@
         }
       }
     ]
+  },
+  "B0FGFKNX7R": {
+    "sku": "16430008",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: target_gender, item_form, item_volume, scent. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_form",
+          "item_volume",
+          "scent",
+          "target_gender"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   }
 }
