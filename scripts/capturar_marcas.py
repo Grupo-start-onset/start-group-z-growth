@@ -1,41 +1,45 @@
 # ==================================================================
-# CAPTURA: Marca de cada produto (Listings Items API), EM LOTE
-# Roda no Colab. Descobre a MARCA cadastrada na Amazon de cada ASIN
-# e grava em <conta>/raw/catalogo.json (campo "marca"), que o
-# transformar_vendor.py ja le. E o que alimenta o filtro "Marca" do
-# dashboard (contas com 2 ou mais marcas, como OZITP e Pet Clean).
+# CAPTURA: Marca e imagem principal de cada produto (Listings Items
+# API), EM LOTE. Roda no Colab/Actions. Descobre a MARCA cadastrada na
+# Amazon de cada ASIN e a URL da IMAGEM principal (summaries.mainImage.link)
+# e grava em <conta>/raw/catalogo.json (campos "marca" e "imagem"), que
+# o transformar_vendor.py ja le. Alimenta o filtro "Marca" do dashboard
+# E as fotos de produto em todas as paginas (antes, imagem sempre null
+# -- nenhuma captura buscava esse campo).
 #
 # Por que este script existe: a Catalog Items API (get_catalog_item)
 # devolve brand = None para estas contas, entao o campo "marca" do
 # catalogo.json ficou vazio em todos os ASINs. O atributo "brand" da
 # Listings Items API (attributes.brand[0].value) e o cadastro do
-# proprio produto.
+# proprio produto. A mesma chamada (includedData=summaries) ja trazia
+# mainImage.link, so que o script nao estava lendo esse campo.
 #
 # Como funciona:
 #   1) Junta os ASINs da conta (catalogo, listings, vendas, estoque e
 #      pedidos ja capturados em <conta>/raw/).
-#   2) Marca que ja esta salva (marcas.json) ou que ja veio no
-#      listings_attributes.json (captura de atributos que voce ja tem)
-#      NAO gasta chamada de API.
+#   2) ASIN que ja tem marca E imagem em cache (marcas.json) ou que ja
+#      veio no listings_attributes.json (so marca) NAO gasta chamada de
+#      API para a marca -- mas se faltar imagem, ainda assim precisa
+#      da API (so summaries traz mainImage).
 #   3) So o que falta vai para a API, EM LOTE: search_listings_items
 #      com ate TAMANHO_LOTE ASINs por chamada (padrao de 25/09/2026).
-#   4) Grava marcas.json (cache) e atualiza "marca" no catalogo.json.
-#      Nao mexe em nome, imagem nem BSR de quem ja esta no catalogo;
-#      ASIN que ainda nao esta no catalogo entra so com a marca (e o
+#   4) Grava marcas.json (cache) e atualiza "marca"/"imagem" no
+#      catalogo.json. Nao mexe em nome nem BSR de quem ja esta la;
+#      ASIN que ainda nao esta no catalogo entra com marca+imagem (e o
 #      nome do anuncio, quando a API traz).
 #
-# Cache: roda de novo sem problema; so busca o que falta. ASIN que a
-# API nao devolveu (sem anuncio ativo na conta) fica com "erro" e e
-# tentado de novo na proxima rodada. Produto que existe mas nao tem
-# marca cadastrada fica registrado e nao e refeito (apague marcas.json
-# da conta para refazer tudo).
+# Cache: roda de novo sem problema; so busca o que falta (marca OU
+# imagem). ASIN que a API nao devolveu (sem anuncio ativo na conta)
+# fica com "erro" e e tentado de novo na proxima rodada. Produto que
+# existe mas nao tem marca cadastrada fica registrado e nao e refeito
+# (apague marcas.json da conta para refazer tudo).
 #
 # Rodar DEPOIS de capturar_mensal/pedidos (para ter a lista de ASINs)
 # e ANTES do transformar_vendor.py.
 #
 # Salva em: START_Vendor_Analytics/<conta>/raw/marcas.json
-# Formato: { "<asin>": {"marca": "KastKing"|null, "nome":..., "fonte":...,
-#                       "erro": ...(opcional)} }
+# Formato: { "<asin>": {"marca": "KastKing"|null, "imagem": "https://..."|null,
+#                       "nome":..., "fonte":..., "erro": ...(opcional)} }
 # ==================================================================
 
 import os, json, glob, time
@@ -200,22 +204,24 @@ def capturar_conta(chave, cfg):
     if not isinstance(marcas, dict):
         marcas = {}
 
-    # 1) o que ja esta resolvido sem API: cache anterior e listings_attributes.json
-    do_cache = sum(1 for a in asins if a in marcas and not marcas[a].get('erro'))
+    # 1) o que ja esta resolvido sem API: cache anterior (com marca E imagem) e
+    # listings_attributes.json (so tem atributos, nunca imagem -- nao conta pra cache de imagem)
+    completo = lambda a: a in marcas and not marcas[a].get('erro') and marcas[a].get('imagem') is not None
+    do_cache = sum(1 for a in asins if completo(a))
     listings_attrs = ler_json(f'{pasta_raw}/listings_attributes.json', {})
     aproveitados = 0
     if isinstance(listings_attrs, dict):
         for a in asins:
-            if a in marcas and not marcas[a].get('erro'):
-                continue
+            if a in marcas and not marcas[a].get('erro') and marcas[a].get('marca'):
+                continue  # ja tem marca (de algum cache); so falta imagem, que so vem da API
             marca = marca_dos_atributos((listings_attrs.get(a) or {}).get('attributes'), MARKETPLACE.marketplace_id)
             if marca:
-                marcas[a] = {'marca': marca, 'nome': None, 'fonte': 'listings_attributes'}
+                marcas[a] = {'marca': marca, 'imagem': (marcas.get(a) or {}).get('imagem'), 'nome': None, 'fonte': 'listings_attributes'}
                 aproveitados += 1
-    print(f'  {do_cache} ja em cache, {aproveitados} aproveitados do listings_attributes.json (sem chamada de API)')
+    print(f'  {do_cache} ja em cache (marca+imagem), {aproveitados} marcas aproveitadas do listings_attributes.json')
 
-    # 2) o que falta vai para a API, em lote
-    faltando = [a for a in asins if a not in marcas or marcas[a].get('erro')]
+    # 2) o que falta (marca OU imagem) vai para a API, em lote
+    faltando = [a for a in asins if not completo(a)]
     ok, sem_resultado, erros = 0, 0, 0
     amostra_sem_marca = None
     if faltando:
@@ -243,13 +249,14 @@ def capturar_conta(chave, cfg):
                             continue
                         encontrados.add(asin_item)
                         marca = marca_do_item(item, MARKETPLACE.marketplace_id)
-                        marcas[asin_item] = {'marca': marca, 'nome': resumo.get('itemName'), 'fonte': 'api'}
+                        imagem = (resumo.get('mainImage') or {}).get('link')
+                        marcas[asin_item] = {'marca': marca, 'imagem': imagem, 'nome': resumo.get('itemName'), 'fonte': 'api'}
                         if marca:
                             ok += 1
                         elif amostra_sem_marca is None:
                             amostra_sem_marca = (asin_item, sorted((item.get('attributes') or {}).keys())[:20])
                     for asin_faltante in set(lote) - encontrados:   # sem anuncio da conta / nao devolvido
-                        marcas[asin_faltante] = {'marca': None, 'nome': None, 'fonte': 'api', 'erro': 'sem resultado no lote'}
+                        marcas[asin_faltante] = {'marca': None, 'imagem': None, 'nome': None, 'fonte': 'api', 'erro': 'sem resultado no lote'}
                         sem_resultado += 1
                 except RuntimeError as e:
                     print(f'  [ERRO FATAL] {e}')
@@ -265,7 +272,7 @@ def capturar_conta(chave, cfg):
                 time.sleep(INTERVALO)
     salvar_json(caminho_marcas, marcas)
 
-    # 3) grava a marca no catalogo.json (nao mexe em nome/imagem/BSR de quem ja esta la)
+    # 3) grava marca e imagem no catalogo.json (nao mexe em nome nem BSR de quem ja esta la)
     caminho_catalogo = f'{pasta_raw}/catalogo.json'
     catalogo = ler_json(caminho_catalogo, {})
     if not isinstance(catalogo, dict):
@@ -273,19 +280,25 @@ def capturar_conta(chave, cfg):
     novos, atualizados = 0, 0
     for a in asins:
         m = marcas.get(a) or {}
-        marca = m.get('marca')
-        if not marca:
+        marca, imagem = m.get('marca'), m.get('imagem')
+        if not marca and not imagem:
             continue
         item = catalogo.get(a)
         if item is None:
-            catalogo[a] = {'nome': m.get('nome'), 'marca': marca, 'imagem': None, 'bsr': []}
+            catalogo[a] = {'nome': m.get('nome'), 'marca': marca, 'imagem': imagem, 'bsr': []}
             novos += 1
         else:
-            if item.get('marca') != marca:
+            mudou = False
+            if marca and item.get('marca') != marca:
                 item['marca'] = marca
-                atualizados += 1
+                mudou = True
+            if imagem and item.get('imagem') != imagem:
+                item['imagem'] = imagem
+                mudou = True
             if not item.get('nome') and m.get('nome'):
                 item['nome'] = m['nome']
+            if mudou:
+                atualizados += 1
     if novos or atualizados:
         salvar_json(caminho_catalogo, catalogo)
 
