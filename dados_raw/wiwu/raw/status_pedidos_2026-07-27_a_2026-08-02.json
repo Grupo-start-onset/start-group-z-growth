@@ -1,0 +1,103 @@
+[
+  {
+    "purchaseOrderNumber": "4LRVGEBC",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-02-02T05:59:58Z",
+    "lastUpdatedDate": "2026-07-27T23:59:24Z",
+    "sellingParty": {
+      "partyId": "4E8ND"
+    },
+    "shipToParty": {
+      "partyId": "GRU5"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0CKTCPDWW",
+        "vendorProductIdentifier": "6976195095326",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "45"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "50"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-07-27T23:59:24Z",
+              "orderedQuantity": {
+                "amount": 1,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "REJECTED",
+          "rejectedQuantity": {
+            "amount": 1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      },
+      {
+        "itemSequenceNumber": "2",
+        "buyerProductIdentifier": "B0CH711P59",
+        "vendorProductIdentifier": "6936686411318",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "52.46"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "87.44"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-07-27T23:59:24Z",
+              "orderedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          }
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      }
+    ]
+  }
+]

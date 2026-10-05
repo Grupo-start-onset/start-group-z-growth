@@ -1,0 +1,78 @@
+[
+  {
+    "purchaseOrderNumber": "49HVUSRK",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-04-27T05:43:45Z",
+    "lastUpdatedDate": "2026-05-27T06:58:58Z",
+    "sellingParty": {
+      "partyId": "4E8ND"
+    },
+    "shipToParty": {
+      "partyId": "GRU9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0CX5HQG1B",
+        "vendorProductIdentifier": "6936686411400",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "74.94"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "83.26"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-04-27T05:52:25Z",
+              "orderedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-04-27T18:20:10Z",
+              "acceptedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-05-27T04:45:12.292Z"
+        }
+      }
+    ]
+  }
+]

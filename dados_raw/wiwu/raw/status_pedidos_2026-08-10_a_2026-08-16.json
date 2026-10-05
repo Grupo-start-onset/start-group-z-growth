@@ -1,0 +1,78 @@
+[
+  {
+    "purchaseOrderNumber": "6DU6T36N",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-08-14T19:28:53Z",
+    "lastUpdatedDate": "2026-08-26T12:59:11Z",
+    "sellingParty": {
+      "partyId": "4E8ND"
+    },
+    "shipToParty": {
+      "partyId": "XCV9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B08ZLWX5L9",
+        "vendorProductIdentifier": "6973218930374",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "108.65"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "120.73"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-08-14T19:28:58Z",
+              "orderedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-08-17T12:50:37Z",
+              "acceptedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-08-26T12:42:11.950Z"
+        }
+      }
+    ]
+  }
+]
