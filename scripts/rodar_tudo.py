@@ -39,6 +39,7 @@ TRANSFORMA = [
     'transformar_semanas.py',  # complementos -- sempre depois do transformar_vendor.py
     'transformar_destaque.py',
     'transformar_brand.py',
+    'transformar_origem.py',
 ]
 # roda depois do transformar_vendor.py (precisa do bloco `pedidos` atualizado) e
 # antes de publicar -- manda email quando aparece PO novo desde a ultima execucao.
