@@ -591,7 +591,7 @@ def processar_conta(pasta_raw):
     # --- Curva ABC ---
     tot_rec = {}
     for a, ms in vendas.items():
-        r = sum(v['orderedRevenue'] for v in ms.values())
+        r = sum(v['shippedRevenue'] for v in ms.values())
         if r > 0:
             tot_rec[a] = r
     ordenado = sorted(tot_rec.items(), key=lambda x: -x[1])
@@ -669,12 +669,12 @@ def analisar(d):
     V, E, T, M = d['vendas'], d['estoque'], d['trafego'], d['margem']
     AV, AE, AT, AM = d['aggVendas'], d['aggEstoque'], d['aggTrafego'], d['aggMargem']
     meses = sorted(set(list(AV) + list(AE) + list(AT) + list(AM)))
-    ult = next((m for m in reversed(meses) if AV.get(m, {}).get('orderedUnits', 0) > 0), None)
+    ult = next((m for m in reversed(meses) if AV.get(m, {}).get('shippedUnits', 0) > 0), None)
     if not ult:
         return None
 
     tv = sum(AT.get(m, {}).get('glanceViews', 0) for m in meses)
-    tu = sum(AV.get(m, {}).get('orderedUnits', 0) for m in meses)
+    tu = sum(AV.get(m, {}).get('shippedUnits', 0) for m in meses)
     conv_geral = tu / tv if tv > 0 else 0
     ticket = d['ticketMarkup'].get(ult, {}).get('ticket', 0)
     npm = AM.get(ult, {}).get('npm')
@@ -683,9 +683,9 @@ def analisar(d):
     for a in set(V) | set(E) | set(T) | set(M):
         v = V.get(a, {}).get(ult, {}); e = E.get(a, {}).get(ult, {})
         t = T.get(a, {}).get(ult, {}); mg = M.get(a, {}).get(ult, {}); s = d['sellin'].get(a, {})
-        views = t.get('glanceViews', 0); ped = v.get('orderedUnits', 0)
+        views = t.get('glanceViews', 0); ped = v.get('shippedUnits', 0)
         perfil[a] = {
-            'views': views, 'ped': ped, 'env': v.get('shippedUnits', 0), 'rec': v.get('orderedRevenue', 0),
+            'views': views, 'ped': ped, 'env': v.get('shippedUnits', 0), 'rec': v.get('shippedRevenue', 0),
             'cogs': v.get('shippedCogs', 0), 'dev': v.get('customerReturns', 0),
             'est': e.get('sellableUnits', 0), 'parado': e.get('unhealthyUnits', 0),
             'a90': e.get('aged90Units', 0), 'giro': e.get('sellThrough', 0), 'openPO': e.get('openPO', 0),
@@ -772,7 +772,7 @@ def analisar(d):
         av = AV.get(m, {}); ae = AE.get(m, {})
         vd = av.get('shippedUnits', 0) / 30 if av.get('shippedUnits', 0) > 0 else 0
         cobertura[m] = ae.get('sellableUnits', 0) / vd if vd > 0 else None
-    conversao = {m: (AV.get(m, {}).get('orderedUnits', 0) / AT[m]['glanceViews']
+    conversao = {m: (AV.get(m, {}).get('shippedUnits', 0) / AT[m]['glanceViews']
                       if AT.get(m, {}).get('glanceViews', 0) > 0 else None) for m in meses}
 
     scatter = [{'a': a, 'x': p['views'], 'y': round((p['conv'] or 0) * 100, 2), 'r': round(p['rec'], 2)}
