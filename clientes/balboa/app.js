@@ -101,7 +101,7 @@ function marcasDaConta(k, c){
     const x = info[m] || (info[m] = { nome: m, asins: 0, receita: 0 });
     x.asins++;
     const vs = (c.vendas || {})[a];
-    if (vs) for (const mes of Object.keys(vs)) x.receita += vs[mes].orderedRevenue || 0;
+    if (vs) for (const mes of Object.keys(vs)) x.receita += vs[mes].shippedRevenue || 0;
   }
   const lista = Object.values(info).sort((p, q) => (q.receita - p.receita) || (q.asins - p.asins));
   return lista.length >= 2 ? lista : [];
@@ -186,11 +186,11 @@ function analisarConta(d){
   const V = d.vendas || {}, E = d.estoque || {}, T = d.trafego || {}, M = d.margem || {};
   const AV = d.aggVendas || {}, AE = d.aggEstoque || {}, AT = d.aggTrafego || {}, AM = d.aggMargem || {};
   const meses = [...new Set([...Object.keys(AV), ...Object.keys(AE), ...Object.keys(AT), ...Object.keys(AM)])].sort();
-  const ult = [...meses].reverse().find(m => ((AV[m] || {}).orderedUnits || 0) > 0);
+  const ult = [...meses].reverse().find(m => ((AV[m] || {}).shippedUnits || 0) > 0);
   if (!ult) return null;
 
   const tv = meses.reduce((s, m) => s + ((AT[m] || {}).glanceViews || 0), 0);
-  const tu = meses.reduce((s, m) => s + ((AV[m] || {}).orderedUnits || 0), 0);
+  const tu = meses.reduce((s, m) => s + ((AV[m] || {}).shippedUnits || 0), 0);
   const convGeral = tv > 0 ? tu / tv : 0;
   const ticket = ((d.ticketMarkup || {})[ult] || {}).ticket || 0;
   const npm = (AM[ult] || {}).npm;
@@ -198,9 +198,9 @@ function analisarConta(d){
   const perfil = {};
   for (const a of new Set([...Object.keys(V), ...Object.keys(E), ...Object.keys(T), ...Object.keys(M)])) {
     const v = (V[a] || {})[ult] || {}, e = (E[a] || {})[ult] || {}, t = (T[a] || {})[ult] || {}, mg = (M[a] || {})[ult] || {};
-    const views = t.glanceViews || 0, ped = v.orderedUnits || 0;
+    const views = t.glanceViews || 0, ped = v.shippedUnits || 0;
     perfil[a] = {
-      views, ped, rec: v.orderedRevenue || 0,
+      views, ped, rec: v.shippedRevenue || 0,
       est: e.sellableUnits || 0, parado: e.unhealthyUnits || 0, a90: e.aged90Units || 0, giro: e.sellThrough || 0,
       temInfoEst: !!e.temInfo, conv: views > 0 ? ped / views : null, npm: mg.npm == null ? null : mg.npm
     };
@@ -795,8 +795,8 @@ async function iniciarDashboard() {
         const e = (c.aggEstoque||{})[m] || {};
         const mg = (c.aggMargem||{})[m] || {};
         const tm = (c.ticketMarkup||{})[m] || {};
-        const rev = v.orderedRevenue || 0;
-        const un = v.orderedUnits || 0;
+        const rev = v.shippedRevenue || 0;
+        const un = v.shippedUnits || 0;
         const gv = t.glanceViews || 0;
         const shipUn = v.shippedUnits || 0;
         const cogs = v.shippedCogs || 0;
@@ -836,7 +836,7 @@ async function iniciarDashboard() {
       const vendas = CONTAS[k].vendas || {};
       Object.keys(vendas).forEach(asin => {
         let rev = 0;
-        meses.forEach(m => { rev += (vendas[asin][m] && vendas[asin][m].orderedRevenue) || 0; });
+        meses.forEach(m => { rev += (vendas[asin][m] && vendas[asin][m].shippedRevenue) || 0; });
         if (rev !== 0) {
           const key = asin;
           if (!soma[key]) soma[key] = {asin, rev:0, contas:new Set(), contaKey:k};
@@ -953,7 +953,7 @@ async function iniciarDashboard() {
       const ultimoMes = meses[meses.length - 1];
       Object.keys(vendas).forEach(asin => {
         let rev = 0;
-        meses.forEach(m => { rev += (vendas[asin][m] && vendas[asin][m].orderedRevenue) || 0; });
+        meses.forEach(m => { rev += (vendas[asin][m] && vendas[asin][m].shippedRevenue) || 0; });
         if (rev === 0) return;
         const info = catalogInfo(k, asin);
         const estUlt = ultimoMes ? ((c.estoque||{})[asin]||{})[ultimoMes] : null;
