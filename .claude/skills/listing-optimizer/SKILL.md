@@ -122,23 +122,45 @@ props = schema['properties']
   os 6 atributos da Visão Geral do Produto: errado em qualquer um deles
   gera Grau D automático (CDQ, confirmado).
 
-## Processo de uso (diagnóstico → reescrita → revisão → publicação)
+## Processo de uso (diagnóstico → referência → reescrita → revisão → publicação)
 
 1. **Ler o formulário vivo** (link acima) antes de começar, para pegar
    regra nova ou ASIN de referência que tenha sido adicionado.
-2. **Diagnóstico**: rodar `scripts/diagnosticar_listing.py <conta> [asin...]`
+2. **Buscar a referência da marca antes de reescrever.** O formulário
+   (Seção 4, `asinsReferencia`) tem um ASIN de referência por marca do
+   grupo, indicado pelo cliente como bem ranqueado/bem escrito. Antes de
+   reescrever qualquer item da marca X, puxar o(s) ASIN(s) de referência
+   de X com `CatalogItems.get_catalog_item(asin, includedData=['summaries','attributes'])`
+   (funciona pra ASIN de qualquer vendedor, não só os nossos) e usar o
+   padrão real de comprimento, estrutura e tom como calibração — não só
+   seguir o número teórico do CDQ isoladamente.
+   **Lição de 06/10/2026 (Rio Master, categoria Natal)**: o CDQ trata 75
+   caracteres como critério de Grau A, mas o ASIN de referência do cliente
+   (B0FM5YBV67, #3 em Enfeites de Natal) tem título de 179 caracteres, rico
+   em especificação real (altura, galhos) e adjetivos de venda. Outros 2
+   ASINs de referência da mesma categoria confirmam o padrão (150-200
+   caracteres). Título curto demais (54-61 caracteres) ficou mais pobre que
+   o padrão real do nicho, mesmo "correto" pelo documento isolado. Sempre
+   calibrar pelo exemplo real antes de aplicar o número teórico como teto.
+   Se a referência expõe um atributo que falta no nosso cadastro (ex.:
+   altura real do produto, que a Rio Master não tinha preenchido, só
+   dimensão de embalagem), registrar como pendência para o cliente
+   completar o dado — nunca inventar pra igualar à referência.
+4. **Diagnóstico**: rodar `scripts/diagnosticar_listing.py <conta> [asin...]`
    — busca título/bullets/descrição atuais + schema da categoria, aponta
    violações objetivas (CAIXA ALTA, acima do limite, termo proibido, menos
    de N bullets, bullet vazio). 100% determinístico, sem IA.
-3. **Reescrita**: para os itens com violação, buscar os atributos reais do
+5. **Reescrita**: para os itens com violação, buscar os atributos reais do
    ASIN (`includedData=['attributes']`) e redigir novo
-   título/bullets/descrição com dado real, seguindo a estrutura e os
-   limites acima. Nunca usar frase genérica de preenchimento
-   ("decoração deslumbrante e durável") no lugar de característica real —
-   isso também viola a regra de "título/bullet não genérico".
-4. **Revisão humana**: apresentar antes/depois em texto ou planilha para
+   título/bullets/descrição com dado real, calibrado pela referência da
+   marca (passo 2), seguindo a estrutura e os limites acima. Nunca usar
+   frase genérica de preenchimento ("decoração deslumbrante e durável")
+   no lugar de característica real — isso também viola a regra de
+   "título/bullet não genérico". Comprimento: mirar a faixa real observada
+   na referência, não só o mínimo teórico de Grau A.
+6. **Revisão humana**: apresentar antes/depois em texto ou planilha para
    aprovação — nunca publicar sem essa etapa enquanto o processo for novo.
-5. **Publicação**: só após aprovação, usar `patch_listings_item` com
+7. **Publicação**: só após aprovação, usar `patch_listings_item` com
    `op: replace` no atributo alterado (não precisa reenviar o listing
    inteiro, isso é só para o PUT de mudança de categoria). Nunca reenviar
    `cost_price` em conta Vendor.
