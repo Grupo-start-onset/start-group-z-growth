@@ -59,7 +59,32 @@ listados, ou (b) acesso mais direto ao Playbook pra automatizar a busca.
 Mensagem de pedido já foi redigida nesta sessão (contém a lista completa dos
 132 SKUs).
 
-## 4. Limite de 1.600 chamadas/dia — não confirmado como real
+## 5. Criação de listings novos (ASIN/SKU que ainda não existe) via API
+Pergunta do usuário (06/10/2026): dá pra subir produto novo pelo mesmo
+mecanismo usado hoje pra editar? Resposta: sim, tecnicamente — `putListingsItem`
+("Creates a new or fully-updates an existing listings item") cria um listing
+novo quando o SKU informado ainda não existe na conta, usando o mesmo endpoint
+que já validamos hoje pra PATCH/PUT de edição.
+
+Diferenças importantes em relação a editar um item existente (o que fizemos
+hoje):
+- Precisa enviar **todos** os atributos obrigatórios da categoria de uma vez
+  (título, bullets, descrição, imagens, dimensões, EAN/GTIN ou isenção,
+  preço/custo etc.) — não dá pra reaproveitar atributos já preenchidos, porque
+  não existem ainda.
+- Em conta Vendor (caso da Jolitex), a criação de ASIN novo pode passar por
+  aprovação/triagem da Amazon antes de ficar visível — precisa confirmar esse
+  comportamento especificamente (não testado ainda).
+- Se o produto novo for variação de um já existente (cor/tamanho diferente do
+  mesmo produto pai), entra a lógica de vínculo ao ASIN pai — mesma área que
+  já deu problema hoje (atributo `size`/`color` inconsistente na família).
+
+Ainda não implementado nem testado nesta sessão — é um fluxo novo (hoje só
+mexemos em listings que já existiam). Desenhar com calma na próxima sessão:
+provavelmente vale um teste piloto com 1 produto novo real antes de escalar,
+igual fizemos hoje com a reclassificação de categoria.
+
+## 6. Limite de 1.600 chamadas/dia — não confirmado como real
 Investigado nesta sessão: não existe menção a um teto diário de 1.600 chamadas
 na documentação oficial da SP-API (o rate limit documentado é por segundo,
 ex: 5 req/s pra Listings Items API, sem teto diário). O usuário disse que o
