@@ -110,6 +110,7 @@ CONTAS_CONFIG = {
     'riomaster': {'nome': 'BR - Rio Master', 'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER'},
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'nome': 'WIWU', 'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
+    'petiko':    {'nome': 'PETIKO', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
 }
 
 # tipo interno -> (reportType da Amazon, campo da linha -> chave curta no arquivo)

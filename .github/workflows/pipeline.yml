@@ -56,6 +56,8 @@ jobs:
           SP_API_REFRESH_TOKEN_PETCLEAN: ${{ secrets.SP_API_REFRESH_TOKEN_PETCLEAN }}
           SP_API_REFRESH_TOKEN_RIOMASTER: ${{ secrets.SP_API_REFRESH_TOKEN_RIOMASTER }}
           SP_API_REFRESH_TOKEN_PLASTPET: ${{ secrets.SP_API_REFRESH_TOKEN_PLASTPET }}
+          SP_API_REFRESH_TOKEN_WIWU: ${{ secrets.SP_API_REFRESH_TOKEN_WIWU }}
+          SP_API_REFRESH_TOKEN_PETIKO: ${{ secrets.SP_API_REFRESH_TOKEN_PETIKO }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python scripts/rodar_tudo.py

@@ -56,6 +56,7 @@ CONTAS_CONFIG = {
     'riomaster': {'nome': 'BR - Rio Master', 'pasta': 'riomaster/raw', 'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER'},
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'pasta': 'plastpet/raw', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'nome': 'WIWU', 'pasta': 'wiwu/raw', 'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
+    'petiko':    {'nome': 'PETIKO', 'pasta': 'petiko/raw', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
 }
 
 ARQUIVO = 'previsao_60dias.json'

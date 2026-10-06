@@ -65,6 +65,7 @@ CONTAS_CONFIG = {
     'riomaster': {'nome': 'BR - Rio Master', 'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER','seller_id': 'RD8QP'},
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET', 'seller_id': 'SY933'},
     'wiwu':      {'nome': 'WIWU', 'secret': 'SP_API_REFRESH_TOKEN_WIWU', 'seller_id': '4E8ND'},
+    'petiko':    {'nome': 'PETIKO', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO', 'seller_id': 'YM9CK'},
 }
 # nome de exibicao (como sai na planilha) -> chave interna da conta
 NOME_PARA_CHAVE = {cfg['nome']: chave for chave, cfg in CONTAS_CONFIG.items()}

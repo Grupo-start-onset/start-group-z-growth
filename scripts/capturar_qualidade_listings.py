@@ -66,6 +66,7 @@ CONTAS_CONFIG = {
     'riomaster': {'pasta': 'riomaster/raw',  'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER'},
     'plastpet':  {'pasta': 'plastpet/raw',   'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'pasta': 'wiwu/raw',       'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
+    'petiko':    {'pasta': 'petiko/raw',     'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
 }
 
 SELLER_IDS = {
@@ -78,6 +79,7 @@ SELLER_IDS = {
     'riomaster': 'RD8QP',
     'plastpet':  'SY933',   # Pet Factory Brazil Industria Ltda
     'wiwu':      '4E8ND',
+    'petiko':    'YM9CK',
 }
 
 # Nome da aba na planilha por conta (None = conta sem aba, usa fallback antigo)
@@ -91,6 +93,7 @@ ABA_PLANILHA = {
     'riomaster': 'Rio Master',
     'plastpet':  None,      # sem aba na planilha -- usa fallback local
     'wiwu':      None,      # sem aba na planilha -- usa fallback local
+    'petiko':    None,      # sem aba na planilha -- usa fallback local
 }
 
 LWA_CLIENT_ID = userdata.get('SP_API_LWA_CLIENT_ID')

@@ -48,6 +48,7 @@ CONTAS_CONFIG = {
     'riomaster': 'riomaster/raw',
     'plastpet':  'plastpet/raw',
     'wiwu':      'wiwu/raw',
+    'petiko':    'petiko/raw',
 }
 
 MAX_COMPRADO_JUNTO = 5      # por ASIN

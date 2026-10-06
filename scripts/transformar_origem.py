@@ -51,6 +51,7 @@ CONTAS_CONFIG = {
     'riomaster': 'riomaster/raw',
     'plastpet':  'plastpet/raw',
     'wiwu':      'wiwu/raw',
+    'petiko':    'petiko/raw',
 }
 
 

@@ -68,6 +68,7 @@ CONTAS_CONFIG = {
     'riomaster': {'pasta': 'riomaster/raw',  'secret': 'SP_API_REFRESH_TOKEN_RIOMASTER'},
     'plastpet':  {'pasta': 'plastpet/raw',   'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'pasta': 'wiwu/raw',       'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
+    'petiko':    {'pasta': 'petiko/raw',     'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
 }
 
 SELLER_IDS = {
@@ -80,6 +81,7 @@ SELLER_IDS = {
     'riomaster': 'RD8QP',
     'plastpet':  'SY933',   # Pet Factory Brazil Industria Ltda
     'wiwu':      '4E8ND',
+    'petiko':    'YM9CK',
 }
 
 # None = todas as contas. Para testar so uma: CONTAS_ALVO = ['ozitp']

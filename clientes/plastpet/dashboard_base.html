@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="icon" type="image/png" href="../../assets/favicon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
   <!-- ============ MENU LATERAL ============ -->
   <aside class="side">
     <div class="brand">
-      <img class="brand-logo" src="assets/start-wordmark-white.png" alt="START">
+      <img class="brand-logo" src="../../assets/start-wordmark-white.png" alt="START">
       <div class="brand-rule"></div>
       <div class="brand-sub">Inteligência Vendor Central</div>
     </div>
@@ -61,7 +61,7 @@
 
     <header class="topbar">
       <div class="pagehead">
-        <img class="topmark" src="assets/start-s.png" alt="">
+        <img class="topmark" src="../../assets/start-s.png" alt="">
         <div>
           <h1 id="pageTitle">Início</h1>
           <p class="sub" id="pageSub"></p>
@@ -215,6 +215,18 @@
               <p class="desc">Uma linha por conta selecionada</p>
               <div class="chartbox"><canvas id="chFatMes"></canvas></div>
             </div>
+          </div>
+        </div>
+
+        <div class="section" id="sec-origem">
+          <p class="sectitle">Venda própria × outros distribuidores <span class="beta">dado oficial da Amazon</span></p>
+          <p class="secdesc">A Amazon soma, na visão padrão do painel, o que foi vendido por qualquer distribuidor cadastrado na mesma marca/fabricante — não só o que passou pela sua conta de fornecedor. Comparação entre as duas visões oficiais da Amazon (Fabricação × Origem), nos últimos 6 meses fechados. O mês corrente não aparece: a Amazon só consolida a visão Origem no fechamento do mês.</p>
+          <div class="trstatus" id="origemStatus" hidden></div>
+          <div class="kpis" id="origemKpi" style="margin-bottom:16px"></div>
+          <div class="card">
+            <h3>Mês a mês</h3>
+            <p class="desc" id="origemGrafDesc">A sua venda (linha verde) contra a venda de outros distribuidores / market place (linha vermelha).</p>
+            <div class="chartbox"><canvas id="chOrigem"></canvas></div>
           </div>
         </div>
 

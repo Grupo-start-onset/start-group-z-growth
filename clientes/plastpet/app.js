@@ -1424,6 +1424,58 @@ async function iniciarDashboard() {
     });
   }
 
+  function renderOrigem(){
+    const contas = state.contas.filter(k => CONTAS[k].origemFabricacao);
+    const sem = state.contas.filter(k => !CONTAS[k].origemFabricacao).map(k => CONTA_NOME[k]);
+    const st = document.getElementById('origemStatus');
+    if (!contas.length) {
+      st.hidden = false; st.className = 'trstatus warn';
+      st.innerHTML = 'Ainda não há dados de origem x fabricação para as contas selecionadas. Rode o <code>capturar_mensal.py</code> (captura a visão SOURCING) e depois o <code>transformar_origem.py</code>.';
+      document.getElementById('origemKpi').innerHTML = '';
+      destroyChart('origem');
+      return;
+    }
+    if (sem.length) { st.hidden = false; st.className = 'trstatus'; st.innerHTML = 'Sem dados de origem x fabricação: ' + esc(sem.join(', ')) + ' (ainda não capturado para essa conta).'; }
+    else st.hidden = true;
+
+    // soma por mes entre as contas selecionadas (so os meses presentes em ao menos 1 conta)
+    const ids = [...new Set(contas.flatMap(k => CONTAS[k].origemFabricacao.meses.map(m => m.id)))].sort().slice(-6);
+    const porMes = ids.map(id => {
+      let fabricacao = 0, origem = 0;
+      contas.forEach(k => {
+        const m = CONTAS[k].origemFabricacao.meses.find(x => x.id === id);
+        if (m) { fabricacao += m.fabricacao; origem += m.origem; }
+      });
+      return { id, fabricacao, origem, outros: Math.max(0, fabricacao - origem) };
+    });
+
+    const totFab = porMes.reduce((s, m) => s + m.fabricacao, 0);
+    const totOri = porMes.reduce((s, m) => s + m.origem, 0);
+    const totOutros = Math.max(0, totFab - totOri);
+    const pctOutros = totFab > 0 ? totOutros / totFab : null;
+
+    document.getElementById('origemKpi').innerHTML =
+      kpiHTML('Vendido no total (Fabricação)', MOEDA(totFab), 'todos os distribuidores da marca · últimos ' + ids.length + ' mês(es) fechados') +
+      kpiHTML('Vendido pela sua conta (Origem)', MOEDA(totOri), 'só o que você abasteceu') +
+      kpiHTML('Outros distribuidores / market place', MOEDA(totOutros) + (pctOutros == null ? '' : ' (' + PCT(pctOutros) + ')'), 'não passou pela sua conta', pctOutros != null && pctOutros >= 0.1);
+
+    destroyChart('origem');
+    const corBad = getComputedStyle(document.documentElement).getPropertyValue('--bad').trim() || '#A32E2A';
+    const corGood = getComputedStyle(document.documentElement).getPropertyValue('--good').trim() || '#2C7A57';
+    charts.origem = new Chart(document.getElementById('chOrigem'), {
+      type: 'line',
+      data: { labels: ids.map(MESLABEL),
+        datasets: [
+          { label: 'Outros distribuidores / market place', data: porMes.map(m => m.outros),
+            borderColor: corBad, backgroundColor: 'transparent', tension: .25, pointRadius: 3 },
+          { label: 'Vendido pela sua conta (Origem)', data: porMes.map(m => m.origem),
+            borderColor: corGood, backgroundColor: 'transparent', tension: .25, pointRadius: 3 },
+        ] },
+      options: { ...baseGridOpts(), plugins: { legend: { labels: { boxWidth: 10, boxHeight: 10, font: { size: 11 } } },
+        tooltip: { callbacks: { label: c => c.dataset.label + ': ' + MOEDA(c.raw) } } } }
+    });
+  }
+
   function renderEstoque(porMes, meses){
     destroyChart('estoque');
     charts.estoque = new Chart(document.getElementById('chEstoque'), {
@@ -2755,7 +2807,7 @@ async function iniciarDashboard() {
     alertas:   { titulo:'Alertas', sub:'O que exige ação agora, por prioridade (semana fechada contra a anterior; não usa o filtro de período)', periodo:false,
                  render: () => renderAlertas() },
     vendas:    { titulo:'Vendas e margem', sub:'Faturamento e margem no período', periodo:true,
-                 render: ag => { renderFaturamento(ag.porConta, ag.meses); renderMargemMarkup(ag.porMes, ag.meses); } },
+                 render: ag => { renderFaturamento(ag.porConta, ag.meses); renderOrigem(); renderMargemMarkup(ag.porMes, ag.meses); } },
     estoque:   { titulo:'Estoque', sub:'Composição, conversão, cobertura e ruptura', periodo:true,
                  render: ag => renderEstoque(ag.porMes, ag.meses) },
     compras:   { titulo:'Compras e pedidos', sub:'Sell-in vs. sell-out e pedidos de compra (POs)', periodo:true,

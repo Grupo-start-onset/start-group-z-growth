@@ -177,6 +177,9 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.82rem}
 #tblPedidos .ponum{font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.2px}
 #tblPedidos tr.peddet > td{background:#FBF9F5;padding:4px 10px 12px 28px}
 #tblPedidos tr.peddet:hover > td{background:#FBF9F5}
+#tblPedidos .pedManualInput{font-family:inherit;font-size:.85rem;font-weight:600;padding:5px 8px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--ink);width:100%;box-sizing:border-box;cursor:text}
+#tblPedidos .pedFaturadoInput{max-width:120px;text-align:right}
+#tblPedidos .pedStatusInput{min-width:140px}
 #tblPedidos table.itens{width:100%;border-collapse:collapse;font-size:.76rem;background:#fff;border:1px solid var(--line);border-radius:8px}
 #tblPedidos table.itens th{position:static}
 #tblPedidos .pedmeta{font-size:.72rem;color:var(--muted);margin:6px 0}

@@ -48,4 +48,6 @@ jobs:
           SP_API_REFRESH_TOKEN_PETCLEAN: ${{ secrets.SP_API_REFRESH_TOKEN_PETCLEAN }}
           SP_API_REFRESH_TOKEN_RIOMASTER: ${{ secrets.SP_API_REFRESH_TOKEN_RIOMASTER }}
           SP_API_REFRESH_TOKEN_PLASTPET: ${{ secrets.SP_API_REFRESH_TOKEN_PLASTPET }}
+          SP_API_REFRESH_TOKEN_WIWU: ${{ secrets.SP_API_REFRESH_TOKEN_WIWU }}
+          SP_API_REFRESH_TOKEN_PETIKO: ${{ secrets.SP_API_REFRESH_TOKEN_PETIKO }}
         run: python scripts/capturar_tempo_real.py

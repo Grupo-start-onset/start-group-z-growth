@@ -53,7 +53,7 @@ ARQUIVO_ESTADO = os.path.join(RAIZ, 'dados_raw', 'pedidos_notificados.json')
 CONTA_NOME = {
     'alfa_jf': 'ALFA JF', 'blidshop': 'Blid Shop', 'conta3': 'Petclean BR',
     'ozitp': 'OZITP', 'jolitex': 'Jolitex', 'balboa': 'Balboa', 'riomaster': 'BR - Rio Master',
-    'plastpet': 'Pet Factory Brazil Industria Ltda', 'wiwu': 'WIWU',
+    'plastpet': 'Pet Factory Brazil Industria Ltda', 'wiwu': 'WIWU', 'petiko': 'PETIKO',
 }
 
 # FASE DE TESTE: todas as contas mandam pro mesmo email. Pra ligar pro
