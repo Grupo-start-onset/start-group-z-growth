@@ -24,24 +24,49 @@ sem reclamar, então um processo 100% autônomo rodando todo dia sem revisão
 corre risco de piorar listagens sem ninguém perceber (perda de SEO, texto
 pior, possível violação de política só percebida depois via supressão).
 
-## 2. JOLITEX — reclassificação de categoria (productType), itens restantes
-Hoje (06/10/2026) reclassificamos 198 ASINs "HOME" (genérico) para categorias
-específicas (VASE, BASKET, FOOD_STORAGE_CONTAINER, TRASH_CAN, TRAY,
-BATHROOM_CONTAINER_SET, DISHWARE_PLATE, FURNITURE_CART, HANGING_ORNAMENT,
-KNIFE_BLOCK_SET, FLATWARE, THERMOS, BUTTER_DISH, STORAGE_BOX, SHELF, CADDY,
-DISPOSABLE_NAPKIN, BED_LINEN_SET, FITTED_SHEET) — 198/198 aceitos.
+## 2. JOLITEX — reclassificação de categoria (productType) — PRATICAMENTE CONCLUÍDA
+Hoje (06/10/2026), em duas etapas:
 
-Ficaram de fora:
-- **83 ASINs "HOME" sem padrão de nome reconhecível** — precisam de pesquisa
-  individual de categoria (via `search_definitions_product_types`) e validação
-  um a um. Lista completa nos dados do script `reclassificar_jolitex_lote2.py`
-  (ver `sem_match` na análise), ou refazer a partir do catálogo completo
-  (ver item abaixo).
-- **~173 ASINs que não aparecem na busca paginada** — a conta tem 1.173 ASINs
-  reais, mas `search_listings_items` só pagina até 1.000 resultados (limite da
-  própria API da Amazon, não é bug nosso). Pra alcançar os ~173 restantes,
-  precisa de outro caminho: relatório de inventário via Reports API (ex:
-  GET_MERCHANT_LISTINGS_ALL_DATA ou similar), que não tem esse teto de 1.000.
+**Etapa 1** (sessão anterior, catálogo parcial de ~1.000 ASINs, limite de
+paginação da Amazon): 198 ASINs "HOME" reclassificados — 198/198 aceitos.
+
+**Etapa 2** (sessão atual, catálogo COMPLETO): resolvido o teto de 1.000
+resultados do `search_listings_items` com paginação por cursor de data
+(`sortBy=lastUpdatedDate, sortOrder=ASC` + `lastUpdatedAfter=<máximo da rodada
+anterior>`, em múltiplas rodadas) — técnica não documentada pela Amazon,
+descoberta por teste nesta sessão. Script: `full_catalog_jolitex_v2.py`.
+Resultado: os 1.173 ASINs reais da conta, confirmando 179 ASINs ainda "HOME"
+genérico no catálogo completo (vs. os ~281 vistos no catálogo parcial).
+
+Desses 179, reclassificados em duas levas:
+- Leva 1 (regras já existentes): 64/64 aceitos.
+- Leva 2 (regras novas, ~35 tipos pesquisados e confirmados via
+  `search_definitions_product_types` antes de aplicar — SCULPTURE,
+  NAPKIN_RING, TRIVET, KITCHEN_KNIFE, STORAGE_HOOK, TOILET_PAPER_HOLDER,
+  TOWEL_HOLDER, PITCHER, COFFEE_MAKER, DRYING_RACK, CLEANING_BRUSH, CABINET,
+  CLOTHES_RACK, FOOD_STRAINER, BOTTLE_OPENER, FURNITURE_CART,
+  PORTABLE_ELECTRONIC_DEVICE_STAND, DISHWARE_BOWL, BEVERAGE_INSULATOR,
+  ROTATING_TRAY, THERMOS, HOME_MIRROR, STORAGE_DRAWER, WHISK_UTENSIL,
+  SEASONING_MILL, SPOON, BAKING_MAT, FOOD_SPATULA, PASTRY_BASTING_BRUSH,
+  BOTTLE_STOPPER, PAPER_CLIP_CLAMP, BAKING_PAN, CUTTING_BOARD, ITEM_CONTAINER,
+  SAUTE_FRY_PAN, BASKET, DISHWARE_PLATE, PAPER_TOWEL_HOLDER, TONG_UTENSIL,
+  BUTTER_DISH, NAPKIN_HOLDER, TRAY, SHELF, DRAIN_STRAINER, CADDY,
+  FOOD_STORAGE_CONTAINER): 103/103 aceitos.
+
+**Total reclassificado nas duas sessões: 365 ASINs, 365/365 aceitos.**
+
+Ficaram de fora (só isso, nada mais pendente nesta frente):
+- **12 ASINs "HOME" sem categoria confiável encontrada** mesmo após pesquisa —
+  arriscado demais adivinhar e aplicar via PUT sem confirmação. Lista:
+  B0FD4FBXH7 (cubo de gelo artificial decorativo), B0FD4V68B3 (colher
+  bailarina p/drinks), B0FD56NZKR (kit 4 utensílios de bambu — set
+  genérico), B0FD5C9R6S e B0FD5CH2Y5 (variações MEK de itens que a Amazon já
+  classificou diferente do esperado — checar manualmente), B0F6959VYD,
+  B0FD4X5FPF, B0CJ5L8CQ3, B0F7RVG8PV, B0FD4X6BY6 (variações MEK diversas),
+  B0FD57LBHN (tampa antirrespingo — sem tipo "splatter guard" na taxonomia
+  BR), B0DJCDCP4G (esteira de bambu p/sofá — categoria ambígua). Resolver
+  individualmente numa sessão futura com paciência, ou aceitar que ficam
+  "HOME" genérico (não é erro, só não está no nível mais específico possível).
 
 Mecanismo de reclassificação já validado e funcionando (reaproveitar):
 - `GET /listings/2021-08-01/items/{sellerId}/{sku}` (via `search_listings_items`
