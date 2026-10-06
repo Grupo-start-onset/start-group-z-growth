@@ -59,6 +59,46 @@ listados, ou (b) acesso mais direto ao Playbook pra automatizar a busca.
 Mensagem de pedido já foi redigida nesta sessão (contém a lista completa dos
 132 SKUs).
 
+## 4. Card "Venda própria × outros distribuidores" — ajustes pendentes
+Construído nesta sessão (06/10/2026) usando `distributorView` MANUFACTURING
+(Fabricação, soma de todos os vendors da mesma marca) vs SOURCING (Origem, só
+a própria conta) no `GET_VENDOR_SALES_REPORT`. Dúvidas do usuário esclarecidas
+durante a sessão, registrar pra não perder o contexto:
+
+- **Isso NÃO é "venda 1P × venda 3P" (marketplace)**. `GET_VENDOR_SALES_REPORT`
+  é exclusivo de conta Vendor — não enxerga vendedores terceiros no marketplace
+  de jeito nenhum. "Outros distribuidores" = outras contas Vendor cadastradas
+  vendendo a mesma marca/fabricante (outro fornecedor direto pra Amazon), não
+  revendedores do marketplace.
+- **Testado e confirmado nesta sessão**: não há como buscar dados de 3P via
+  API. Vendas de outros sellers são dado privado deles, a Amazon nunca expõe
+  isso pra outro participante. Testei `get_item_offers` e
+  `get_competitive_pricing_for_asins` (Product Pricing API) pra Blidshop — deu
+  `Unauthorized` (permissão de Pricing não autorizada nessa integração Vendor).
+  Pra ter visibilidade de ofertas/preços de terceiros (não vendas, só
+  concorrência de Buy Box), precisaria autorizar a permissão "Pricing" no
+  Seller Central da conta — configuração fora daqui. O card mais próximo que
+  já temos hoje pra sinalizar concorrência é "Oferta em Destaque"
+  (`transformar_destaque.py`), que mostra % de visualizações em que a Amazon/
+  outro vendedor ganha o Buy Box — não é venda, mas é o proxy mais próximo que
+  temos.
+- **Ruído de medição**: contas sem nenhum outro distribuidor conhecido (ex.:
+  Blidshop) ainda mostram uma diferença pequena entre Fabricação e Origem
+  (Blidshop R$711, 0,4%; Rio Master R$394, 1%; WIWU R$641, 1,6%; Petiko R$30,
+  1,5%) — isso é ruído de reconciliação entre os dois relatórios (pedidos
+  separados à Amazon, podem ter cortes de dados ligeiramente diferentes), não
+  um distribuidor real. Só Petclean (8%) e Jolitex (23%) têm diferença grande
+  o suficiente pra ser provavelmente real.
+  **Ação sugerida, ainda não aplicada**: só exibir "outros distribuidores" no
+  card quando a diferença passar de um limite (ex.: 3-5%); abaixo disso,
+  mostrar como "sem diferença relevante" pra não confundir contas que não têm
+  outro distribuidor de verdade.
+- **Texto do card a corrigir**: a label atual usa "outros distribuidores /
+  market place", copiada do painel de referência do parceiro que o usuário
+  mostrou — mas "market place" é enganoso dado o que a métrica realmente mede.
+  Trocar por algo tipo "outros distribuidores/fornecedores Vendor da mesma
+  marca".
+
 ## 5. Criação de listings novos (ASIN/SKU que ainda não existe) via API
 Pergunta do usuário (06/10/2026): dá pra subir produto novo pelo mesmo
 mecanismo usado hoje pra editar? Resposta: sim, tecnicamente — `putListingsItem`
