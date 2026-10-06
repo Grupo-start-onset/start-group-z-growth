@@ -136,6 +136,13 @@ def opts_completo(p):
     return {"reportPeriod": p, "distributorView": "MANUFACTURING", "sellingProgram": "RETAIL"}
 
 
+def opts_origem(p):
+    # distributorView SOURCING = so o que passou pela conta do fornecedor (vs MANUFACTURING,
+    # que soma todos os distribuidores da mesma marca/fabricante). Usado no card
+    # "Venda propria x outros distribuidores" do dashboard (transformar_origem.py).
+    return {"reportPeriod": p, "distributorView": "SOURCING", "sellingProgram": "RETAIL"}
+
+
 def opts_simples(p):
     return {"reportPeriod": p}
 
@@ -145,10 +152,11 @@ print(f"Periodo: {DATA_INICIO.date()} a {DATA_FIM.date()} ({len(bmes)} meses fec
 print("(o mes em andamento fica de fora: e coberto por semanas no capturar_semanal.py)\n")
 
 tarefas = [
-    ("VENDAS mensal",  ReportType.GET_VENDOR_SALES_REPORT,                   "vendas_mes",  opts_completo("MONTH")),
-    ("ESTOQUE mensal", ReportType.GET_VENDOR_INVENTORY_REPORT,               "estoque_mes", opts_completo("MONTH")),
-    ("TRAFEGO mensal", ReportType.GET_VENDOR_TRAFFIC_REPORT,                 "trafego_mes", opts_simples("MONTH")),
-    ("MARGEM mensal",  ReportType.GET_VENDOR_NET_PURE_PRODUCT_MARGIN_REPORT, "margem_mes",  opts_simples("MONTH")),
+    ("VENDAS mensal",        ReportType.GET_VENDOR_SALES_REPORT,                   "vendas_mes",        opts_completo("MONTH")),
+    ("VENDAS mensal ORIGEM", ReportType.GET_VENDOR_SALES_REPORT,                   "vendas_mes_origem", opts_origem("MONTH")),
+    ("ESTOQUE mensal",       ReportType.GET_VENDOR_INVENTORY_REPORT,               "estoque_mes",       opts_completo("MONTH")),
+    ("TRAFEGO mensal",       ReportType.GET_VENDOR_TRAFFIC_REPORT,                 "trafego_mes",       opts_simples("MONTH")),
+    ("MARGEM mensal",        ReportType.GET_VENDOR_NET_PURE_PRODUCT_MARGIN_REPORT, "margem_mes",        opts_simples("MONTH")),
 ]
 
 resumo_geral = {}
