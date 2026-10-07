@@ -1,0 +1,23 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_NET_PURE_PRODUCT_MARGIN_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "MONTH"
+    },
+    "lastUpdatedDate" : "2026-10-03",
+    "dataStartTime" : "2026-07-01",
+    "dataEndTime" : "2026-07-31",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "netPureProductMarginAggregate" : [ {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "netPureProductMargin" : 0.4635
+  } ],
+  "netPureProductMarginByAsin" : [ {
+    "startDate" : "2026-07-01",
+    "endDate" : "2026-07-31",
+    "asin" : "B0C756ZJWH",
+    "netPureProductMargin" : 0.4635
+  } ]
+}

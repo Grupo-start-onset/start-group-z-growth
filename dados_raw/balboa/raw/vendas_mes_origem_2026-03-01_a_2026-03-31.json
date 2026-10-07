@@ -1,0 +1,57 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_SALES_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "MONTH",
+      "sellingProgram" : "RETAIL",
+      "distributorView" : "SOURCING"
+    },
+    "lastUpdatedDate" : "2026-10-03",
+    "dataStartTime" : "2026-03-01",
+    "dataEndTime" : "2026-03-31",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "salesAggregate" : [ {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 208.15,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 231.04,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 3
+  } ],
+  "salesByAsin" : [ {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0G1CVMCVS",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 141.70,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 181.30,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 2
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0G1CX7RTQ",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 66.45,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 49.74,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  } ]
+}

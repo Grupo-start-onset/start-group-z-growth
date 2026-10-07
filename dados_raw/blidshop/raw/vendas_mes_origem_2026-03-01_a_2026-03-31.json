@@ -1,0 +1,85 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_SALES_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "MONTH",
+      "sellingProgram" : "RETAIL",
+      "distributorView" : "SOURCING"
+    },
+    "lastUpdatedDate" : "2026-10-03",
+    "dataStartTime" : "2026-03-01",
+    "dataEndTime" : "2026-03-31",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "salesAggregate" : [ {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "customerReturns" : 4,
+    "shippedCogs" : {
+      "amount" : 11928.76,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 15560.34,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 29
+  } ],
+  "salesByAsin" : [ {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0FJSF5MP2",
+    "customerReturns" : 1,
+    "shippedCogs" : {
+      "amount" : 7186.06,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 9437.64,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 18
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0F81MVTHF",
+    "customerReturns" : 1,
+    "shippedCogs" : {
+      "amount" : 689.34,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 848.53,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0GKQRGS3B",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 461.43,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 602.39,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-03-01",
+    "endDate" : "2026-03-31",
+    "asin" : "B0FJSDTCGS",
+    "customerReturns" : 2,
+    "shippedCogs" : {
+      "amount" : 3591.93,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 4671.78,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 9
+  } ]
+}

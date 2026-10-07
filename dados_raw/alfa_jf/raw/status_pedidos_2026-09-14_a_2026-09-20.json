@@ -3,7 +3,7 @@
     "purchaseOrderNumber": "5MZXEDUY",
     "purchaseOrderStatus": "OPEN",
     "purchaseOrderDate": "2026-09-14T05:29:40Z",
-    "lastUpdatedDate": "2026-09-29T11:17:43Z",
+    "lastUpdatedDate": "2026-10-06T03:06:46Z",
     "sellingParty": {
       "partyId": "76I78"
     },
@@ -141,7 +141,7 @@
         "vendorProductIdentifier": "7898648264990",
         "netCost": {
           "currencyCode": "BRL",
-          "amount": "16.32"
+          "amount": "16.31"
         },
         "listPrice": {
           "currencyCode": "BRL",
@@ -165,9 +165,9 @@
           ]
         },
         "acknowledgementStatus": {
-          "confirmationStatus": "ACCEPTED",
+          "confirmationStatus": "PARTIALLY_ACCEPTED",
           "acceptedQuantity": {
-            "amount": 24,
+            "amount": 28,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -188,13 +188,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 20,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T22:24:36.728Z"
+          "lastReceiveDate": "2026-09-30T22:37:04.995Z"
         }
       },
       {
@@ -707,7 +707,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 96,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -715,6 +715,19 @@
             {
               "updatedDate": "2026-09-14T05:30:13Z",
               "orderedQuantity": {
+                "amount": 96,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-02T00:09:05Z",
+              "orderedQuantity": {
+                "amount": 96,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 96,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
@@ -808,7 +821,7 @@
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-26T22:38:33.483Z"
+          "lastReceiveDate": "2026-10-04T23:26:54.857Z"
         }
       },
       {
@@ -879,7 +892,7 @@
         "vendorProductIdentifier": "7898648261265",
         "netCost": {
           "currencyCode": "BRL",
-          "amount": "16.32"
+          "amount": "16.31"
         },
         "listPrice": {
           "currencyCode": "BRL",
@@ -903,9 +916,9 @@
           ]
         },
         "acknowledgementStatus": {
-          "confirmationStatus": "ACCEPTED",
+          "confirmationStatus": "PARTIALLY_ACCEPTED",
           "acceptedQuantity": {
-            "amount": 24,
+            "amount": 28,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -926,13 +939,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 20,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T23:14:27.147Z"
+          "lastReceiveDate": "2026-09-30T02:06:29.767Z"
         }
       },
       {
@@ -1011,7 +1024,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 12,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -1019,6 +1032,19 @@
             {
               "updatedDate": "2026-09-14T05:30:13Z",
               "orderedQuantity": {
+                "amount": 12,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-02T00:09:05Z",
+              "orderedQuantity": {
+                "amount": 12,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 12,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
@@ -1602,13 +1628,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 20,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T23:10:00.636Z"
+          "lastReceiveDate": "2026-10-04T00:41:57.854Z"
         }
       },
       {
@@ -1731,8 +1757,7 @@
             "amount": 12,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
-          },
-          "lastReceiveDate": "2026-09-26T11:08:33.264Z"
+          }
         }
       },
       {
@@ -1976,11 +2001,10 @@
         "receivingStatus": {
           "receiveStatus": "PARTIALLY_RECEIVED",
           "receivedQuantity": {
-            "amount": 11,
+            "amount": 10,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
-          },
-          "lastReceiveDate": "2026-09-26T22:43:40.566Z"
+          }
         }
       },
       {
@@ -2059,7 +2083,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 48,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -2067,6 +2091,19 @@
             {
               "updatedDate": "2026-09-14T05:30:13Z",
               "orderedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-02T00:09:05Z",
+              "orderedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 48,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
@@ -2107,7 +2144,7 @@
         "vendorProductIdentifier": "7898648261098",
         "netCost": {
           "currencyCode": "BRL",
-          "amount": "16.32"
+          "amount": "16.31"
         },
         "listPrice": {
           "currencyCode": "BRL",
@@ -2131,9 +2168,9 @@
           ]
         },
         "acknowledgementStatus": {
-          "confirmationStatus": "ACCEPTED",
+          "confirmationStatus": "PARTIALLY_ACCEPTED",
           "acceptedQuantity": {
-            "amount": 24,
+            "amount": 28,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -2154,13 +2191,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 20,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T22:40:15.164Z"
+          "lastReceiveDate": "2026-09-30T03:51:02.526Z"
         }
       },
       {
@@ -2357,7 +2394,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 80,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -2365,6 +2402,19 @@
             {
               "updatedDate": "2026-09-14T05:30:13Z",
               "orderedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-02T00:09:05Z",
+              "orderedQuantity": {
+                "amount": 80,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 80,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
@@ -2576,13 +2626,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 20,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T23:04:41.778Z"
+          "lastReceiveDate": "2026-10-01T23:42:44.216Z"
         }
       },
       {
@@ -2826,11 +2876,10 @@
         "receivingStatus": {
           "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 48,
+            "amount": 42,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
-          },
-          "lastReceiveDate": "2026-09-29T11:17:43.690Z"
+          }
         }
       },
       {
@@ -3273,7 +3322,7 @@
         "vendorProductIdentifier": "7898648261012",
         "netCost": {
           "currencyCode": "BRL",
-          "amount": "16.32"
+          "amount": "16.31"
         },
         "listPrice": {
           "currencyCode": "BRL",
@@ -3297,9 +3346,9 @@
           ]
         },
         "acknowledgementStatus": {
-          "confirmationStatus": "ACCEPTED",
+          "confirmationStatus": "PARTIALLY_ACCEPTED",
           "acceptedQuantity": {
-            "amount": 24,
+            "amount": 27,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -3320,13 +3369,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 20,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T22:49:11.695Z"
+          "lastReceiveDate": "2026-10-02T09:46:52.190Z"
         }
       },
       {
@@ -3529,7 +3578,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 36,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -3537,6 +3586,19 @@
             {
               "updatedDate": "2026-09-14T05:30:13Z",
               "orderedQuantity": {
+                "amount": 36,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-02T00:09:05Z",
+              "orderedQuantity": {
+                "amount": 36,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 36,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
@@ -3624,13 +3686,7 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "RECEIVED",
-          "receivedQuantity": {
-            "amount": 12,
-            "unitOfMeasure": "Eaches",
-            "unitSize": 1
-          },
-          "lastReceiveDate": "2026-09-25T23:24:39.117Z"
+          "receiveStatus": "NOT_RECEIVED"
         }
       },
       {
@@ -3934,13 +3990,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 44,
+            "amount": 48,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-25T23:34:15.541Z"
+          "lastReceiveDate": "2026-10-01T23:08:07.924Z"
         }
       },
       {
@@ -3996,13 +4052,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "RECEIVED",
+          "receiveStatus": "PARTIALLY_RECEIVED",
           "receivedQuantity": {
-            "amount": 12,
+            "amount": 11,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
-          "lastReceiveDate": "2026-09-27T16:38:33.817Z"
+          "lastReceiveDate": "2026-10-01T12:01:41.497Z"
         }
       },
       {
@@ -4035,9 +4091,9 @@
           ]
         },
         "acknowledgementStatus": {
-          "confirmationStatus": "ACCEPTED",
+          "confirmationStatus": "PARTIALLY_ACCEPTED",
           "acceptedQuantity": {
-            "amount": 12,
+            "amount": 18,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },

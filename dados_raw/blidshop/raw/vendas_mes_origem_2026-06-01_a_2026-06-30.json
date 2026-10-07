@@ -1,0 +1,85 @@
+{
+  "reportSpecification" : {
+    "reportType" : "GET_VENDOR_SALES_REPORT",
+    "reportOptions" : {
+      "reportPeriod" : "MONTH",
+      "sellingProgram" : "RETAIL",
+      "distributorView" : "SOURCING"
+    },
+    "lastUpdatedDate" : "2026-10-03",
+    "dataStartTime" : "2026-06-01",
+    "dataEndTime" : "2026-06-30",
+    "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
+  },
+  "salesAggregate" : [ {
+    "startDate" : "2026-06-01",
+    "endDate" : "2026-06-30",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 5979.52,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 6074.00,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 18
+  } ],
+  "salesByAsin" : [ {
+    "startDate" : "2026-06-01",
+    "endDate" : "2026-06-30",
+    "asin" : "B0FJSDTCGS",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 401.77,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 445.55,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-06-01",
+    "endDate" : "2026-06-30",
+    "asin" : "B0GS788T1P",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 1201.50,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 964.89,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 6
+  }, {
+    "startDate" : "2026-06-01",
+    "endDate" : "2026-06-30",
+    "asin" : "B0FJSF5MP2",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 2367.40,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 3000.04,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 6
+  }, {
+    "startDate" : "2026-06-01",
+    "endDate" : "2026-06-30",
+    "asin" : "B0FKQ5Z8MR",
+    "customerReturns" : 0,
+    "shippedCogs" : {
+      "amount" : 2008.85,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 1663.52,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 5
+  } ]
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "purchaseOrderNumber": "2ZTZQ84Z",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-10-05T05:37:33Z",
+      "purchaseOrderStateChangedDate": "2026-10-05T19:06:09Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "UM8O1"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-10-05T07:00:00Z--2026-10-23T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0GKHYZQB7",
+          "vendorProductIdentifier": "7898977819274",
+          "orderedQuantity": {
+            "amount": 6,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "449.1"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "499"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B0GQNQ88TW",
+          "vendorProductIdentifier": "7898977819137",
+          "orderedQuantity": {
+            "amount": 5,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "971.19"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "1079.1"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B0FXBQ944Y",
+          "vendorProductIdentifier": "7898977819106",
+          "orderedQuantity": {
+            "amount": 20,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "1079.1"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "1199"
+          }
+        }
+      ]
+    }
+  }
+]

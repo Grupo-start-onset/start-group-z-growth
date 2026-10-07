@@ -1,0 +1,1010 @@
+{
+  "B0FH341T47": {
+    "sku": "1198",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T01:10:14.206Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH34LMJT": {
+    "sku": "1081",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_weight, material, scent. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_weight",
+          "material",
+          "scent"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100605",
+        "message": "Solicitação de custo de BRL 11.72 recusada. No momento, não é possível aceitar uma atualização de custo desta oferta.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_PRICE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      }
+    ]
+  },
+  "B0FH34NGCJ": {
+    "sku": "1083",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100607",
+        "message": "Solicitação de custo de BRL 158.35 recusada. No momento, não podemos aceitar uma atualização de custo desta oferta.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_PRICE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      }
+    ]
+  },
+  "B0FH32M1DZ": {
+    "sku": "1073",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100605",
+        "message": "Solicitação de custo de BRL 8.62 recusada. No momento, não é possível aceitar uma atualização de custo desta oferta.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_PRICE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH31K58G": {
+    "sku": "1196",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH33YSNK": {
+    "sku": "1080",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH343T7F": {
+    "sku": "1050",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100605",
+        "message": "Solicitação de custo de BRL 22.55 recusada. No momento, não é possível aceitar uma atualização de custo desta oferta.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_PRICE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH337MZK": {
+    "sku": "1199",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T00:49:00.607Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH2ZVVMK": {
+    "sku": "1070",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T00:53:42.607Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH32BP56": {
+    "sku": "1001",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100605",
+        "message": "Solicitação de custo de BRL 20.90 recusada. No momento, não é possível aceitar uma atualização de custo desta oferta.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_PRICE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T00:43:32.807Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH347L7H": {
+    "sku": "1195",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T00:34:49.825Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH3464Z6": {
+    "sku": "1197",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "101244",
+        "message": "Seu preço sugerido [BRL24.99] deve ser maior do que o custo do produto [BRL29.00]. Atualize seu preço sugerido ou seu custo, ou entre em contato com o suporte para obter ajuda.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ]
+      },
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T00:55:13.195Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH31X2DG": {
+    "sku": "1071",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T14:18:48.749Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH338CT4": {
+    "sku": "1202",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH33ZPNW": {
+    "sku": "1231",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, age_range_description. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "flavor"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH34BY4P": {
+    "sku": "1831",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "101244",
+        "message": "Seu preço sugerido [BRL17.9] deve ser maior do que o custo do produto [BRL47.86]. Atualize seu preço sugerido ou seu custo, ou entre em contato com o suporte para obter ajuda.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ]
+      }
+    ]
+  },
+  "B0FH33JK77": {
+    "sku": "1208",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_weight, scent. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_weight",
+          "scent"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "101244",
+        "message": "Seu preço sugerido [BRL12.5] deve ser maior do que o custo do produto [BRL126.66]. Atualize seu preço sugerido ou seu custo, ou entre em contato com o suporte para obter ajuda.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ]
+      }
+    ]
+  },
+  "B0FH33K7VX": {
+    "sku": "2001",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "101244",
+        "message": "Seu preço sugerido [BRL18.9] deve ser maior do que o custo do produto [BRL20.90]. Atualize seu preço sugerido ou seu custo, ou entre em contato com o suporte para obter ajuda.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ]
+      }
+    ]
+  },
+  "B0FH33F6XS": {
+    "sku": "1210",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_weight, material, scent. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_weight",
+          "material",
+          "scent"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "101244",
+        "message": "Seu preço sugerido [BRL10.35] deve ser maior do que o custo do produto [BRL158.35]. Atualize seu preço sugerido ou seu custo, ou entre em contato com o suporte para obter ajuda.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ]
+      }
+    ]
+  },
+  "B0FH34NXMB": {
+    "sku": "1211",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, age_range_description. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "flavor"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH35DMQ2": {
+    "sku": "1074",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0FH34VLTD": {
+    "sku": "1075",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "100605",
+        "message": "Solicitação de custo de BRL 22.55 recusada. No momento, não é possível aceitar uma atualização de custo desta oferta.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_PRICE",
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "100525",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a fs_petConsumables_br. O não fornecimento dessas documentações até 2026-11-24T00:44:31.386Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "WARNING",
+        "categories": [
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: flavor, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "flavor",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H3WK52X1": {
+    "sku": "1333",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": []
+  },
+  "B0H7L2N7GF": {
+    "sku": "7908591300413",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7LD2TGC": {
+    "sku": "7898968541573",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7L3BHLH": {
+    "sku": "7898968541542",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7LGV2SK": {
+    "sku": "7898968541535",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7KXDGD7": {
+    "sku": "7898968541467",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7KZH2XV": {
+    "sku": "7898968541528",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7KWY5KT": {
+    "sku": "7898968541450",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7KWTZ9P": {
+    "sku": "7908591300406",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7KWW8M4": {
+    "sku": "7908591300666",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7KZFSLZ": {
+    "sku": "7898968541511",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7L1QMMZ": {
+    "sku": "7898968541566",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7LG5GWZ": {
+    "sku": "7898968541597",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7L955P6": {
+    "sku": "7908591301144",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7LGC65H": {
+    "sku": "7898968541504",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0H7LG9LK2": {
+    "sku": "7898968541559",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: age_range_description, specific_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "age_range_description",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
+  },
+  "B0FH34P5ZZ": {
+    "sku": "2000",
+    "status": [
+      "DISCOVERABLE"
+    ],
+    "issues": [
+      {
+        "code": "101244",
+        "message": "Seu preço sugerido [BRL22.6] deve ser maior do que o custo do produto [BRL126.66]. Atualize seu preço sugerido ou seu custo, ou entre em contato com o suporte para obter ajuda.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "cost"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "LISTING"
+        ]
+      }
+    ]
+  }
+}

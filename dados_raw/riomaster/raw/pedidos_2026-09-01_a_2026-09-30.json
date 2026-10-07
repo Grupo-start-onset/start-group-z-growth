@@ -1,0 +1,769 @@
+[
+  {
+    "purchaseOrderNumber": "2RMLCPHE",
+    "purchaseOrderState": "Acknowledged",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-09-28T05:25:05Z",
+      "purchaseOrderStateChangedDate": "2026-09-28T17:22:00Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "RD8QP"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-09-28T07:00:00Z--2026-10-16T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0BPDKFC32",
+          "vendorProductIdentifier": "7899432885308",
+          "orderedQuantity": {
+            "amount": 8,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "134.64"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "149.6"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B0FJMTK2M8",
+          "vendorProductIdentifier": "7908573426728",
+          "orderedQuantity": {
+            "amount": 4,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "219.67"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "244.08"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B0FJMVJTSC",
+          "vendorProductIdentifier": "7908573410932",
+          "orderedQuantity": {
+            "amount": 16,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "96.61"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "107.35"
+          }
+        },
+        {
+          "itemSequenceNumber": "4",
+          "amazonProductIdentifier": "B0BKTB5JJS",
+          "vendorProductIdentifier": "7898494699694",
+          "orderedQuantity": {
+            "amount": 72,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "20.7"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "59.9"
+          }
+        },
+        {
+          "itemSequenceNumber": "5",
+          "amazonProductIdentifier": "B0BNZMRN4R",
+          "vendorProductIdentifier": "7899432817361",
+          "orderedQuantity": {
+            "amount": 96,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "14.22"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "15.8"
+          }
+        },
+        {
+          "itemSequenceNumber": "6",
+          "amazonProductIdentifier": "B09F6V5QRD",
+          "vendorProductIdentifier": "7899432891040",
+          "orderedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "10.62"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "49.99"
+          }
+        },
+        {
+          "itemSequenceNumber": "7",
+          "amazonProductIdentifier": "B09J1PQ1NP",
+          "vendorProductIdentifier": "7899432817354",
+          "orderedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "14.22"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "44.08"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "67FGZN1Q",
+    "purchaseOrderState": "Acknowledged",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-09-21T06:07:10Z",
+      "purchaseOrderChangedDate": "2026-09-28T20:03:35Z",
+      "purchaseOrderStateChangedDate": "2026-09-21T14:27:32Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "GRU8"
+      },
+      "sellingParty": {
+        "partyId": "RD8QP"
+      },
+      "shipToParty": {
+        "partyId": "GRU8"
+      },
+      "billToParty": {
+        "partyId": "GRU8"
+      },
+      "deliveryWindow": "2026-09-21T07:00:00Z--2026-10-08T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B09BBBMLMD",
+          "vendorProductIdentifier": "7899432896878",
+          "orderedQuantity": {
+            "amount": 96,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "7.56"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "18.38"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B0B834GC19",
+          "vendorProductIdentifier": "7898494690035",
+          "orderedQuantity": {
+            "amount": 144,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "11.81"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "52.47"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B0DJDWD2RV",
+          "vendorProductIdentifier": "7899432898162",
+          "orderedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "22.06"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "24.51"
+          }
+        },
+        {
+          "itemSequenceNumber": "4",
+          "amazonProductIdentifier": "B07ZL69Z5V",
+          "vendorProductIdentifier": "7899432878751",
+          "orderedQuantity": {
+            "amount": 72,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "15.6"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "44.19"
+          }
+        },
+        {
+          "itemSequenceNumber": "5",
+          "amazonProductIdentifier": "B08JM88FGY",
+          "vendorProductIdentifier": "7899432882246",
+          "orderedQuantity": {
+            "amount": 28,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "216"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "401.9"
+          }
+        },
+        {
+          "itemSequenceNumber": "6",
+          "amazonProductIdentifier": "B09J1NLCYC",
+          "vendorProductIdentifier": "7899432896540",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "37.8"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "87.78"
+          }
+        },
+        {
+          "itemSequenceNumber": "7",
+          "amazonProductIdentifier": "B0B785YZ6Q",
+          "vendorProductIdentifier": "7899432837703",
+          "orderedQuantity": {
+            "amount": 72,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "8.52"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "49.93"
+          }
+        },
+        {
+          "itemSequenceNumber": "8",
+          "amazonProductIdentifier": "B0CF46P1XQ",
+          "vendorProductIdentifier": "7899432896885",
+          "orderedQuantity": {
+            "amount": 72,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "9.13"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "41.09"
+          }
+        },
+        {
+          "itemSequenceNumber": "9",
+          "amazonProductIdentifier": "B0FJMTDSMX",
+          "vendorProductIdentifier": "7908573437571",
+          "orderedQuantity": {
+            "amount": 4,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "227.91"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "253.23"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "66NH9YTK",
+    "purchaseOrderState": "Acknowledged",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-09-21T06:07:08Z",
+      "purchaseOrderStateChangedDate": "2026-09-21T14:27:12Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "RD8QP"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-09-21T07:00:00Z--2026-10-08T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B07WXN7RYJ",
+          "vendorProductIdentifier": "7891000107003",
+          "orderedQuantity": {
+            "amount": 72,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "9.9"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "18"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B0FJMS592F",
+          "vendorProductIdentifier": "7908573428111",
+          "orderedQuantity": {
+            "amount": 48,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "46.78"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "51.98"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B09J1MPJJ3",
+          "vendorProductIdentifier": "7899432837758",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "447.48"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "1325.48"
+          }
+        },
+        {
+          "itemSequenceNumber": "4",
+          "amazonProductIdentifier": "B09K913B9D",
+          "vendorProductIdentifier": "7899432817668",
+          "orderedQuantity": {
+            "amount": 36,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "17.82"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "78.45"
+          }
+        },
+        {
+          "itemSequenceNumber": "5",
+          "amazonProductIdentifier": "B09ML24NM4",
+          "vendorProductIdentifier": "7899432874692",
+          "orderedQuantity": {
+            "amount": 36,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "25.2"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "78"
+          }
+        },
+        {
+          "itemSequenceNumber": "6",
+          "amazonProductIdentifier": "B08MV4RX2Q",
+          "vendorProductIdentifier": "7899432869858",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "28.8"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "32"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "6IBBTC3Y",
+    "purchaseOrderState": "Acknowledged",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-09-07T06:01:50Z",
+      "purchaseOrderChangedDate": "2026-10-02T00:05:58Z",
+      "purchaseOrderStateChangedDate": "2026-09-07T16:26:50Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "RD8QP"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-09-08T07:00:00Z--2026-09-28T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0FJMTZBJN",
+          "vendorProductIdentifier": "7908573410956",
+          "orderedQuantity": {
+            "amount": 36,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "43.63"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "48.48"
+          }
+        },
+        {
+          "itemSequenceNumber": "2",
+          "amazonProductIdentifier": "B0FJMRMVSY",
+          "vendorProductIdentifier": "7908573438493",
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "274.59"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "305.1"
+          }
+        },
+        {
+          "itemSequenceNumber": "3",
+          "amazonProductIdentifier": "B0FJMSZ628",
+          "vendorProductIdentifier": "7908573401848",
+          "orderedQuantity": {
+            "amount": 16,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "106.83"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "118.7"
+          }
+        },
+        {
+          "itemSequenceNumber": "4",
+          "amazonProductIdentifier": "B0FJMSW5HK",
+          "vendorProductIdentifier": "7899432885278",
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "232.2"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "258"
+          }
+        },
+        {
+          "itemSequenceNumber": "5",
+          "amazonProductIdentifier": "B0FJNJB3G5",
+          "vendorProductIdentifier": "7898494688704",
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "38.65"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "42.94"
+          }
+        },
+        {
+          "itemSequenceNumber": "6",
+          "amazonProductIdentifier": "B09K998T89",
+          "vendorProductIdentifier": "7898494702707",
+          "orderedQuantity": {
+            "amount": 32,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "39.39"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "125.12"
+          }
+        },
+        {
+          "itemSequenceNumber": "7",
+          "amazonProductIdentifier": "B0FJMX8WDH",
+          "vendorProductIdentifier": "7908573443527",
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "32.54"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "36.16"
+          }
+        },
+        {
+          "itemSequenceNumber": "8",
+          "amazonProductIdentifier": "B0FJMVHRTC",
+          "vendorProductIdentifier": "7908573406638",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "66.78"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "74.2"
+          }
+        },
+        {
+          "itemSequenceNumber": "9",
+          "amazonProductIdentifier": "B0FJMV99Q1",
+          "vendorProductIdentifier": "7908573428258",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "97.93"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "108.81"
+          }
+        },
+        {
+          "itemSequenceNumber": "10",
+          "amazonProductIdentifier": "B0FJN829RR",
+          "vendorProductIdentifier": "7898494706552",
+          "orderedQuantity": {
+            "amount": 8,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "454.03"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "504.48"
+          }
+        },
+        {
+          "itemSequenceNumber": "11",
+          "amazonProductIdentifier": "B0DD1WFM5W",
+          "vendorProductIdentifier": "7899432896953",
+          "orderedQuantity": {
+            "amount": 96,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "12.29"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "23.55"
+          }
+        },
+        {
+          "itemSequenceNumber": "12",
+          "amazonProductIdentifier": "B0FJMSQBWX",
+          "vendorProductIdentifier": "7908573406768",
+          "orderedQuantity": {
+            "amount": 24,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "73"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "81.12"
+          }
+        },
+        {
+          "itemSequenceNumber": "13",
+          "amazonProductIdentifier": "B0FJMXMBYZ",
+          "vendorProductIdentifier": "7899432897332",
+          "orderedQuantity": {
+            "amount": -1,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "59.26"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "65.85"
+          }
+        }
+      ]
+    }
+  }
+]

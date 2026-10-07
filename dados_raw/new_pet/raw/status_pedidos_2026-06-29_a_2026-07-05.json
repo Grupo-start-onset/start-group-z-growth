@@ -1,0 +1,168 @@
+[
+  {
+    "purchaseOrderNumber": "148JWXKW",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-06-30T05:54:19Z",
+    "lastUpdatedDate": "2026-07-20T23:52:03Z",
+    "sellingParty": {
+      "partyId": "8E8RI"
+    },
+    "shipToParty": {
+      "partyId": "XCV9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0FH32BP56",
+        "vendorProductIdentifier": "7898968541283",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "138.43"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "189.9"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-06-30T05:54:28Z",
+              "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-07-20T23:52:03Z",
+              "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-06-30T18:30:00Z",
+              "acceptedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      }
+    ]
+  },
+  {
+    "purchaseOrderNumber": "44AB5RKC",
+    "purchaseOrderStatus": "CLOSED",
+    "purchaseOrderDate": "2026-06-29T06:08:09Z",
+    "lastUpdatedDate": "2026-07-23T23:55:35Z",
+    "sellingParty": {
+      "partyId": "8E8RI"
+    },
+    "shipToParty": {
+      "partyId": "XCV9"
+    },
+    "itemStatus": [
+      {
+        "itemSequenceNumber": "1",
+        "buyerProductIdentifier": "B0FH337MZK",
+        "vendorProductIdentifier": "7898968541276",
+        "netCost": {
+          "currencyCode": "BRL",
+          "amount": "138.43"
+        },
+        "listPrice": {
+          "currencyCode": "BRL",
+          "amount": "189.9"
+        },
+        "orderedQuantity": {
+          "orderedQuantity": {
+            "amount": 0,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "orderedQuantityDetails": [
+            {
+              "updatedDate": "2026-06-29T06:15:24Z",
+              "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-07-23T23:55:35Z",
+              "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "acknowledgementStatus": {
+          "confirmationStatus": "ACCEPTED",
+          "acceptedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "acknowledgementStatusDetails": [
+            {
+              "acknowledgementDate": "2026-06-30T18:30:00Z",
+              "acceptedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "rejectedQuantity": {
+                "amount": 0,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            }
+          ]
+        },
+        "receivingStatus": {
+          "receiveStatus": "NOT_RECEIVED"
+        }
+      }
+    ]
+  }
+]

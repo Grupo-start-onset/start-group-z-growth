@@ -1,9 +1,9 @@
 [
   {
     "purchaseOrderNumber": "1V7XPGXX",
-    "purchaseOrderStatus": "OPEN",
+    "purchaseOrderStatus": "CLOSED",
     "purchaseOrderDate": "2026-08-17T06:17:33Z",
-    "lastUpdatedDate": "2026-09-11T23:55:33Z",
+    "lastUpdatedDate": "2026-10-01T18:19:11Z",
     "sellingParty": {
       "partyId": "OZITV"
     },
@@ -25,7 +25,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 48,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -33,6 +33,19 @@
             {
               "updatedDate": "2026-08-17T06:56:59Z",
               "orderedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:19:11Z",
+              "orderedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 48,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1

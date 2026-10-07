@@ -546,9 +546,9 @@
   },
   {
     "purchaseOrderNumber": "4M2V2Y3C",
-    "purchaseOrderStatus": "OPEN",
+    "purchaseOrderStatus": "CLOSED",
     "purchaseOrderDate": "2026-08-31T02:19:32Z",
-    "lastUpdatedDate": "2026-09-22T04:17:28Z",
+    "lastUpdatedDate": "2026-10-01T18:19:49Z",
     "sellingParty": {
       "partyId": "A470C"
     },
@@ -570,7 +570,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 312,
+            "amount": 310,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -579,6 +579,19 @@
               "updatedDate": "2026-08-31T02:19:36Z",
               "orderedQuantity": {
                 "amount": 312,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:19:49Z",
+              "orderedQuantity": {
+                "amount": 312,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 2,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -694,7 +707,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 240,
+            "amount": 239,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -703,6 +716,19 @@
               "updatedDate": "2026-08-31T02:19:36Z",
               "orderedQuantity": {
                 "amount": 240,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:19:49Z",
+              "orderedQuantity": {
+                "amount": 240,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -755,7 +781,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 336,
+            "amount": 327,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -764,6 +790,19 @@
               "updatedDate": "2026-08-31T02:19:36Z",
               "orderedQuantity": {
                 "amount": 336,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:19:49Z",
+              "orderedQuantity": {
+                "amount": 336,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 9,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -794,7 +833,7 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
             "amount": 332,
             "unitOfMeasure": "Eaches",

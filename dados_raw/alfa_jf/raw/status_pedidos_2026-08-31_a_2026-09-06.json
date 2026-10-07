@@ -1,9 +1,9 @@
 [
   {
     "purchaseOrderNumber": "8ADOWFHP",
-    "purchaseOrderStatus": "OPEN",
+    "purchaseOrderStatus": "CLOSED",
     "purchaseOrderDate": "2026-08-31T05:43:56Z",
-    "lastUpdatedDate": "2026-09-27T17:47:59Z",
+    "lastUpdatedDate": "2026-10-01T18:22:21Z",
     "sellingParty": {
       "partyId": "76I78"
     },
@@ -87,7 +87,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 24,
+            "amount": 23,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -96,6 +96,19 @@
               "updatedDate": "2026-08-31T05:58:19Z",
               "orderedQuantity": {
                 "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:22:21Z",
+              "orderedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -149,7 +162,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 24,
+            "amount": 23,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -158,6 +171,19 @@
               "updatedDate": "2026-08-31T05:58:19Z",
               "orderedQuantity": {
                 "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:22:21Z",
+              "orderedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -342,7 +368,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 18,
+            "amount": 10,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -351,6 +377,19 @@
               "updatedDate": "2026-08-31T05:58:19Z",
               "orderedQuantity": {
                 "amount": 18,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:22:21Z",
+              "orderedQuantity": {
+                "amount": 18,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 8,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -381,7 +420,7 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
             "amount": 10,
             "unitOfMeasure": "Eaches",
@@ -505,12 +544,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
-            "amount": 11,
+            "amount": 12,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
-          }
+          },
+          "lastReceiveDate": "2026-09-30T12:51:23.093Z"
         }
       },
       {
@@ -782,7 +822,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 24,
+            "amount": 23,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -791,6 +831,19 @@
               "updatedDate": "2026-08-31T05:58:19Z",
               "orderedQuantity": {
                 "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:22:21Z",
+              "orderedQuantity": {
+                "amount": 24,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 1,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -859,9 +912,9 @@
           ]
         },
         "acknowledgementStatus": {
-          "confirmationStatus": "ACCEPTED",
+          "confirmationStatus": "PARTIALLY_ACCEPTED",
           "acceptedQuantity": {
-            "amount": 24,
+            "amount": 25,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -1029,7 +1082,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 48,
+            "amount": 24,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -1038,6 +1091,19 @@
               "updatedDate": "2026-08-31T05:58:19Z",
               "orderedQuantity": {
                 "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-01T18:22:21Z",
+              "orderedQuantity": {
+                "amount": 48,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
+                "amount": 24,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1
               }
@@ -1068,7 +1134,7 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "PARTIALLY_RECEIVED",
+          "receiveStatus": "RECEIVED",
           "receivedQuantity": {
             "amount": 24,
             "unitOfMeasure": "Eaches",

@@ -521,7 +521,7 @@
     "purchaseOrderNumber": "66NH9YTK",
     "purchaseOrderStatus": "OPEN",
     "purchaseOrderDate": "2026-09-21T06:07:08Z",
-    "lastUpdatedDate": "2026-09-21T14:27:30Z",
+    "lastUpdatedDate": "2026-10-04T14:21:18Z",
     "sellingParty": {
       "partyId": "RD8QP"
     },
@@ -582,7 +582,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 72,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-10-04T14:21:18.828Z"
         }
       },
       {

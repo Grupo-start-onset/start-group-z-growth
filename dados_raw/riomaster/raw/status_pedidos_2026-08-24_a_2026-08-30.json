@@ -3,7 +3,7 @@
     "purchaseOrderNumber": "7V3TKAOS",
     "purchaseOrderStatus": "CLOSED",
     "purchaseOrderDate": "2026-08-24T06:30:01Z",
-    "lastUpdatedDate": "2026-09-15T00:14:23Z",
+    "lastUpdatedDate": "2026-10-04T19:07:33Z",
     "sellingParty": {
       "partyId": "RD8QP"
     },
@@ -698,7 +698,13 @@
           ]
         },
         "receivingStatus": {
-          "receiveStatus": "NOT_RECEIVED"
+          "receiveStatus": "RECEIVED",
+          "receivedQuantity": {
+            "amount": 71,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "lastReceiveDate": "2026-10-04T14:32:14.420Z"
         }
       },
       {

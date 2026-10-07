@@ -443,9 +443,9 @@
   },
   {
     "purchaseOrderNumber": "16P9RGAC",
-    "purchaseOrderStatus": "OPEN",
+    "purchaseOrderStatus": "CLOSED",
     "purchaseOrderDate": "2026-08-28T16:59:40Z",
-    "lastUpdatedDate": "2026-09-17T12:18:20Z",
+    "lastUpdatedDate": "2026-10-05T23:44:05Z",
     "sellingParty": {
       "partyId": "OZITV"
     },
@@ -715,7 +715,7 @@
         },
         "orderedQuantity": {
           "orderedQuantity": {
-            "amount": 10,
+            "amount": 0,
             "unitOfMeasure": "Eaches",
             "unitSize": 1
           },
@@ -723,6 +723,19 @@
             {
               "updatedDate": "2026-08-28T16:59:44Z",
               "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              }
+            },
+            {
+              "updatedDate": "2026-10-05T23:44:05Z",
+              "orderedQuantity": {
+                "amount": 10,
+                "unitOfMeasure": "Eaches",
+                "unitSize": 1
+              },
+              "cancelledQuantity": {
                 "amount": 10,
                 "unitOfMeasure": "Eaches",
                 "unitSize": 1

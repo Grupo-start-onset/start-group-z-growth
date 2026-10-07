@@ -1,0 +1,134 @@
+[
+  {
+    "purchaseOrderNumber": "8QXKC3AQ",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-05-25T05:28:01Z",
+      "purchaseOrderStateChangedDate": "2026-05-29T01:19:47Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "SSA5"
+      },
+      "sellingParty": {
+        "partyId": "8E8RI"
+      },
+      "shipToParty": {
+        "partyId": "SSA5"
+      },
+      "billToParty": {
+        "partyId": "SSA5"
+      },
+      "deliveryWindow": "2026-05-25T07:00:00Z--2026-06-26T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0FH34LMJT",
+          "vendorProductIdentifier": "7898968541382",
+          "orderedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "132.78"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "152"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "1SE34XMC",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-05-22T06:01:32Z",
+      "purchaseOrderStateChangedDate": "2026-06-13T13:00:45Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "8E8RI"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-05-22T07:00:00Z--2026-06-15T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0FH337MZK",
+          "vendorProductIdentifier": "7898968541276",
+          "orderedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "125.63"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "172.34"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "purchaseOrderNumber": "4KUBSW4L",
+    "purchaseOrderState": "Closed",
+    "orderDetails": {
+      "purchaseOrderDate": "2026-05-20T05:37:28Z",
+      "purchaseOrderStateChangedDate": "2026-06-13T12:59:16Z",
+      "purchaseOrderType": "RegularOrder",
+      "paymentMethod": "Invoice",
+      "buyingParty": {
+        "partyId": "XCV9"
+      },
+      "sellingParty": {
+        "partyId": "8E8RI"
+      },
+      "shipToParty": {
+        "partyId": "XCV9"
+      },
+      "billToParty": {
+        "partyId": "XCV9"
+      },
+      "deliveryWindow": "2026-05-20T07:00:00Z--2026-06-13T10:00:00Z",
+      "items": [
+        {
+          "itemSequenceNumber": "1",
+          "amazonProductIdentifier": "B0FH32BP56",
+          "vendorProductIdentifier": "7898968541283",
+          "orderedQuantity": {
+            "amount": 10,
+            "unitOfMeasure": "Eaches",
+            "unitSize": 1
+          },
+          "isBackOrderAllowed": false,
+          "netCost": {
+            "currencyCode": "BRL",
+            "amount": "129.33"
+          },
+          "listPrice": {
+            "currencyCode": "BRL",
+            "amount": "177.42"
+          }
+        }
+      ]
+    }
+  }
+]

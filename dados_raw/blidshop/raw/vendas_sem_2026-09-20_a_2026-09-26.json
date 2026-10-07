@@ -6,7 +6,7 @@
       "sellingProgram" : "RETAIL",
       "distributorView" : "MANUFACTURING"
     },
-    "lastUpdatedDate" : "2026-09-27",
+    "lastUpdatedDate" : "2026-10-03",
     "dataStartTime" : "2026-09-20",
     "dataEndTime" : "2026-09-26",
     "marketplaceIds" : [ "A2Q3Y263D00KWC" ]
@@ -33,13 +33,13 @@
   "salesByAsin" : [ {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
-    "asin" : "B0FXBPPMRN",
+    "asin" : "B0FXBQ944Y",
     "customerReturns" : 0,
     "orderedRevenue" : {
-      "amount" : 0.00,
+      "amount" : 1199.90,
       "currencyCode" : "BRL"
     },
-    "orderedUnits" : 0,
+    "orderedUnits" : 1,
     "shippedCogs" : {
       "amount" : 0,
       "currencyCode" : "BRL"
@@ -52,13 +52,13 @@
   }, {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
-    "asin" : "B0FXBQ944Y",
+    "asin" : "B0FXBPPMRN",
     "customerReturns" : 0,
     "orderedRevenue" : {
-      "amount" : 1199.90,
+      "amount" : 0.00,
       "currencyCode" : "BRL"
     },
-    "orderedUnits" : 1,
+    "orderedUnits" : 0,
     "shippedCogs" : {
       "amount" : 0,
       "currencyCode" : "BRL"
@@ -90,25 +90,6 @@
   }, {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
-    "asin" : "B0FKPKCS47",
-    "customerReturns" : 2,
-    "orderedRevenue" : {
-      "amount" : 0.00,
-      "currencyCode" : "BRL"
-    },
-    "orderedUnits" : 0,
-    "shippedCogs" : {
-      "amount" : 1181.52,
-      "currencyCode" : "BRL"
-    },
-    "shippedRevenue" : {
-      "amount" : 1245.50,
-      "currencyCode" : "BRL"
-    },
-    "shippedUnits" : 3
-  }, {
-    "startDate" : "2026-09-20",
-    "endDate" : "2026-09-26",
     "asin" : "B0GZR8SDWC",
     "customerReturns" : 0,
     "orderedRevenue" : {
@@ -125,6 +106,25 @@
       "currencyCode" : "BRL"
     },
     "shippedUnits" : 1
+  }, {
+    "startDate" : "2026-09-20",
+    "endDate" : "2026-09-26",
+    "asin" : "B0FKPKCS47",
+    "customerReturns" : 2,
+    "orderedRevenue" : {
+      "amount" : 0.00,
+      "currencyCode" : "BRL"
+    },
+    "orderedUnits" : 0,
+    "shippedCogs" : {
+      "amount" : 1181.52,
+      "currencyCode" : "BRL"
+    },
+    "shippedRevenue" : {
+      "amount" : 1245.50,
+      "currencyCode" : "BRL"
+    },
+    "shippedUnits" : 3
   }, {
     "startDate" : "2026-09-20",
     "endDate" : "2026-09-26",
