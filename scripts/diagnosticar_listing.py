@@ -26,14 +26,27 @@ SELLER_IDS = {
     'conta3':    'A470C',
     'ozitp':     'OZITV',
     'jolitex':   'R88OM',
+    'balboa':    '6R8TT',
+    'riomaster': 'RD8QP',
+    'plastpet':  'SY933',
+    'wiwu':      '4E8ND',
+    'petiko':    'YM9CK',
+    'new_pet':   '8E8RI',
 }
 SECRETS = {
-    'alfa_jf':  'SP_API_REFRESH_TOKEN_ALFAJF',
-    'blidshop': 'SP_API_REFRESH_TOKEN_BLIDSHOP',
-    'conta3':   'SP_API_REFRESH_TOKEN_PETCLEAN',
-    'ozitp':    'SP_API_REFRESH_TOKEN_OZITP',
-    'jolitex':  'SP_API_REFRESH_TOKEN_JOLITEX',
+    'alfa_jf':   'SP_API_REFRESH_TOKEN_ALFAJF',
+    'blidshop':  'SP_API_REFRESH_TOKEN_BLIDSHOP',
+    'conta3':    'SP_API_REFRESH_TOKEN_PETCLEAN',
+    'ozitp':     'SP_API_REFRESH_TOKEN_OZITP',
+    'jolitex':   'SP_API_REFRESH_TOKEN_JOLITEX',
+    'balboa':    'SP_API_REFRESH_TOKEN_BALBOA',
+    'riomaster': 'SP_API_REFRESH_TOKEN_RIOMASTER',
+    'plastpet':  'SP_API_REFRESH_TOKEN_PLASTPET',
+    'wiwu':      'SP_API_REFRESH_TOKEN_WIWU',
+    'petiko':    'SP_API_REFRESH_TOKEN_PETIKO',
+    'new_pet':   'SP_API_REFRESH_TOKEN_NEWPET',
 }
+CONTAS_APP2 = {'new_pet'}  # usam o segundo app LWA (limite de 10 contas no app principal)
 
 TERMOS_PROMOCIONAIS = [
     'frete gratis', 'frete grátis', '100% garantido', 'melhor preco',
@@ -46,10 +59,16 @@ CARACTERES_PROIBIDOS = ['!', '$', '?', '_', '{', '}', '^', '¬', '¦']
 
 def get_api_clients(conta):
     secret = SECRETS[conta]
+    if conta in CONTAS_APP2:
+        lwa_app_id = userdata.get('SP_API_LWA_CLIENT_ID_APP2')
+        lwa_client_secret = userdata.get('SP_API_LWA_CLIENT_SECRET_APP2')
+    else:
+        lwa_app_id = userdata.get('SP_API_LWA_CLIENT_ID')
+        lwa_client_secret = userdata.get('SP_API_LWA_CLIENT_SECRET')
     creds = dict(
         refresh_token=userdata.get(secret),
-        lwa_app_id=userdata.get('SP_API_LWA_CLIENT_ID'),
-        lwa_client_secret=userdata.get('SP_API_LWA_CLIENT_SECRET'),
+        lwa_app_id=lwa_app_id,
+        lwa_client_secret=lwa_client_secret,
     )
     return (
         ListingsItems(credentials=creds, marketplace=Marketplaces.BR),
@@ -81,7 +100,17 @@ def get_schema_limits(api_pt, product_type):
         )
         bullet_max_qtd = bp.get('maxUniqueItems')
 
-        desc_key = next((k for k in props if 'descri' in k.lower()), None)
+        # varios product types tem mais de um campo com "descri" no nome
+        # (ex.: SHAMPOO tem age_range_description, rtip_product_description,
+        # short_product_description) -- prioriza o campo de descricao
+        # principal do produto, nao um campo auxiliar tipo faixa etaria/garantia.
+        candidatos_desc = [k for k in props if 'descri' in k.lower()]
+        desc_key = (
+            next((k for k in candidatos_desc if k == 'rtip_product_description'), None)
+            or next((k for k in candidatos_desc if 'product_description' in k and 'age_range' not in k and 'warranty' not in k), None)
+            or next((k for k in candidatos_desc if 'warranty' not in k and 'age_range' not in k), None)
+            or (candidatos_desc[0] if candidatos_desc else None)
+        )
         desc_max = None
         if desc_key:
             desc_max = (
@@ -211,17 +240,49 @@ def main():
                 alvos.append(items[0])
             time.sleep(0.3)
     else:
-        page_token = None
+        # search_listings_items trunca em 1000 resultados mesmo com pageToken.
+        # Workaround: pagina por lastUpdatedDate em rodadas, usando o cursor da
+        # ultima pagina de cada rodada como ponto de partida da proxima, ate
+        # juntar o numberOfResults total (mesma tecnica usada no catalogo
+        # completo de Jolitex/Rio Master).
+        vistos = {}
+        cursor_after = None
+        total_geral = None
+        rodada = 0
         while True:
-            kwargs = dict(sellerId=seller_id, marketplaceIds=[MARKETPLACE_ID], pageSize=20,
-                           includedData=['attributes', 'summaries'])
-            if page_token:
-                kwargs['pageToken'] = page_token
-            resp = api_listings.search_listings_items(**kwargs)
-            alvos.extend(resp.payload.get('items', []))
-            page_token = getattr(resp, 'next_token', None)
-            if not page_token:
+            rodada += 1
+            page_token = None
+            novos_na_rodada = 0
+            while True:
+                kwargs = dict(sellerId=seller_id, marketplaceIds=[MARKETPLACE_ID], pageSize=20,
+                               includedData=['attributes', 'summaries'],
+                               sortBy='lastUpdatedDate', sortOrder='ASC')
+                if cursor_after:
+                    kwargs['lastUpdatedAfter'] = cursor_after
+                if page_token:
+                    kwargs['pageToken'] = page_token
+                resp = api_listings.search_listings_items(**kwargs)
+                if total_geral is None:
+                    total_geral = resp.payload.get('numberOfResults')
+                for item in resp.payload.get('items', []):
+                    s = item.get('summaries', [{}])[0]
+                    asin = s.get('asin')
+                    if not asin or asin in vistos:
+                        continue
+                    vistos[asin] = item
+                    novos_na_rodada += 1
+                page_token = getattr(resp, 'next_token', None)
+                if not page_token:
+                    break
+                time.sleep(0.3)
+            print(f'  rodada {rodada}: {novos_na_rodada} novos, total {len(vistos)} / esperado {total_geral}')
+            if novos_na_rodada == 0 or (total_geral is not None and len(vistos) >= total_geral):
                 break
+            cursor_after = max(
+                item.get('summaries', [{}])[0].get('lastUpdatedDate', '')
+                for item in vistos.values()
+            )
+        alvos = list(vistos.values())
 
     print(f'Diagnosticando {len(alvos)} ASINs da conta {conta}...\n')
 
