@@ -69,6 +69,7 @@ CONTAS_CONFIG = {
     'plastpet':  {'pasta': 'plastpet/raw',   'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'pasta': 'wiwu/raw',       'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
     'petiko':    {'pasta': 'petiko/raw',     'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
+    'new_pet':   {'pasta': 'new_pet/raw',    'secret': 'SP_API_REFRESH_TOKEN_NEWPET', 'app2': True},
 }
 
 SELLER_IDS = {
@@ -82,6 +83,7 @@ SELLER_IDS = {
     'plastpet':  'SY933',   # Pet Factory Brazil Industria Ltda
     'wiwu':      '4E8ND',
     'petiko':    'YM9CK',
+    'new_pet':   '8E8RI',
 }
 
 # None = todas as contas. Para testar so uma: CONTAS_ALVO = ['ozitp']
@@ -89,6 +91,13 @@ CONTAS_ALVO = None
 
 LWA_CLIENT_ID = userdata.get('SP_API_LWA_CLIENT_ID')
 LWA_CLIENT_SECRET = userdata.get('SP_API_LWA_CLIENT_SECRET')
+LWA_CLIENT_ID_APP2 = userdata.get('SP_API_LWA_CLIENT_ID_APP2')
+LWA_CLIENT_SECRET_APP2 = userdata.get('SP_API_LWA_CLIENT_SECRET_APP2')
+# contas autorizadas pelo 2o app SP-API (1o bateu no limite de 10 contas)
+def lwa_para(cfg):
+    if cfg.get('app2'):
+        return LWA_CLIENT_ID_APP2, LWA_CLIENT_SECRET_APP2
+    return LWA_CLIENT_ID, LWA_CLIENT_SECRET
 MARKETPLACE = Marketplaces.BR
 
 TAMANHO_LOTE = 20       # ASINs por chamada (maximo da API)
@@ -235,8 +244,8 @@ def capturar_conta(chave, cfg):
         else:
             credentials = dict(
                 refresh_token=userdata.get(cfg['secret']),
-                lwa_app_id=LWA_CLIENT_ID,
-                lwa_client_secret=LWA_CLIENT_SECRET,
+                lwa_app_id=lwa_para(CONTAS_CONFIG[chave])[0],
+                lwa_client_secret=lwa_para(CONTAS_CONFIG[chave])[1],
             )
             api = ListingsItems(credentials=credentials, marketplace=MARKETPLACE)
             lotes = list(em_lotes(faltando, TAMANHO_LOTE))

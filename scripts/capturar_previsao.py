@@ -44,6 +44,13 @@ drive.mount('/content/drive', force_remount=True)
 BASE_DRIVE = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, 'dados_raw'))
 LWA_CLIENT_ID = userdata.get('SP_API_LWA_CLIENT_ID')
 LWA_CLIENT_SECRET = userdata.get('SP_API_LWA_CLIENT_SECRET')
+LWA_CLIENT_ID_APP2 = userdata.get('SP_API_LWA_CLIENT_ID_APP2')
+LWA_CLIENT_SECRET_APP2 = userdata.get('SP_API_LWA_CLIENT_SECRET_APP2')
+# contas autorizadas pelo 2o app SP-API (1o bateu no limite de 10 contas)
+def lwa_para(cfg):
+    if cfg.get('app2'):
+        return LWA_CLIENT_ID_APP2, LWA_CLIENT_SECRET_APP2
+    return LWA_CLIENT_ID, LWA_CLIENT_SECRET
 MARKETPLACE = Marketplaces.BR
 
 CONTAS_CONFIG = {
@@ -57,6 +64,7 @@ CONTAS_CONFIG = {
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'pasta': 'plastpet/raw', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'nome': 'WIWU', 'pasta': 'wiwu/raw', 'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
     'petiko':    {'nome': 'PETIKO', 'pasta': 'petiko/raw', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
+    'new_pet':   {'nome': 'New Pet', 'pasta': 'new_pet/raw', 'secret': 'SP_API_REFRESH_TOKEN_NEWPET', 'app2': True},
 }
 
 ARQUIVO = 'previsao_60dias.json'
@@ -125,8 +133,8 @@ def processar_conta(chave, cfg):
 
     reports_api = Reports(credentials=dict(
         refresh_token=userdata.get(cfg['secret']),
-        lwa_app_id=LWA_CLIENT_ID,
-        lwa_client_secret=LWA_CLIENT_SECRET,
+        lwa_app_id=lwa_para(cfg)[0],
+        lwa_client_secret=lwa_para(cfg)[1],
     ), marketplace=MARKETPLACE)
 
     rid = None

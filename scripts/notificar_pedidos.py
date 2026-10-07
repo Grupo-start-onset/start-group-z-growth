@@ -54,6 +54,7 @@ CONTA_NOME = {
     'alfa_jf': 'ALFA JF', 'blidshop': 'Blid Shop', 'conta3': 'Petclean BR',
     'ozitp': 'OZITP', 'jolitex': 'Jolitex', 'balboa': 'Balboa', 'riomaster': 'BR - Rio Master',
     'plastpet': 'Pet Factory Brazil Industria Ltda', 'wiwu': 'WIWU', 'petiko': 'PETIKO',
+    'new_pet': 'New Pet',
 }
 
 # FASE DE TESTE: todas as contas mandam pro mesmo email. Pra ligar pro

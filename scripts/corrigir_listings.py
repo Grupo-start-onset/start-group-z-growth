@@ -54,6 +54,13 @@ MARKETPLACE_ID = 'A2Q3Y263D00KWC'
 
 LWA_CLIENT_ID = userdata.get('SP_API_LWA_CLIENT_ID')
 LWA_CLIENT_SECRET = userdata.get('SP_API_LWA_CLIENT_SECRET')
+LWA_CLIENT_ID_APP2 = userdata.get('SP_API_LWA_CLIENT_ID_APP2')
+LWA_CLIENT_SECRET_APP2 = userdata.get('SP_API_LWA_CLIENT_SECRET_APP2')
+# contas autorizadas pelo 2o app SP-API (1o bateu no limite de 10 contas)
+def lwa_para(cfg):
+    if cfg.get('app2'):
+        return LWA_CLIENT_ID_APP2, LWA_CLIENT_SECRET_APP2
+    return LWA_CLIENT_ID, LWA_CLIENT_SECRET
 
 CONTAS_CONFIG = {
     'alfa_jf':   {'nome': 'ALFA JF',         'secret': 'SP_API_REFRESH_TOKEN_ALFAJF',   'seller_id': '76I78'},
@@ -66,6 +73,7 @@ CONTAS_CONFIG = {
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET', 'seller_id': 'SY933'},
     'wiwu':      {'nome': 'WIWU', 'secret': 'SP_API_REFRESH_TOKEN_WIWU', 'seller_id': '4E8ND'},
     'petiko':    {'nome': 'PETIKO', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO', 'seller_id': 'YM9CK'},
+    'new_pet':   {'nome': 'New Pet', 'secret': 'SP_API_REFRESH_TOKEN_NEWPET', 'seller_id': '8E8RI', 'app2': True},
 }
 # nome de exibicao (como sai na planilha) -> chave interna da conta
 NOME_PARA_CHAVE = {cfg['nome']: chave for chave, cfg in CONTAS_CONFIG.items()}
@@ -75,9 +83,10 @@ RE_ATRIBUTOS_18448 = re.compile(r'envio:\s*(.*?)\.\s*A falta')
 
 def credenciais(chave):
     refresh = userdata.get(CONTAS_CONFIG[chave]['secret'])
-    if not (refresh and LWA_CLIENT_ID and LWA_CLIENT_SECRET):
+    cid, csec = lwa_para(CONTAS_CONFIG[chave])
+    if not (refresh and cid and csec):
         return None
-    return dict(refresh_token=refresh, lwa_app_id=LWA_CLIENT_ID, lwa_client_secret=LWA_CLIENT_SECRET)
+    return dict(refresh_token=refresh, lwa_app_id=cid, lwa_client_secret=csec)
 
 
 def ler_planilha_aprovadas(conta_filtro=None):

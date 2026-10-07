@@ -37,6 +37,13 @@ drive.mount('/content/drive', force_remount=True)
 BASE_DRIVE = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, 'dados_raw'))
 LWA_CLIENT_ID = userdata.get('SP_API_LWA_CLIENT_ID')
 LWA_CLIENT_SECRET = userdata.get('SP_API_LWA_CLIENT_SECRET')
+LWA_CLIENT_ID_APP2 = userdata.get('SP_API_LWA_CLIENT_ID_APP2')
+LWA_CLIENT_SECRET_APP2 = userdata.get('SP_API_LWA_CLIENT_SECRET_APP2')
+# contas autorizadas pelo 2o app SP-API (1o bateu no limite de 10 contas)
+def lwa_para(cfg):
+    if cfg.get('app2'):
+        return LWA_CLIENT_ID_APP2, LWA_CLIENT_SECRET_APP2
+    return LWA_CLIENT_ID, LWA_CLIENT_SECRET
 ENDPOINT = 'https://sellingpartnerapi-na.amazon.com'
 LWA_URL = 'https://api.amazon.com/auth/o2/token'
 
@@ -51,6 +58,7 @@ CONTAS_CONFIG = {
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'pasta': 'plastpet/raw', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'nome': 'WIWU', 'pasta': 'wiwu/raw', 'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
     'petiko':    {'nome': 'PETIKO', 'pasta': 'petiko/raw', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
+    'new_pet':   {'nome': 'New Pet', 'pasta': 'new_pet/raw', 'secret': 'SP_API_REFRESH_TOKEN_NEWPET', 'app2': True},
 }
 
 N_SEMANAS = 4              # quantas semanas fechadas manter (tendencia semana a semana)

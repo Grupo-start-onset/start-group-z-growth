@@ -50,6 +50,7 @@ CONTAS = {
     "plastpet": "PLASTPET",  # nome de exibição: "Pet Factory Brazil Industria Ltda"
     "wiwu": "WIWU",
     "petiko": "PETIKO",
+    "new_pet": "NEWPET",  # autorizada pelo 2o app SP-API (ver .env: *_APP2)
 }
 
 _VARS_OBRIGATORIAS = ["SP_API_LWA_CLIENT_ID", "SP_API_LWA_CLIENT_SECRET"]

@@ -111,6 +111,7 @@ CONTAS_CONFIG = {
     'plastpet':  {'nome': 'Pet Factory Brazil Industria Ltda', 'secret': 'SP_API_REFRESH_TOKEN_PLASTPET'},
     'wiwu':      {'nome': 'WIWU', 'secret': 'SP_API_REFRESH_TOKEN_WIWU'},
     'petiko':    {'nome': 'PETIKO', 'secret': 'SP_API_REFRESH_TOKEN_PETIKO'},
+    'new_pet':   {'nome': 'New Pet', 'secret': 'SP_API_REFRESH_TOKEN_NEWPET', 'app2': True},
 }
 
 # tipo interno -> (reportType da Amazon, campo da linha -> chave curta no arquivo)
@@ -161,8 +162,12 @@ def get_secret(nome):
 
 def credenciais(chave):
     refresh = get_secret(CONTAS_CONFIG[chave]['secret'])
-    cid = get_secret('SP_API_LWA_CLIENT_ID')
-    csec = get_secret('SP_API_LWA_CLIENT_SECRET')
+    if CONTAS_CONFIG[chave].get('app2'):
+        cid = get_secret('SP_API_LWA_CLIENT_ID_APP2')
+        csec = get_secret('SP_API_LWA_CLIENT_SECRET_APP2')
+    else:
+        cid = get_secret('SP_API_LWA_CLIENT_ID')
+        csec = get_secret('SP_API_LWA_CLIENT_SECRET')
     if not (refresh and cid and csec):
         return None
     return dict(refresh_token=refresh, lwa_app_id=cid, lwa_client_secret=csec)

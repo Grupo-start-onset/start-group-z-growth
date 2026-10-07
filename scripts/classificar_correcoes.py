@@ -37,6 +37,7 @@ CONTA_NOME = {
     'alfa_jf': 'ALFA JF', 'blidshop': 'Blid Shop', 'petclean': 'Petclean BR',
     'ozitp': 'OZITP', 'jolitex': 'Jolitex', 'balboa': 'Balboa', 'riomaster': 'BR - Rio Master',
     'plastpet': 'Pet Factory Brazil Industria Ltda', 'wiwu': 'WIWU', 'petiko': 'PETIKO',
+    'new_pet': 'New Pet',
 }
 
 # codigo da Amazon -> categoria de correcao
