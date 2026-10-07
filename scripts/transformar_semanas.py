@@ -51,6 +51,7 @@ CONTAS_CONFIG = {
     'plastpet':  'plastpet/raw',
     'wiwu':      'wiwu/raw',
     'petiko':    'petiko/raw',
+    'new_pet':   'new_pet/raw',
 }
 
 
