@@ -522,6 +522,7 @@ async function iniciarDashboard() {
     ate: ALL_MONTHS[ALL_MONTHS.length-1],
     catBusca: '',
     catOrdenar: 'rev_desc',
+    itensVendidosBusca: '',
     qualBusca: '',
     qualFiltroGrau: '',
     qualOrdenar: 'score_asc',
@@ -597,6 +598,9 @@ async function iniciarDashboard() {
   catBusca.oninput = () => { state.catBusca = catBusca.value.trim().toLowerCase(); resetLim(); renderCatalogo(agregarPeriodo()); };
   catOrdenar.onchange = () => { state.catOrdenar = catOrdenar.value; resetLim(); renderCatalogo(agregarPeriodo()); };
 
+  const itensVendidosBusca = document.getElementById('itensVendidosBusca');
+  itensVendidosBusca.oninput = () => { state.itensVendidosBusca = itensVendidosBusca.value.trim().toLowerCase(); resetLim(); renderItensVendidos(agregarPeriodo()); };
+
   const qualBusca = document.getElementById('qualBusca');
   const qualFiltroGrau = document.getElementById('qualFiltroGrau');
   const qualOrdenar = document.getElementById('qualOrdenar');
@@ -663,6 +667,7 @@ async function iniciarDashboard() {
   // botão "Mostrar mais": aumenta o limite daquela tabela e redesenha só ela
   const REDESENHAR_TABELA = {
     catalogo:   () => renderCatalogo(agregarPeriodo()),
+    itensVendidos: () => renderItensVendidos(agregarPeriodo()),
     suprimidos: () => renderListingsSuprimidos(montarListings()),
     avisos:     () => renderListingsAvisos(montarListings()),
     qualidade:  () => renderQualidade(),
@@ -1422,6 +1427,59 @@ async function iniciarDashboard() {
         })) },
       options: baseGridOpts()
     });
+  }
+
+  /* ------------------------------------------------------------------------
+     ITENS VENDIDOS MÊS A MÊS (unidades enviadas, por produto, uma coluna por mês)
+     ------------------------------------------------------------------------ */
+  function montarItensVendidosPeriodo(meses){
+    const linhas = [];
+    state.contas.forEach(k => {
+      const c = CONTAS[k];
+      const vendas = c.vendas || {};
+      Object.keys(vendas).forEach(asin => {
+        const porMes = {};
+        let total = 0;
+        meses.forEach(m => {
+          const un = (vendas[asin][m] && vendas[asin][m].shippedUnits) || 0;
+          porMes[m] = un;
+          total += un;
+        });
+        if (total === 0) return;
+        const info = catalogInfo(k, asin);
+        linhas.push({ asin, contaKey:k, nome:info.nome, imagem:info.imagem, porMes, total });
+      });
+    });
+    return linhas;
+  }
+
+  function renderItensVendidos(agregado){
+    const { meses } = agregado;
+    let linhas = montarItensVendidosPeriodo(meses);
+
+    if (state.itensVendidosBusca) {
+      linhas = linhas.filter(l => l.nome.toLowerCase().includes(state.itensVendidosBusca) || l.asin.toLowerCase().includes(state.itensVendidosBusca));
+    }
+    linhas.sort((a,b) => b.total - a.total);
+
+    document.getElementById('itensVendidosCount').textContent = linhas.length + ' produto(s)';
+
+    const multiConta = state.contas.length > 1;
+    const colspan = 2 + meses.length;
+    document.getElementById('tblItensVendidosHead').innerHTML =
+      '<th>Produto</th>' + meses.map(m => `<th class="num">${MESLABEL(m)}</th>`).join('') + '<th class="num">Total</th>';
+
+    const tbody = document.querySelector('#tblItensVendidos tbody');
+    if (!linhas.length) { tbody.innerHTML = `<tr><td colspan="${colspan}" class="empty">Nenhum produto vendido no período.</td></tr>`; return; }
+
+    tbody.innerHTML = tbodyHTML('itensVendidos', linhas, colspan, l => `<tr>
+      <td><div class="prodcell">
+        ${l.imagem ? `<img class="thumb" src="${esc(l.imagem)}" loading="lazy" alt="">` : '<div class="thumb"></div>'}
+        <div><div class="prodname">${esc(l.nome)}</div><div class="asincode">${linkAsin(l.asin)}${multiConta ? ' · <span class="contatag" style="margin:0">' + esc(CONTA_NOME[l.contaKey]) + '</span>' : ''}</div></div>
+      </div></td>
+      ${meses.map(m => `<td class="num">${NUM(l.porMes[m])}</td>`).join('')}
+      <td class="num"><b>${NUM(l.total)}</b></td>
+    </tr>`);
   }
 
   function renderOrigem(){
@@ -2807,7 +2865,7 @@ async function iniciarDashboard() {
     alertas:   { titulo:'Alertas', sub:'O que exige ação agora, por prioridade (semana fechada contra a anterior; não usa o filtro de período)', periodo:false,
                  render: () => renderAlertas() },
     vendas:    { titulo:'Vendas e margem', sub:'Faturamento e margem no período', periodo:true,
-                 render: ag => { renderFaturamento(ag.porConta, ag.meses); renderOrigem(); renderMargemMarkup(ag.porMes, ag.meses); } },
+                 render: ag => { renderFaturamento(ag.porConta, ag.meses); renderItensVendidos(ag); renderOrigem(); renderMargemMarkup(ag.porMes, ag.meses); } },
     estoque:   { titulo:'Estoque', sub:'Composição, conversão, cobertura e ruptura', periodo:true,
                  render: ag => renderEstoque(ag.porMes, ag.meses) },
     compras:   { titulo:'Compras e pedidos', sub:'Sell-in vs. sell-out e pedidos de compra (POs)', periodo:true,
