@@ -157,14 +157,16 @@ def gravar_atomico(alvo, obj):
 
 class Sessao:
     """Access token do LWA por conta, renovado antes de expirar (validade de 1 hora)."""
-    def __init__(self, refresh_token):
+    def __init__(self, refresh_token, client_id=None, client_secret=None):
         self.refresh = refresh_token
+        self.client_id = client_id or LWA_CLIENT_ID
+        self.client_secret = client_secret or LWA_CLIENT_SECRET
         self.token, self.t0 = None, 0
 
     def headers(self):
         if not self.token or time.time() - self.t0 > 45 * 60:
             r = requests.post(LWA_URL, data={'grant_type': 'refresh_token', 'refresh_token': self.refresh,
-                                             'client_id': LWA_CLIENT_ID, 'client_secret': LWA_CLIENT_SECRET}, timeout=60)
+                                             'client_id': self.client_id, 'client_secret': self.client_secret}, timeout=60)
             r.raise_for_status()
             self.token, self.t0 = r.json()['access_token'], time.time()
         return {'x-amz-access-token': self.token, 'content-type': 'application/json'}
@@ -225,7 +227,8 @@ def capturar_conta(chave, cfg, semanas):
         return cfg['nome'], {'ok': 0, 'cache': len(semanas) - len(pend), 'falha': 0, 'pulado': 1}
 
     try:
-        sessao = Sessao(userdata.get(cfg['secret']))
+        cid, csec = lwa_para(cfg)
+        sessao = Sessao(userdata.get(cfg['secret']), cid, csec)
         registros, seg = consultar(sessao, montar_query(pend[0][0], pend[-1][1]), tag)
         pedidas = {(i.strftime('%Y-%m-%d'), f.strftime('%Y-%m-%d')) for i, f in pend}
         gravadas = 0
