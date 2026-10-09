@@ -19,7 +19,7 @@
 #       sys.argv = [ "x", "--teste", "alfa_jf"]; main()
 #
 # ONDE GRAVA
-#   Drive (historico persistente, janela deslizante de 72h):
+#   Drive (historico persistente, janela deslizante de 192h/8 dias):
 #     START_Vendor_Analytics/tempo_real/<conta>.json   (1 arquivo por conta)
 #     START_Vendor_Analytics/tempo_real/index.json     (resumo + falhas)
 #   GitHub Pages (se PUBLICAR = True): pasta tempo_real/ do repositorio
@@ -123,7 +123,7 @@ RELATORIOS = {
 TIPOS_LINHA = ('vendas', 'trafego')     # entram em "horas"; estoque tem tratamento proprio
 
 HORAS_JANELA = 48          # quanto tempo para tras recapturar a cada rodada (max 168)
-HORAS_MANTER = 72          # historico mantido nos arquivos
+HORAS_MANTER = 192         # historico mantido nos arquivos (8 dias, cobre a semana em andamento inteira)
 ATRASO_HORAS = 1           # fim = hora cheia atual - ATRASO_HORAS (regra dos 60 min)
 CHUNKS_HORAS = [24, 6, 1]  # tenta janelas grandes; se a Amazon recusar, reduz
 # O relatorio de TRAFEGO da Amazon vem FATAL se o fim da janela for recente demais

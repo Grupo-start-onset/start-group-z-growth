@@ -21,7 +21,7 @@ concurrency:
 jobs:
   capturar_tempo_real:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,4 +53,4 @@ jobs:
           SP_API_REFRESH_TOKEN_NEWPET: ${{ secrets.SP_API_REFRESH_TOKEN_NEWPET }}
           SP_API_LWA_CLIENT_ID_APP2: ${{ secrets.SP_API_LWA_CLIENT_ID_APP2 }}
           SP_API_LWA_CLIENT_SECRET_APP2: ${{ secrets.SP_API_LWA_CLIENT_SECRET_APP2 }}
-        run: python scripts/capturar_tempo_real.py
+        run: python -u scripts/capturar_tempo_real.py
