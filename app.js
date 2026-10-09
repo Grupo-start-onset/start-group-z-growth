@@ -2161,6 +2161,43 @@ async function iniciarDashboard() {
     return { semanas: todas.filter(s => s.fim >= mes + '-01'), todas, mes };
   }
 
+  // domingo (00:00, 'YYYY-MM-DD') da semana que contém o dia 'diaISO'
+  function inicioSemanaBRT(diaISO){
+    const d = new Date(diaISO + 'T12:00:00Z');
+    d.setUTCDate(d.getUTCDate() - d.getUTCDay());
+    return d.toISOString().slice(0,10);
+  }
+  // mesma regra do numero_semana() em transformar_semanas.py: semana 1 = a que contém 1/jan
+  function numeroSemana(domingoISO){
+    const d = new Date(domingoISO + 'T12:00:00Z');
+    const ano = new Date(d.getTime() + 6*86400000).getUTCFullYear();
+    const j1 = new Date(Date.UTC(ano, 0, 1));
+    const ini = new Date(j1.getTime() - j1.getUTCDay()*86400000);
+    return Math.floor((d - ini) / (7*86400000)) + 1;
+  }
+  // agrega as horas de tempo_real (tempo_real/<conta>.json) desde o domingo da semana
+  // corrente até a última hora capturada -- é uma PRÉVIA por pedidos, não o relatório
+  // fechado da Amazon (ARA): pode ter diferença por cancelamentos ainda não processados.
+  function trSemanaAtualAgg(contas){
+    const sel = contas.filter(k => TR[k]);
+    if (!sel.length) return null;
+    let ultima = '';
+    sel.forEach(k => { if ((TR[k].ultima_hora || '') > ultima) ultima = TR[k].ultima_hora; });
+    if (!ultima) return null;
+    const hoje = diaBRT(ultima), domingo = inicioSemanaBRT(hoje);
+    let rev = 0, un = 0, views = 0, tem = false;
+    sel.forEach(k => {
+      (TR[k].horas || []).forEach(x => {
+        if (!noFiltroMarca(k, x.asin)) return;
+        if (diaBRT(x.h) < domingo) return;
+        tem = true;
+        rev += x.r || 0; un += x.u || 0; views += x.v || 0;
+      });
+    });
+    if (!tem) return null;
+    return { id: domingo, num: numeroSemana(domingo), ini: domingo, fim: hoje, rev, un, views };
+  }
+
   function somaSemana(id){
     const t = { rev:0, un:0, env:0, views:0, npmNum:0, npmDen:0, est:0, oosNum:0, oosDen:0, tem:false };
     state.contas.forEach(k => {
@@ -2176,7 +2213,7 @@ async function iniciarDashboard() {
     return t;
   }
 
-  function renderSemanas(){
+  async function renderSemanas(){
     const { semanas, todas, mes } = semanasDoMes();
     const vazio = document.getElementById('semVazio'), cont = document.getElementById('semConteudo');
     const titulo = document.getElementById('semTitulo'), desc = document.getElementById('semDesc');
@@ -2194,42 +2231,60 @@ async function iniciarDashboard() {
     titulo.textContent = nomeMes.charAt(0).toUpperCase() + nomeMes.slice(1) + ' de ' + mes.slice(0,4) + ', por semana';
     const primeira = semanas[0];
     const cruza = primeira.ini < mes + '-01';
-    desc.textContent = 'O mês ainda não fechou, e a Amazon só libera o relatório mensal com o mês inteiro; por isso ele aparece por semanas fechadas (domingo a sábado), como no painel Análise de Varejo. ' +
-      'Semanas mostradas: ' + semanas.map(s => 'S' + s.num).join(', ') + '. ' +
-      (cruza ? `A semana ${primeira.num} começa em ${DM(primeira.ini)} e inclui dias do mês anterior, que já estão nos totais mensais; por isso estas semanas não entram nas somas dos outros blocos. ` : '') +
-      'Não usa o filtro de período.';
 
     // ---- linhas: cada semana com a anterior (que pode estar fora do mês) para a variação ----
     const idxTodas = Object.fromEntries(todas.map((s,i) => [s.id, i]));
     const linhas = semanas.map(s => {
       const i = idxTodas[s.id];
       const t = somaSemana(s.id), ant = i > 0 ? somaSemana(todas[i-1].id) : null;
-      return { s, t, dv: ant && ant.tem ? varPct(t.rev, ant.rev) : null };
+      return { s, t, dv: ant && ant.tem ? varPct(t.rev, ant.rev) : null, preview:false };
     });
-    const tot = linhas.reduce((a,l) => { a.rev += l.t.rev; a.un += l.t.un; a.views += l.t.views; a.npmNum += l.t.npmNum; a.npmDen += l.t.npmDen; return a; }, { rev:0, un:0, views:0, npmNum:0, npmDen:0 });
-    const ult = linhas[linhas.length-1].t;
-    document.getElementById('semTabDesc').textContent = 'Estoque e ruptura são a posição de cada semana; a linha de total soma receita, unidades e visitas' +
-      (linhas.some(l => l.t.rev < 0 || l.t.un < 0) ? '. Receita ou unidades negativas: na semana, os cancelamentos superaram os pedidos novos (a Amazon ajusta os pedidos por cancelamento)' : '');
+
+    // ---- semana corrente em andamento (prévia por pedidos, via tempo_real/<conta>.json) ----
+    // só entra se ainda não houver uma semana FECHADA com o mesmo domingo (senão duplicaria).
+    await carregarTR(state.contas);
+    const semAtual = trSemanaAtualAgg(state.contas);
+    const semAtualNova = semAtual && !todas.some(s => s.id === semAtual.id);
+    if (semAtualNova) {
+      linhas.push({
+        s: semAtual,
+        t: { rev: semAtual.rev, un: semAtual.un, views: semAtual.views, npmNum:0, npmDen:0, est:0, oosNum:0, oosDen:0, tem:true },
+        dv: null, preview: true
+      });
+    }
+
+    desc.textContent = 'O mês ainda não fechou, e a Amazon só libera o relatório mensal com o mês inteiro; por isso ele aparece por semanas fechadas (domingo a sábado), como no painel Análise de Varejo. ' +
+      'Semanas mostradas: ' + semanas.map(s => 'S' + s.num).join(', ') + '. ' +
+      (cruza ? `A semana ${primeira.num} começa em ${DM(primeira.ini)} e inclui dias do mês anterior, que já estão nos totais mensais; por isso estas semanas não entram nas somas dos outros blocos. ` : '') +
+      (semAtualNova ? `A semana ${semAtual.num} (em andamento, ${DM(semAtual.ini)} até ${DM(semAtual.fim)}) é uma PRÉVIA por pedidos (tempo_real), não o relatório fechado da Amazon — pode mudar com cancelamentos e chega com atraso de 1h. ` : '') +
+      'Não usa o filtro de período.';
+
+    const linhasFechadas = linhas.filter(l => !l.preview);
+    const tot = linhasFechadas.reduce((a,l) => { a.rev += l.t.rev; a.un += l.t.un; a.views += l.t.views; a.npmNum += l.t.npmNum; a.npmDen += l.t.npmDen; return a; }, { rev:0, un:0, views:0, npmNum:0, npmDen:0 });
+    const ult = linhasFechadas[linhasFechadas.length-1].t;
+    document.getElementById('semTabDesc').textContent = 'Estoque e ruptura são a posição de cada semana; a linha de total soma receita, unidades e visitas das semanas fechadas (sem a semana em andamento)' +
+      (linhasFechadas.some(l => l.t.rev < 0 || l.t.un < 0) ? '. Receita ou unidades negativas: na semana, os cancelamentos superaram os pedidos novos (a Amazon ajusta os pedidos por cancelamento)' : '');
 
     const conv = t => t.views > 0 ? t.un / t.views : null;
     const npm = t => t.npmDen > 0 ? t.npmNum / t.npmDen : null;
     const oos = t => t.oosDen > 0 ? t.oosNum / t.oosDen : null;
-    document.querySelector('#tblSemanas tbody').innerHTML = linhas.map(l => `<tr>
-      <td><b>Sem ${l.s.num}</b> <span class="asincode">${DM(l.s.ini)} a ${DM(l.s.fim)}</span></td>
+    document.querySelector('#tblSemanas tbody').innerHTML = linhas.map(l => `<tr${l.preview ? ' style="opacity:.75"' : ''}>
+      <td><b>Sem ${l.s.num}</b> <span class="asincode">${DM(l.s.ini)} a ${DM(l.s.fim)}</span>${l.preview ? ' <span class="tag muted">em andamento · prévia</span>' : ''}</td>
       <td class="num">${MOEDA(l.t.rev)}</td><td class="num"${deltaCls(l.dv)}>${DELTA(l.dv)}</td>
       <td class="num">${NUM(l.t.un)}</td><td class="num">${NUM(l.t.views)}</td><td class="num">${PCT(conv(l.t))}</td>
-      <td class="num">${PCT(npm(l.t))}</td><td class="num">${NUM(l.t.est)}</td><td class="num">${PCT(oos(l.t))}</td>
-    </tr>`).join('') + `<tr style="font-weight:700"><td>Total mostrado</td><td class="num">${MOEDA(tot.rev)}</td><td class="num">—</td>
+      <td class="num">${l.preview ? '—' : PCT(npm(l.t))}</td><td class="num">${l.preview ? '—' : NUM(l.t.est)}</td><td class="num">${l.preview ? '—' : PCT(oos(l.t))}</td>
+    </tr>`).join('') + `<tr style="font-weight:700"><td>Total mostrado (semanas fechadas)</td><td class="num">${MOEDA(tot.rev)}</td><td class="num">—</td>
       <td class="num">${NUM(tot.un)}</td><td class="num">${NUM(tot.views)}</td><td class="num">${PCT(conv(tot))}</td><td class="num">${PCT(npm(tot))}</td>
       <td class="num">${NUM(ult.est)}</td><td class="num">${PCT(oos(ult))}</td></tr>`;
 
     destroyChart('semanas');
     charts.semanas = new Chart(document.getElementById('chSemanas'), {
       type:'bar',
-      data:{ labels: linhas.map(l => 'Sem ' + l.s.num),
-        datasets:[{ label:'Receita pedida', data: linhas.map(l => l.t.rev), backgroundColor:'#FD984D', borderRadius:5 }] },
+      data:{ labels: linhas.map(l => 'Sem ' + l.s.num + (l.preview ? ' (prévia)' : '')),
+        datasets:[{ label:'Receita pedida', data: linhas.map(l => l.t.rev),
+          backgroundColor: linhas.map(l => l.preview ? '#FFD199' : '#FD984D'), borderRadius:5 }] },
       options: { ...baseGridOpts(), plugins:{ legend:{display:false},
-        tooltip:{ callbacks:{ title: items => { const s = linhas[items[0].dataIndex].s; return `Semana ${s.num} (${DM(s.ini)} a ${DM(s.fim)})`; },
+        tooltip:{ callbacks:{ title: items => { const l = linhas[items[0].dataIndex]; return `Semana ${l.s.num} (${DM(l.s.ini)} a ${DM(l.s.fim)})` + (l.preview ? ' — em andamento, prévia por pedidos' : ''); },
                               label: ctx => MOEDA(ctx.raw) } } } }
     });
 
