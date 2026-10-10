@@ -86,6 +86,14 @@
   .steps > li::before { content: counter(s); position: absolute; left: 0; top: -0.3mm; width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; }
 </style>
 </head>
+<style>
+  .slot { grid-template-columns: 44mm 1fr; }
+  .slot img, .slot .ph { width: 44mm; height: 44mm; }
+  .slot .src { font-size: 7.5pt; color: var(--muted); margin-top: 1mm; text-align: center; }
+  .refgrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; margin: 2mm 0 1mm; }
+  .refgrid img { width: 100%; border: 1px solid var(--line); border-radius: 1mm; display: block; }
+  .reflabel { font-size: 8pt; font-weight: 600; margin-top: 3mm; }
+</style>
 <body>
 
 <!-- ===================== CAPA ===================== -->
@@ -94,7 +102,7 @@
     <div class="kicker">Grupo START · Guia para o cliente</div>
     <h1>Guia de Imagens Amazon<br>New Pet</h1>
     <p class="lead">Quais imagens precisamos para cada ração, como nomear cada arquivo e como montar a pasta no Google Drive para publicarmos tudo de uma vez, sem risco de imagem trocada.</p>
-    <p class="small">Vale para as imagens do anúncio (galeria) e para o Conteúdo A+ (a parte "Da marca / Do fabricante" mais abaixo na página do produto). Versão de outubro de 2026.</p>
+    <p class="small">Vale para as imagens do anúncio (galeria) e para as imagens do Conteúdo A+ (a área "Do fabricante", mais abaixo na página do produto). Versão de outubro de 2026.</p>
   </div>
   <div class="imgs">
     <img src="img/np2.jpg" alt="">
@@ -105,16 +113,35 @@
     <h3 style="margin-top:0">O que pedimos, por produto (por EAN)</h3>
     <div class="summary">
       <div><b>9</b>imagens de anúncio<br><span class="small">1 principal + 8 complementares</span></div>
-      <div><b>5–8</b>imagens de A+<br><span class="small">conforme o modelo escolhido para a linha</span></div>
-      <div><b>1</b>planilha de controle<br><span class="small">para toda a marca, com EANs e textos do A+</span></div>
+      <div><b>7–8</b>imagens de A+<br><span class="small">conforme o modelo escolhido para a linha</span></div>
+      <div><b>1</b>planilha de controle<br><span class="small">para toda a marca, com os EANs</span></div>
     </div>
-    <p class="small" style="margin-top:4mm">Tudo em <b>uma única pasta</b> do Google Drive, sem subpastas, com cada arquivo nomeado pelo <b>EAN</b> do produto.</p>
+    <p class="small" style="margin-top:4mm">Tudo em <b>uma única pasta</b> do Google Drive, sem subpastas, com cada arquivo nomeado pelo <b>EAN</b> do produto. <b>Os textos do anúncio e do A+ são criados pela START</b>. De vocês precisamos só das imagens, incluindo o texto que vai desenhado dentro delas.</p>
   </div>
 </section>
 
-<!-- ===================== 1. AS 5 REGRAS ===================== -->
+<!-- ===================== 1. QUEM FAZ O QUÊ + REGRAS ===================== -->
 <section class="page brk">
-  <h2><span class="n">1</span>As 5 regras que não podem falhar</h2>
+  <h2><span class="n">1</span>Quem faz o quê</h2>
+  <div class="two">
+    <div class="box warn" style="margin:0"><b class="t">New Pet (marketing / design)</b>
+      <ul style="margin:0">
+        <li>Fotos e artes da galeria (9 por produto)</li>
+        <li>Imagens do A+ no tamanho de cada módulo</li>
+        <li>O texto que fica <b>dentro</b> das imagens (títulos, ícones, tabelas desenhadas)</li>
+        <li>Pasta do Drive e planilha de controle</li>
+      </ul>
+    </div>
+    <div class="box info" style="margin:0"><b class="t">START</b>
+      <ul style="margin:0">
+        <li>Título, bullets e descrição do anúncio</li>
+        <li>Textos dos módulos do A+ (títulos, parágrafos, especificações e descrições das imagens), feitos a partir das informações do produto</li>
+        <li>Montagem do A+, conferência, envio para a Amazon e relatório</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="margin-top:6mm"><span class="n">2</span>As 5 regras que não podem falhar</h2>
   <p class="lead">Nosso sistema lê a pasta, identifica o produto pelo nome de cada arquivo e envia as imagens para a Amazon automaticamente, em massa. Por isso o nome do arquivo é tudo: <b>se o nome estiver errado, a imagem vai para o produto errado</b>.</p>
 
   <table>
@@ -123,7 +150,7 @@
     <tr><td><b>2</b></td><td><b>Uma única pasta, sem subpastas</b></td><td>O sistema lê só os arquivos que estão diretamente na pasta compartilhada. Tudo que estiver dentro de subpastas fica invisível e não é enviado.</td></tr>
     <tr><td><b>3</b></td><td><b>Um arquivo = uma imagem</b>, em JPG (ou PNG no A+)</td><td>ZIP, PDF, PSD, HEIC, WEBP, imagens coladas em Google Docs ou Slides e atalhos do Drive não são lidos.</td></tr>
     <tr><td><b>4</b></td><td><b>Seguir exatamente o código de posição</b> (MAIN, PT01, AP01…)</td><td>O código diz em que lugar a imagem entra: capa, posição 2 da galeria, banner do A+ etc.</td></tr>
-    <tr><td><b>5</b></td><td><b>Preencher a planilha de controle</b></td><td>É ela que diz quais EANs devem ter imagem, qual modelo de A+ cada produto usa e quais textos vão no A+.</td></tr>
+    <tr><td><b>5</b></td><td><b>Preencher a planilha de controle</b></td><td>É ela que diz quais EANs devem ter imagem e qual modelo de A+ cada produto usa.</td></tr>
   </table>
 
   <h3>Formato do nome</h3>
@@ -150,9 +177,9 @@
   </table>
 </section>
 
-<!-- ===================== 2. PADRÕES TÉCNICOS ===================== -->
-<section class="page">
-  <h2><span class="n">2</span>Padrões técnicos das imagens do anúncio</h2>
+<!-- ===================== 3. PADRÕES TÉCNICOS ===================== -->
+<section class="page" style="margin-top:6mm">
+  <h2><span class="n">3</span>Padrões técnicos das imagens do anúncio</h2>
   <table>
     <tr><th style="width:55mm">Item</th><th>Padrão</th></tr>
     <tr><td>Formato</td><td>Quadrado (1:1)</td></tr>
@@ -168,7 +195,7 @@
     <li>Fundo <b>branco puro</b> (RGB 255, 255, 255), sem degradê, sem cenário e sem sombra de fundo colorida.</li>
     <li>Embalagem ocupando <b>no mínimo 85%</b> da imagem, inteira, sem cortes.</li>
     <li><b>Nada adicionado</b>: sem selos ("mais vendido", "novo", "promoção"), sem texto, sem ícones, sem bordas, sem logo extra. Só vale o que está impresso na própria embalagem.</li>
-    <li>Sem acessórios ou petiscos que não vêm no pacote (ração solta, pote, cachorro ficam para as outras posições).</li>
+    <li>Sem itens que não vêm no pacote: ração solta, pote e cachorro ficam para as outras posições.</li>
   </ul>
 
   <h3>Regras especiais para ração (valem para todas as imagens e para o A+)</h3>
@@ -177,76 +204,98 @@
       <li><b>Só use benefícios que estejam na embalagem ou no registro do produto.</b> Nada de "cura", "trata", "previne doenças" ou outras promessas de saúde. Isso leva a Amazon a bloquear o anúncio.</li>
       <li><b>Números idênticos aos da embalagem</b>: proteína, níveis de garantia, quantidade diária, peso e idade. Se a imagem diverge do pacote, o cliente reclama e a Amazon pode remover a imagem.</li>
       <li>Sem preço, frete, "oferta", "frete grátis", datas comemorativas ou comparação com marca concorrente citada pelo nome.</li>
-      <li>Sem telefone, site, QR code de campanha ou redes sociais em destaque (o que já vem impresso na embalagem pode aparecer, desde que pequeno).</li>
-      <li>Texto em português, revisado, legível no celular: <b>no máximo cerca de 20% da imagem coberta por texto</b>.</li>
+      <li>Sem telefone, site, QR code de campanha ou redes sociais em destaque. O que já vem impresso na embalagem pode aparecer, desde que pequeno.</li>
+      <li>Texto em português, revisado, legível no celular: <b>no máximo cerca de 20% da imagem coberta por texto</b>, com exceção das tabelas (quantidade diária, níveis de garantia).</li>
     </ul>
   </div>
-
-  <h3>Vídeo (opcional, mas recomendado)</h3>
-  <p>Se houver vídeo do produto (cão comendo, abertura do pacote, tamanho do grão), enviar na mesma pasta como <span class="mono">EAN.VIDEO.mp4</span>: MP4, horizontal 16:9, até 2 minutos, sem preço nem promoção. Junto, uma imagem de capa do vídeo: <span class="mono">EAN.VIDEOCAPA.jpg</span> (1920 × 1080 px).</p>
 </section>
 
-<!-- ===================== 3. GALERIA ===================== -->
+<!-- ===================== 4. REFERÊNCIAS + GALERIA ===================== -->
 <section class="page brk">
-  <h2><span class="n">3</span>A galeria excepcional de ração: 9 posições</h2>
-  <p class="lead">A ordem abaixo é a ordem em que o comprador vê as imagens, principalmente no celular. Cada posição responde a uma dúvida de quem está comprando ração. As imagens com foto são exemplos reais da New Pet; nas demais, o quadro descreve o que produzir.</p>
+  <h2><span class="n">4</span>Anúncios de referência</h2>
+  <p class="lead">Dois anúncios de ração bem construídos na Amazon Brasil servem de modelo para a galeria da New Pet. As imagens deles aparecem neste guia apenas como exemplo do que esperamos.</p>
+
+  <div class="reflabel">Pedigree Nutrição Essencial Adultos 10,1 kg (B098P6Z38R): 7 imagens, 2000 × 2000 px</div>
+  <div class="refgrid">
+    <img src="img/p_main.jpg" alt=""><img src="img/p_pt01.jpg" alt=""><img src="img/p_pt02.jpg" alt=""><img src="img/p_pt03.jpg" alt=""><img src="img/p_pt04.jpg" alt=""><img src="img/p_pt05.jpg" alt=""><img src="img/p_pt06.jpg" alt="">
+  </div>
+  <div class="reflabel">Quatree Adultos Carne 15 kg (B07T6CBLLT): 6 imagens, 1000 × 1000 px</div>
+  <div class="refgrid">
+    <img src="img/q_main.jpg" alt=""><img src="img/q_pt01.jpg" alt=""><img src="img/q_pt02.jpg" alt=""><img src="img/q_pt03.jpg" alt=""><img src="img/q_pt04.jpg" alt=""><img src="img/q_pt05.jpg" alt="">
+  </div>
+
+  <h3>O que esses anúncios fazem bem (e queremos na New Pet)</h3>
+  <ul>
+    <li><b>Identidade visual única</b>: todas as imagens secundárias usam as cores da embalagem (amarelo/azul na Pedigree, amarelo/vermelho na Quatree). Na New Pet, seguir as cores de cada linha (ex.: New Dots em laranja e preto).</li>
+    <li><b>Um assunto por imagem</b>, com um título grande que se lê na miniatura do celular ("Guia Alimentar", "Ingredientes", "Formato do grão").</li>
+    <li><b>Fotos reais</b> do grão, da carne e do pote: mostram o produto de verdade, não só a embalagem.</li>
+    <li><b>Informação prática desenhada</b>: quantidade diária e transição alimentar viram tabela e ícones, não foto do verso.</li>
+    <li><b>Venda da linha</b>: a última imagem da Pedigree apresenta outros produtos da marca ("Experimente também").</li>
+  </ul>
+  <div class="box info"><b class="t">Onde dá para ir além das referências</b>
+  A Quatree usa imagens de 1000 px (zoom limitado) e tem só 6 imagens. Pedimos 9 imagens em 2000 px. Nenhuma das duas mostra os níveis de garantia de forma legível nem o tamanho do grão em milímetros, que são as dúvidas mais comuns de quem compra ração.</div>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">5</span>A galeria excepcional de ração: 9 posições</h2>
+  <p class="lead">A ordem abaixo é a ordem em que o comprador vê as imagens, principalmente no celular. Cada imagem de exemplo é de um dos anúncios de referência ou da própria New Pet.</p>
 
   <div class="slot">
-    <img src="img/np2.jpg" alt="">
+    <div><img src="img/p_main.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
     <div>
       <h3>1 · Principal (capa) <span class="tag req">OBRIGATÓRIA</span></h3>
       <span class="file">EAN.MAIN.jpg</span>
       <ul>
-        <li>Frente da embalagem, reta, fundo branco puro, ocupando 85% ou mais.</li>
-        <li>É a única imagem que aparece na busca: o nome da linha, o sabor e o peso precisam ser legíveis mesmo pequenos.</li>
+        <li>Embalagem de frente (ou levemente em ângulo, como na Quatree), fundo branco puro, ocupando 85% ou mais.</li>
+        <li>É a única imagem que aparece na busca: o nome da linha, o sabor e o <b>peso</b> precisam ser legíveis mesmo pequenos, como o "10,1 kg" da Pedigree.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <img src="img/np1.jpg" alt="">
+    <div><img src="img/p_pt01.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
     <div>
-      <h3>2 · Embalagem em ângulo (3/4) <span class="tag req">OBRIGATÓRIA</span></h3>
+      <h3>2 · O grande diferencial <span class="tag req">OBRIGATÓRIA</span></h3>
       <span class="file">EAN.PT01.jpg</span>
       <ul>
-        <li>Pacote girado, mostrando frente e lateral: dá noção de volume e de que é um produto real (não uma arte).</li>
-        <li>Fundo branco ou neutro claro.</li>
+        <li>A principal promessa da linha em destaque, com número grande e foto do grão e do ingrediente.</li>
+        <li>Na New Pet, por exemplo, "Com carne fresca", desde que esteja na embalagem.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <div class="ph">INFOGRÁFICO<br>4 a 6 benefícios<br>com ícones</div>
+    <div><img src="img/q_pt01.jpg" alt=""><div class="src">Exemplo: Quatree</div></div>
     <div>
-      <h3>3 · Benefícios principais <span class="tag req">OBRIGATÓRIA</span></h3>
+      <h3>3 · Benefícios com ícones <span class="tag req">OBRIGATÓRIA</span></h3>
       <span class="file">EAN.PT02.jpg</span>
       <ul>
-        <li>Embalagem de um lado e 4 a 6 ícones com frases curtas, usando os benefícios impressos no pacote (ex.: proteção articular, pelo e pelagem, saúde intestinal, carne fresca).</li>
-        <li>Uma ideia por ícone, no máximo 6 palavras cada.</li>
+        <li>4 a 6 benefícios impressos na embalagem, cada um com ícone e no máximo 6 palavras (ex.: saúde intestinal, pelos macios, fezes firmes).</li>
+        <li>Junto, a foto do ingrediente que dá nome ao sabor.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <div class="ph">CLOSE DO GRÃO<br>com régua ou moeda<br>+ formato e tamanho em mm</div>
+    <div><img src="img/q_pt02.jpg" alt=""><div class="src">Exemplo: Quatree</div></div>
     <div>
-      <h3>4 · O grão (croquete) em tamanho real <span class="tag req">OBRIGATÓRIA</span></h3>
+      <h3>4 · Formato e tamanho do grão <span class="tag req">OBRIGATÓRIA</span></h3>
       <span class="file">EAN.PT03.jpg</span>
       <ul>
-        <li>Foto macro dos grãos reais com uma referência de tamanho (régua, moeda ou mão) e a medida do grão em mm.</li>
-        <li>É a dúvida número 1 de quem tem cão pequeno ou filhote: "meu cachorro consegue mastigar?". Reduz devoluções.</li>
+        <li>Close dos grãos reais mostrando o formato, como na Quatree.</li>
+        <li><b>Acrescentar a medida do grão em mm</b> e uma referência de tamanho (régua ou moeda). É a dúvida de quem tem cão pequeno ou filhote e reduz devoluções.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <div class="ph">INGREDIENTES<br>foto real de frango,<br>arroz e linhaça</div>
+    <div><img src="img/p_pt04.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
     <div>
-      <h3>5 · Ingredientes de destaque <span class="tag rec">RECOMENDADA</span></h3>
+      <h3>5 · Quanto servir por dia <span class="tag req">OBRIGATÓRIA</span></h3>
       <span class="file">EAN.PT04.jpg</span>
       <ul>
-        <li>Composição com os ingredientes que dão nome ao sabor (ex.: frango, arroz e linhaça) ao redor do grão ou do pacote.</li>
-        <li>Só ingredientes que estão na lista de composição da embalagem.</li>
+        <li>Tabela redesenhada em letra grande: peso ou porte do cão × gramas por dia, com os números <b>idênticos</b> aos da embalagem.</li>
+        <li>Ícones de porte ajudam a leitura (Pedigree). Se a tabela for longa, use o modelo da Quatree, com linhas por faixa de peso.</li>
       </ul>
     </div>
   </div>
@@ -254,83 +303,78 @@
 
 <section class="page">
   <div class="slot">
-    <div class="ph">TABELA DE<br>QUANTIDADE DIÁRIA<br>por peso do cão</div>
+    <div><img src="img/q_pt03.jpg" alt=""><div class="src">Exemplo: Quatree</div></div>
     <div>
-      <h3>6 · Quanto servir por dia <span class="tag req">OBRIGATÓRIA</span></h3>
+      <h3>6 · Transição alimentar <span class="tag rec">RECOMENDADA</span></h3>
       <span class="file">EAN.PT05.jpg</span>
       <ul>
-        <li>Tabela redesenhada em letra grande: faixa de peso do cão × gramas por dia, com os números <b>idênticos</b> aos da embalagem.</li>
-        <li>Pode incluir a transição alimentar (dias 1 a 7) se ela estiver no verso do pacote.</li>
+        <li>Como trocar da ração antiga para a New Pet, dia a dia, com ícones de pote e porcentagens.</li>
+        <li>Usar exatamente a orientação impressa no verso da embalagem.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <img src="img/np5.jpg" alt="">
+    <div><img src="img/p_pt03.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
     <div>
-      <h3>7 · Níveis de garantia e composição <span class="tag req">OBRIGATÓRIA</span></h3>
+      <h3>7 · Composição e níveis de garantia <span class="tag req">OBRIGATÓRIA</span></h3>
       <span class="file">EAN.PT06.jpg</span>
       <ul>
-        <li>Níveis de garantia (proteína, gordura, fibra, cálcio etc.) e composição em texto <b>legível</b>, não uma foto pequena do verso.</li>
-        <li>O exemplo ao lado está correto no conteúdo, mas a letra fica pequena demais no celular. Usar menos texto por imagem ou dividir em duas.</li>
+        <li>Composição e níveis de garantia (proteína, gordura, fibra, cálcio etc.) em texto, na identidade visual da linha.</li>
+        <li>Ir além do exemplo: a Pedigree mostra só a composição, em letra pequena. Na New Pet, priorizar uma <b>tabela de níveis de garantia em letra grande</b>. Se não couber junto, a composição vai para uma imagem EXTRA.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <div class="ph">LIFESTYLE<br>cão da raça/porte certo<br>comendo, com tutor</div>
+    <div><img src="img/p_pt02.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
     <div>
-      <h3>8 · Momento de uso (lifestyle) <span class="tag rec">RECOMENDADA</span></h3>
+      <h3>8 · Emocional / momento de uso <span class="tag rec">RECOMENDADA</span></h3>
       <span class="file">EAN.PT07.jpg</span>
       <ul>
-        <li>Cão do porte e idade a que a ração se destina (filhote, adulto, pequeno porte etc.) comendo no comedouro, com a embalagem visível no ambiente.</li>
-        <li>Luz natural, casa real. Gera conexão e mostra para quem é o produto.</li>
+        <li>Cão do porte e da idade a que a ração se destina, feliz, com o pote cheio. Pode ser foto em casa com tutor ou cena de estúdio na cor da marca, como na Pedigree.</li>
+        <li>Uma frase curta da marca pode entrar, desde que seja verdadeira e esteja na embalagem.</li>
       </ul>
     </div>
   </div>
 
   <div class="slot">
-    <img src="img/np3.jpg" alt="">
+    <div><img src="img/p_pt06.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
     <div>
-      <h3>9 · Verso completo da embalagem <span class="tag req">OBRIGATÓRIA</span></h3>
+      <h3>9 · Linha da marca ou nova embalagem <span class="tag rec">RECOMENDADA</span></h3>
       <span class="file">EAN.PT08.jpg</span>
       <ul>
-        <li>Foto reta do verso em alta resolução. Traz as informações obrigatórias do rótulo e passa confiança.</li>
-        <li>Se preferirem outra imagem nesta posição (ex.: a lateral do pacote, como abaixo, ou "tamanhos disponíveis"), o verso pode ir para o A+.</li>
+        <li>"Conheça também": outras rações e sabores da New Pet, para o cliente descobrir a linha.</li>
+        <li>Se a embalagem mudou recentemente, use esta posição para mostrar <b>embalagem anterior × nova</b>, como na Quatree. Isso evita reclamação de "produto diferente da foto".</li>
       </ul>
     </div>
   </div>
 
-  <div class="box info" style="margin-top:5mm"><b class="t">Imagens extras (opcional)</b>
-  Fotos da lateral da embalagem (como a do exemplo abaixo), do fecho zip ou de "tamanhos disponíveis" podem ser enviadas como <span class="mono">EAN.EXTRA1.jpg</span>, <span class="mono">EAN.EXTRA2.jpg</span>. A galeria tem só 9 posições; usamos as extras no A+ ou para substituir uma posição recomendada, se fizer sentido.</div>
-
-  <div style="display:flex; gap:4mm; align-items:center; margin-top:3mm">
-    <img src="img/np4.jpg" alt="" style="width:32mm; border:1px solid var(--line); border-radius:2mm">
-    <p class="small" style="margin:0">Exemplo de lateral da embalagem New Dots, que pode ser enviada como EXTRA.</p>
-  </div>
+  <div class="box info" style="margin-top:4mm"><b class="t">Imagens extras (opcional)</b>
+  Verso completo da embalagem, lateral, fecho zip ou campanhas da marca (como a imagem "Caramelo" da Pedigree) podem ser enviados como <span class="mono">EAN.EXTRA1.jpg</span>, <span class="mono">EAN.EXTRA2.jpg</span>. Vídeo do produto, se houver: <span class="mono">EAN.VIDEO.mp4</span>, sem preço nem promoção. Usamos esses arquivos no A+ ou para substituir uma posição recomendada, se fizer sentido.</div>
 
   <div style="page-break-inside:avoid"><h3>Resumo da galeria</h3>
   <table>
     <tr><th>Posição</th><th>Arquivo</th><th>Conteúdo</th><th>Fundo</th></tr>
-    <tr><td>1</td><td class="mono">EAN.MAIN.jpg</td><td>Frente da embalagem</td><td>Branco puro</td></tr>
-    <tr><td>2</td><td class="mono">EAN.PT01.jpg</td><td>Embalagem em 3/4</td><td>Branco/neutro</td></tr>
-    <tr><td>3</td><td class="mono">EAN.PT02.jpg</td><td>Benefícios (infográfico)</td><td>Livre</td></tr>
-    <tr><td>4</td><td class="mono">EAN.PT03.jpg</td><td>Grão em tamanho real</td><td>Livre</td></tr>
-    <tr><td>5</td><td class="mono">EAN.PT04.jpg</td><td>Ingredientes</td><td>Livre</td></tr>
-    <tr><td>6</td><td class="mono">EAN.PT05.jpg</td><td>Quantidade diária</td><td>Livre</td></tr>
-    <tr><td>7</td><td class="mono">EAN.PT06.jpg</td><td>Níveis de garantia</td><td>Livre</td></tr>
-    <tr><td>8</td><td class="mono">EAN.PT07.jpg</td><td>Lifestyle</td><td>Cenário real</td></tr>
-    <tr><td>9</td><td class="mono">EAN.PT08.jpg</td><td>Verso da embalagem</td><td>Branco/neutro</td></tr>
+    <tr><td>1</td><td class="mono">EAN.MAIN.jpg</td><td>Embalagem de frente</td><td>Branco puro</td></tr>
+    <tr><td>2</td><td class="mono">EAN.PT01.jpg</td><td>Grande diferencial</td><td>Cores da linha</td></tr>
+    <tr><td>3</td><td class="mono">EAN.PT02.jpg</td><td>Benefícios com ícones</td><td>Cores da linha</td></tr>
+    <tr><td>4</td><td class="mono">EAN.PT03.jpg</td><td>Formato e tamanho do grão (mm)</td><td>Cores da linha</td></tr>
+    <tr><td>5</td><td class="mono">EAN.PT04.jpg</td><td>Quantidade diária</td><td>Cores da linha</td></tr>
+    <tr><td>6</td><td class="mono">EAN.PT05.jpg</td><td>Transição alimentar</td><td>Cores da linha</td></tr>
+    <tr><td>7</td><td class="mono">EAN.PT06.jpg</td><td>Composição e níveis de garantia</td><td>Cores da linha</td></tr>
+    <tr><td>8</td><td class="mono">EAN.PT07.jpg</td><td>Emocional / momento de uso</td><td>Cenário ou cores da linha</td></tr>
+    <tr><td>9</td><td class="mono">EAN.PT08.jpg</td><td>Linha da marca ou nova embalagem</td><td>Cores da linha</td></tr>
   </table></div>
 </section>
 
-<!-- ===================== 4. A+ ===================== -->
+<!-- ===================== 6. A+ ===================== -->
 <section class="page brk">
-  <h2><span class="n">4</span>Conteúdo A+ (Da marca)</h2>
-  <p class="lead">O A+ é a área visual abaixo da descrição, na página do produto. Ele é montado em <b>módulos</b> (blocos de imagem e texto). Cada módulo tem um tamanho de imagem exato. Se a imagem vier em outra proporção, a Amazon corta ou recusa.</p>
+  <h2><span class="n">6</span>Imagens do Conteúdo A+</h2>
+  <p class="lead">O A+ é a área visual abaixo da descrição, na página do produto. Ele é montado em <b>módulos</b> (blocos de imagem + texto). <b>De vocês precisamos só as imagens</b>. Os textos ao lado ou abaixo das imagens são escritos pela START.</p>
 
   <div class="box info"><b class="t">Mesmo modelo para todos ou um modelo por linha: a escolha é da marca</b>
-  O A+ pode seguir <b>um único modelo</b> para todo o portfólio (mais rápido de produzir e com cara de marca) ou <b>modelos diferentes por linha</b> (ex.: New Dots com um visual, linha premium com outro), conforme o criativo da New Pet. Abaixo estão 3 modelos prontos. Na planilha de controle, vocês indicam qual modelo cada EAN usa (A, B ou C).</div>
+  O A+ pode seguir <b>um único modelo</b> para todo o portfólio (mais rápido de produzir e com cara de marca) ou <b>modelos diferentes por linha</b> (ex.: New Dots com um visual, outra linha com outro), conforme o criativo da New Pet. Abaixo estão 2 modelos prontos. Na planilha de controle, vocês indicam qual modelo cada EAN usa (A ou B).</div>
 
   <h3>Exemplos de módulos (referência visual do Vendor Central)</h3>
   <div class="examples">
@@ -340,13 +384,13 @@
     <figure><img src="img/np7.jpg" alt=""><figcaption>Imagem única com especificações (300 × 300)</figcaption></figure>
   </div>
 
-  <h3>Regras gerais das imagens do A+</h3>
+  <h3>Regras das imagens do A+</h3>
   <ul>
-    <li>Entregar no <b>tamanho exato</b> indicado em cada módulo (ou maior, <b>na mesma proporção</b>).</li>
-    <li>JPG ou PNG, RGB, até 2 MB por imagem.</li>
-    <li>Texto dentro da imagem é permitido, mas deve ser legível no celular. Títulos e parágrafos longos vão na planilha (campo de texto do módulo), não na imagem.</li>
-    <li>Mesmas proibições do anúncio: sem preço, promoção, frete, garantias de saúde, contato ou concorrente.</li>
-    <li>Cada imagem precisa de uma <b>descrição curta</b> (até 100 caracteres) na planilha. É o texto lido por quem usa leitor de tela e é exigido pela Amazon.</li>
+    <li>Entregar no <b>tamanho exato</b> indicado em cada módulo (ou maior, <b>na mesma proporção</b>). Se a proporção for outra, a Amazon corta ou recusa a imagem.</li>
+    <li>JPG ou PNG, cores RGB.</li>
+    <li>Mesma identidade visual da galeria. Muitas vezes a mesma arte pode ser adaptada para o formato do módulo.</li>
+    <li>Texto dentro da imagem é permitido (título curto, ícones), mas precisa ser legível no celular. <b>Não escrevam parágrafos dentro da imagem</b>: os textos explicativos entram no campo de texto do módulo e são feitos pela START.</li>
+    <li>Mesmas proibições do anúncio: sem preço, promoção, frete, promessas de saúde, contato ou concorrente.</li>
   </ul>
 </section>
 
@@ -356,58 +400,33 @@
 
   <div class="mod"><div class="hd"><b>Módulo 1 · Banner da linha</b><span>AP01 · 970 × 600</span></div>
     <div class="wire"><div style="width:100%;height:16mm">IMAGEM 970 × 600</div></div>
-    <p class="small" style="margin:0">Embalagem + cão + ingredientes, com o nome da linha. Texto do módulo: título (até 150 caracteres) e parágrafo.</p></div>
+    <p class="small" style="margin:0">Embalagem + cão + ingredientes, com o nome da linha. Abaixo da imagem entram título e parágrafo escritos pela START.</p></div>
 
   <div class="mod"><div class="hd"><b>Módulo 2 · Imagem com texto sobreposto</b><span>AP02 · 970 × 300</span></div>
-    <div class="wire"><div style="width:68%;height:9mm">IMAGEM 970 × 300</div><div class="txt" style="width:32%;height:9mm">título + texto</div></div>
-    <p class="small" style="margin:0">O principal diferencial (ex.: "Com carne fresca"). Deixar o lado direito da imagem limpo, porque o texto entra por cima. Título até 70 caracteres, texto até 300.</p></div>
+    <div class="wire"><div style="width:68%;height:9mm">IMAGEM 970 × 300</div><div class="txt" style="width:32%;height:9mm">texto START</div></div>
+    <p class="small" style="margin:0">O principal diferencial (ex.: carne fresca). <b>Deixar o lado direito da imagem limpo</b>, porque a Amazon coloca o texto por cima.</p></div>
 
   <div class="mod"><div class="hd"><b>Módulo 3 · Quatro benefícios</b><span>AP03 a AP06 · 220 × 200 cada</span></div>
     <div class="wire"><div style="flex:1;height:10mm">AP03</div><div style="flex:1;height:10mm">AP04</div><div style="flex:1;height:10mm">AP05</div><div style="flex:1;height:10mm">AP06</div></div>
-    <p class="small" style="margin:0">4 fotos ou ilustrações (ex.: articulações, pelagem, digestão, sabor), cada uma com título e texto na planilha.</p></div>
+    <p class="small" style="margin:0">4 fotos ou ilustrações, uma por benefício (ex.: articulações, pelagem, digestão, sabor). O texto abaixo de cada uma é da START.</p></div>
 
   <div class="mod"><div class="hd"><b>Módulo 4 · Imagem com especificações</b><span>AP07 · 300 × 300</span></div>
-    <div class="wire"><div style="width:22%;height:14mm">AP07</div><div class="txt" style="width:39%;height:14mm">descrição</div><div class="txt" style="width:39%;height:14mm">especificações<br>(até 8 linhas)</div></div>
-    <p class="small" style="margin:0">Grão ou pacote ao lado de: porte, idade, sabor, peso, tamanho do grão, quantidade diária. Os dados entram como texto na planilha.</p></div>
+    <div class="wire"><div style="width:22%;height:14mm">AP07</div><div class="txt" style="width:39%;height:14mm">texto START</div><div class="txt" style="width:39%;height:14mm">especificações START</div></div>
+    <p class="small" style="margin:0">Foto do grão ou do pacote. A ficha (porte, idade, sabor, peso, tamanho do grão) é montada pela START.</p></div>
 
   <div class="mod"><div class="hd"><b>Módulo 5 · Tabela comparativa da linha</b><span>COMP · 150 × 300 (vertical)</span></div>
     <div class="wire"><div style="flex:1;height:16mm">COMP<br>produto 1</div><div style="flex:1;height:16mm">COMP<br>produto 2</div><div style="flex:1;height:16mm">COMP<br>produto 3</div><div style="flex:1;height:16mm">COMP<br>produto 4</div></div>
-    <p class="small" style="margin:0">Compara até 6 produtos da New Pet (sabores, portes ou tamanhos) e leva o cliente de um para o outro. Cada EAN envia <b>uma</b> imagem vertical do pacote, <span class="mono">EAN.COMP.jpg</span>, que é reaproveitada em todas as tabelas em que ele aparece. Na planilha, informem quais produtos entram na tabela e as linhas de comparação (ex.: porte, idade, proteína, sabor).</p></div>
+    <p class="small" style="margin:0">Compara até 6 produtos da New Pet e leva o cliente de um para o outro. Cada EAN envia <b>uma</b> imagem vertical do pacote, sem fundo colorido: <span class="mono">EAN.COMP.jpg</span>. Ela é reaproveitada em todas as tabelas em que o produto aparece. A START monta a tabela.</p></div>
 
   <h3>Modelo B · Destaques (5 módulos)</h3>
-  <p class="small">Mais editorial, bom para linhas com história ou ingrediente forte.</p>
+  <p class="small">Mais editorial, bom para linhas com ingrediente ou história forte. Usa 6 imagens + 1 imagem de comparação.</p>
   <table>
-    <tr><th>Módulo</th><th>Arquivo</th><th>Tamanho</th><th>O que mostrar</th></tr>
+    <tr><th>Módulo</th><th>Arquivo</th><th>Tamanho</th><th>O que mostrar na imagem</th></tr>
     <tr><td>1 · Banner</td><td class="mono">AP01</td><td>970 × 600</td><td>Cena principal da linha</td></tr>
-    <tr><td>2 · Imagem única com destaques</td><td class="mono">AP02</td><td>300 × 300</td><td>Pacote + 3 blocos de texto + lista de até 8 itens</td></tr>
-    <tr><td>3 · Três imagens com texto</td><td class="mono">AP03 a AP05</td><td>300 × 300 cada</td><td>Ingrediente 1, 2, 3 (ex.: frango, arroz, linhaça)</td></tr>
-    <tr><td>4 · Imagem com texto sobreposto</td><td class="mono">AP06</td><td>970 × 300</td><td>Momento de uso (cão + tutor)</td></tr>
+    <tr><td>2 · Imagem única com destaques</td><td class="mono">AP02</td><td>300 × 300</td><td>Pacote ou grão em destaque</td></tr>
+    <tr><td>3 · Três imagens com texto</td><td class="mono">AP03 a AP05</td><td>300 × 300 cada</td><td>Ingrediente 1, 2 e 3 (ex.: frango, arroz, linhaça)</td></tr>
+    <tr><td>4 · Imagem com texto sobreposto</td><td class="mono">AP06</td><td>970 × 300</td><td>Momento de uso (cão + tutor), com o lado direito limpo</td></tr>
     <tr><td>5 · Tabela comparativa</td><td class="mono">COMP</td><td>150 × 300</td><td>Igual ao Modelo A</td></tr>
-  </table>
-</section>
-
-<section class="page">
-  <h3 style="margin-top:0">Modelo C · Premium (até 7 módulos) <span class="tag opt">SÓ SE A CONTA TIVER A+ PREMIUM</span></h3>
-  <p class="small">Imagens maiores, carrossel e versão própria para celular. Depende da Amazon liberar o A+ Premium para a conta. Nós confirmamos antes de vocês produzirem. Atenção: no Premium, desktop e celular usam <b>imagens separadas</b>.</p>
-  <table>
-    <tr><th>Módulo</th><th>Arquivo</th><th>Tamanho</th><th>O que mostrar</th></tr>
-    <tr><td>1 · Imagem de fundo inteira</td><td class="mono">AP01 (computador)<br>AP02 (celular)</td><td>1464 × 600<br>600 × 450</td><td>Banner da linha</td></tr>
-    <tr><td>2 · Quatro colunas</td><td class="mono">AP03 a AP06</td><td>300 × 225 cada</td><td>4 benefícios</td></tr>
-    <tr><td>3 · Imagem + texto</td><td class="mono">AP07</td><td>800 × 600</td><td>Grão em tamanho real</td></tr>
-    <tr><td>4 · Duas imagens + texto</td><td class="mono">AP08, AP09</td><td>650 × 350 cada</td><td>Ingredientes / quantidade diária</td></tr>
-    <tr><td>5 · Carrossel</td><td class="mono">AP10 a AP12<br>(computador e celular)</td><td>1464 × 600<br>600 × 450</td><td>Momentos de uso. Cada slide tem 2 arquivos: <span class="mono">AP10</span> + <span class="mono">AP10M</span> etc.</td></tr>
-    <tr><td>6 · Comparação de 3 colunas</td><td class="mono">COMP3</td><td>300 × 225</td><td>Pacote para a comparação</td></tr>
-  </table>
-  <div class="box warn">Um mesmo A+ não pode misturar módulos do Básico (A e B) com módulos do Premium (C). Escolham um tipo por produto.</div>
-
-  <h3>Brand Story: a história da marca (uma vez para toda a marca)</h3>
-  <p>Faixa "Da marca" com carrossel que aparece em todos os produtos New Pet. Não é por EAN: os arquivos começam com <span class="mono">MARCA-NEWPET</span>.</p>
-  <table>
-    <tr><th>Arquivo</th><th>Tamanho</th><th>Conteúdo</th></tr>
-    <tr><td class="mono">MARCA-NEWPET.LOGO.png</td><td>600 × 180 (fundo transparente)</td><td>Logo da marca</td></tr>
-    <tr><td class="mono">MARCA-NEWPET.BS01.jpg</td><td>1464 × 625</td><td>Imagem de fundo (computador), com título até 30 caracteres</td></tr>
-    <tr><td class="mono">MARCA-NEWPET.BS01M.jpg</td><td>463 × 625</td><td>Mesma imagem de fundo, versão celular</td></tr>
-    <tr><td class="mono">MARCA-NEWPET.BS02.jpg …</td><td>362 × 453</td><td>Cartões do carrossel (quem somos, fábrica, linhas)</td></tr>
   </table>
 
   <h3>Quando vários produtos usam o mesmo A+</h3>
@@ -415,7 +434,7 @@
   <ol>
     <li>Escolham um EAN "de referência" (ex.: o 15 kg) e enviem as imagens AP com o EAN dele.</li>
     <li>Na planilha, nos outros tamanhos, preencham a coluna <b>A+ igual ao EAN</b> com o EAN de referência.</li>
-    <li>As imagens da <b>galeria</b> (MAIN, PT01…) continuam sendo de cada EAN, porque cada pacote mostra o próprio peso.</li>
+    <li>As imagens da <b>galeria</b> (MAIN, PT01…) e a COMP continuam sendo de cada EAN, porque cada pacote mostra o próprio peso.</li>
   </ol>
 
   <div style="page-break-inside:avoid"><h3>Resumo dos códigos de arquivo</h3>
@@ -424,22 +443,21 @@
     <tr><td class="mono">MAIN</td><td>Imagem principal da galeria</td></tr>
     <tr><td class="mono">PT01 a PT08</td><td>Posições 2 a 9 da galeria</td></tr>
     <tr><td class="mono">EXTRA1, EXTRA2…</td><td>Imagens adicionais opcionais</td></tr>
-    <tr><td class="mono">AP01 a AP12</td><td>Imagens do A+, na ordem do modelo escolhido (o sufixo <span class="mono">M</span> indica a versão para celular do Premium)</td></tr>
-    <tr><td class="mono">COMP / COMP3</td><td>Imagem do produto para tabelas de comparação</td></tr>
-    <tr><td class="mono">VIDEO / VIDEOCAPA</td><td>Vídeo do produto e imagem de capa</td></tr>
-    <tr><td class="mono">MARCA-NEWPET.*</td><td>Logo e Brand Story (únicos arquivos sem EAN)</td></tr>
+    <tr><td class="mono">AP01 a AP07</td><td>Imagens do A+, na ordem do modelo escolhido (A ou B)</td></tr>
+    <tr><td class="mono">COMP</td><td>Imagem vertical do produto para a tabela comparativa</td></tr>
+    <tr><td class="mono">VIDEO</td><td>Vídeo do produto (opcional)</td></tr>
   </table></div>
 </section>
 
-<!-- ===================== 5. DRIVE ===================== -->
-<section class="page brk">
-  <h2><span class="n">5</span>Como montar o Google Drive, passo a passo</h2>
+<!-- ===================== 7. DRIVE ===================== -->
+<section class="page" style="margin-top:6mm">
+  <h2><span class="n">7</span>Como montar o Google Drive, passo a passo</h2>
   <ol class="steps">
     <li><b>Crie uma pasta nova</b> no Google Drive chamada <span class="mono">NEWPET - IMAGENS AMAZON</span>. Use uma pasta só para isso, sem arquivos de outras marcas ou de outros canais de venda.</li>
     <li><b>Coloque todas as imagens direto nessa pasta</b>, sem criar nenhuma subpasta. Se as imagens estão organizadas em pastas no computador, abra cada pasta, selecione os arquivos e arraste <b>os arquivos</b> (não a pasta) para o Drive.</li>
     <li><b>Crie a planilha de controle</b> dentro da mesma pasta: Google Planilhas com o nome <span class="mono">NEWPET - PLANILHA DE CONTROLE</span> (modelo na próxima página). Antes de digitar, selecione a coluna EAN e use <i>Formatar → Número → Texto simples</i>, senão o EAN vira 7,89E+12.</li>
     <li><b>Compartilhe a pasta</b> com <span class="mono">comercial@onsetsell.com</span> como <b>Leitor</b> (botão direito na pasta → Compartilhar). Não é preciso deixar a pasta pública.</li>
-    <li><b>Confira</b>: na pasta não pode haver arquivos terminados em "(1)", "cópia" ou "copy", nem atalhos (ícone com setinha). Ordene por nome e confira se todos começam por um EAN de 13 dígitos (ou por <span class="mono">MARCA-NEWPET</span>).</li>
+    <li><b>Confira</b>: na pasta não pode haver arquivos terminados em "(1)", "cópia" ou "copy", nem atalhos (ícone com setinha). Ordene por nome e confira se todos começam por um EAN de 13 dígitos.</li>
     <li><b>Avise-nos</b> por e-mail ou WhatsApp quando a pasta estiver completa, ou quando houver um lote novo.</li>
   </ol>
 
@@ -456,7 +474,6 @@
       <div class="row">7891234567895.COMP.jpg <span>150×300</span></div>
       <div class="row">7896543210128.MAIN.jpg <span>2000×2000</span></div>
       <div class="row">7896543210128.PT01.jpg <span>2000×2000</span></div>
-      <div class="row">MARCA-NEWPET.LOGO.png <span>600×180</span></div>
     </div>
     <div class="drive">
       <div class="bar" style="color:var(--bad)">✘ Errado: subpastas e nomes livres</div>
@@ -480,43 +497,27 @@
   </ul>
 
   <div class="box info"><b class="t">Muitos produtos? Pode mandar em lotes</b>
-  Não é preciso esperar ter tudo pronto. Uma linha por vez (ex.: todos os New Dots) funciona bem. O importante é que cada produto enviado esteja completo, com pelo menos MAIN, PT01, PT02, PT03, PT05, PT06 e PT08.</div>
+  Não é preciso esperar ter tudo pronto. Uma linha por vez (ex.: todos os New Dots) funciona bem. O importante é que cada produto enviado esteja completo, com pelo menos as imagens obrigatórias: MAIN, PT01, PT02, PT03, PT04 e PT06.</div>
 </section>
 
-<!-- ===================== 6. PLANILHA ===================== -->
+<!-- ===================== 8. PLANILHA + GARANTIA ===================== -->
 <section class="page brk">
-  <h2><span class="n">6</span>A planilha de controle</h2>
-  <p>Uma única planilha Google para a marca, com 3 abas. É ela que garante que o EAN do arquivo corresponde ao produto certo e que traz os textos do A+.</p>
-
-  <h3>Aba 1 · PRODUTOS (uma linha por EAN)</h3>
+  <h2><span class="n">8</span>A planilha de controle</h2>
+  <p>Uma única planilha Google para a marca, com uma linha por EAN. É ela que garante que o EAN do arquivo corresponde ao produto certo.</p>
   <table>
     <tr><th>Coluna</th><th>Exemplo</th><th>Observação</th></tr>
     <tr><td><b>EAN</b></td><td class="mono">7891234567895</td><td>13 dígitos, formatado como texto</td></tr>
     <tr><td>SKU / código interno</td><td class="mono">ND-AD-15</td><td>Usado para conferência</td></tr>
     <tr><td>Nome do produto</td><td>New Dots Cães Adultos Frango, Arroz e Linhaça</td><td>Como está na embalagem</td></tr>
     <tr><td>Peso</td><td>15 kg</td><td>Tem que bater com a embalagem da foto</td></tr>
-    <tr><td>Modelo de A+</td><td>A</td><td>A, B ou C</td></tr>
+    <tr><td>Modelo de A+</td><td>A</td><td>A ou B</td></tr>
     <tr><td>A+ igual ao EAN</td><td class="mono">7891112223332</td><td>Vazio se este EAN tem A+ próprio</td></tr>
     <tr><td>Imagens prontas</td><td>SIM</td><td>SIM quando todos os arquivos do EAN estiverem na pasta</td></tr>
     <tr><td>Observações</td><td>embalagem nova a partir de nov/26</td><td>Livre</td></tr>
   </table>
+  <p class="small">Os valores de exemplo são ilustrativos. Não é preciso enviar textos: título, bullets, descrição e textos do A+ são criados pela START a partir das informações do produto.</p>
 
-  <h3>Aba 2 · TEXTOS A+ (uma linha por imagem/módulo)</h3>
-  <table>
-    <tr><th>EAN</th><th>Código</th><th>Título</th><th>Texto</th><th>Descrição da imagem (até 100)</th></tr>
-    <tr><td class="mono">7891234567895</td><td class="mono">AP01</td><td>Nutrição completa para cães adultos</td><td>New Dots foi desenvolvido…</td><td>Embalagem New Dots ao lado de cão adulto</td></tr>
-    <tr><td class="mono">7891234567895</td><td class="mono">AP03</td><td>Articulações protegidas</td><td>Com condroitina e glucosamina…</td><td>Cão correndo na grama</td></tr>
-    <tr><td class="mono">7891234567895</td><td class="mono">AP07</td><td>Ficha do produto</td><td>Porte: todos · Idade: adulto · …</td><td>Grãos de ração New Dots</td></tr>
-  </table>
-  <p class="small">Limites de texto que a Amazon aceita, por módulo: banner título 150 / texto longo; texto sobreposto título 70 / texto 300; quatro imagens título 160 / texto 1000; especificações até 8 linhas de 200 caracteres; comparação: nome do produto 80. Em caso de dúvida, escrevam e nós ajustamos.</p>
-
-  <h3>Aba 3 · COMPARAÇÃO (se usar a tabela comparativa)</h3>
-  <table>
-    <tr><th>EAN da página</th><th>Produtos na tabela (até 6 EANs, na ordem)</th><th>Linhas da comparação</th></tr>
-    <tr><td class="mono">7891234567895</td><td class="mono">7891234567895, 7896543210128, …</td><td>Porte · Idade · Sabor · Proteína bruta · Tamanho do grão</td></tr>
-  </table>
-
-  <h2 class="brk"><span class="n">7</span>Como garantimos que nenhuma imagem vai para o produto errado</h2>
+  <h2 style="margin-top:7mm"><span class="n">9</span>Como garantimos que nenhuma imagem vai para o produto errado</h2>
   <ol class="steps">
     <li><b>Conferência do EAN</b>: o último dígito do EAN é um dígito de controle. Um número digitado errado é recusado automaticamente.</li>
     <li><b>Cruzamento com o catálogo</b>: o EAN precisa existir no catálogo da New Pet na Amazon e na planilha. Arquivo com EAN desconhecido não é enviado e volta para vocês como pendência.</li>
@@ -524,54 +525,40 @@
     <li><b>Envio piloto</b>: publicamos primeiro poucos produtos, conferimos no site e só depois enviamos o restante.</li>
     <li><b>Relatório final</b>: lista do que foi aceito pela Amazon, do que foi recusado e do motivo.</li>
   </ol>
-</section>
 
-<!-- ===================== 8. CHECKLIST ===================== -->
-<section class="page" style="margin-top:8mm">
-  <h2><span class="n">8</span>Checklist antes de nos avisar</h2>
+  <h2 class="brk"><span class="n">10</span>Checklist antes de nos avisar</h2>
   <div class="two">
     <div>
-      <h3 style="margin-top:0">Pasta</h3>
+      <h3 style="margin-top:0">Pasta e nomes</h3>
       <ul class="check">
         <li>Uma única pasta, sem subpastas</li>
         <li>Compartilhada com comercial@onsetsell.com (Leitor)</li>
         <li>Sem ZIP, PDF, PSD, atalhos ou documentos</li>
         <li>Nenhum arquivo com "(1)", "cópia" ou "copy"</li>
         <li>Planilha de controle na pasta e preenchida</li>
-      </ul>
-      <h3>Nomes</h3>
-      <ul class="check">
-        <li>Todos começam pelo EAN de 13 dígitos (ou MARCA-NEWPET)</li>
-        <li>Formato EAN.CÓDIGO.jpg, com pontos</li>
-        <li>Códigos em maiúsculas e com 2 dígitos (PT01, AP03)</li>
+        <li>Todos os arquivos no formato EAN.CÓDIGO.jpg, com pontos</li>
         <li>EAN de cada arquivo confere com o peso da embalagem da foto</li>
       </ul>
     </div>
     <div>
-      <h3 style="margin-top:0">Galeria (por EAN)</h3>
+      <h3 style="margin-top:0">Imagens</h3>
       <ul class="check">
-        <li>MAIN em fundo branco puro, pacote com 85% ou mais da área</li>
-        <li>MAIN sem selos, textos ou elementos adicionados</li>
-        <li>9 imagens: MAIN + PT01 a PT08</li>
-        <li>2000 × 2000 px, JPG, RGB, até 10 MB</li>
-        <li>Números iguais aos da embalagem (quantidade diária, níveis de garantia)</li>
+        <li>MAIN em fundo branco puro, sem selos nem textos adicionados</li>
+        <li>9 imagens de galeria, 2000 × 2000 px, JPG, RGB</li>
+        <li>Mesma identidade visual (cores da linha) nas imagens secundárias</li>
+        <li>Grão com medida em mm</li>
+        <li>Números iguais aos da embalagem</li>
         <li>Nenhuma promessa de saúde, preço, promoção ou frete</li>
-      </ul>
-      <h3>A+</h3>
-      <ul class="check">
-        <li>Modelo (A, B ou C) definido na planilha para cada EAN</li>
-        <li>Imagens AP no tamanho exato do módulo</li>
-        <li>Imagem COMP (150 × 300) de cada produto que entra na comparação</li>
-        <li>Textos e descrições das imagens na aba TEXTOS A+</li>
-        <li>Logo e Brand Story da marca (uma vez só)</li>
+        <li>Modelo de A+ (A ou B) definido e imagens AP no tamanho exato</li>
+        <li>Imagem COMP (150 × 300) de cada produto</li>
       </ul>
     </div>
   </div>
 
-  <div class="box ok" style="margin-top:6mm"><b class="t">Dúvidas?</b>
-  Antes de produzir o lote inteiro, mandem as imagens de <b>um produto</b> seguindo este guia. Validamos o produto completo (galeria + A+) e só então vocês replicam para os demais. Isso evita retrabalho.</div>
+  <div class="box ok" style="margin-top:4mm"><b class="t">Comecem por um produto</b>
+  Antes de produzir o lote inteiro, mandem as imagens de <b>um produto</b> seguindo este guia. Validamos esse produto completo (galeria + A+) e só então vocês replicam para os demais. Isso evita retrabalho.</div>
 
-  <p class="small" style="margin-top:8mm">Grupo START · Fale conosco: (11) 93770-1712 · comercial@onsetsell.com · grupostart.me</p>
+  <p class="small" style="margin-top:6mm">Grupo START · Fale conosco: (11) 93770-1712 · comercial@onsetsell.com · grupostart.me</p>
 </section>
 
 </body>
