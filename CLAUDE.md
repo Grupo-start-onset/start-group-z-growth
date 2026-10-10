@@ -30,6 +30,19 @@ nome do parâmetro, não muda o tipo de conta.
 - Marketplace BR: `A2Q3Y263D00KWC`.
 - A mesma tabela está em `scripts/listings/contas.py` — use-a nos scripts.
 
+### Credenciais (variáveis de ambiente)
+
+As credenciais vêm das **variáveis do ambiente de nuvem "Default"** (menu do ambiente →
+Editar). Um `.env` local só existe se alguém o criou naquele container — não confie nele.
+Variáveis necessárias: `SP_API_LWA_CLIENT_ID`, `SP_API_LWA_CLIENT_SECRET`,
+`SP_API_LWA_CLIENT_ID_APP2`, `SP_API_LWA_CLIENT_SECRET_APP2`, `SP_API_MARKETPLACE_ID`,
+`SP_API_REGION` e um `SP_API_REFRESH_TOKEN_<CONTA>` por conta da tabela acima
+(ALFAJF, BLIDSHOP, PETCLEAN, OZITP, JOLITEX, BALBOA, RIOMASTER, PLASTPET, WIWU, PETIKO, NEWPET).
+
+**Se faltar a credencial de uma conta:** pare e avise o usuário qual variável falta e que ela
+deve ser adicionada no ambiente "Default" (nunca pedir para colar o valor no chat). **Não
+improvisar** consultando com outra conta: o resultado não representa o cadastro da conta pedida.
+
 ## Como rodar scripts
 
 - **Sempre a partir da raiz do repositório** (`cd <raiz> && python3 scripts/...`). Os
