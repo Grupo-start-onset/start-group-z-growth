@@ -23,7 +23,8 @@ import os
 try:
     from dotenv import load_dotenv
 
-    load_dotenv(override=True)
+    if not os.environ.get('IGNORAR_DOTENV'):
+        load_dotenv(override=True)
 except ImportError:
     pass
 
