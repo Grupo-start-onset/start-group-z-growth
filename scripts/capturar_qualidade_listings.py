@@ -34,7 +34,7 @@
 # ",".join(lote) antes de montar a chamada.
 # ==================================================================
 
-import os, json, glob, time
+import os, sys, json, glob, time
 from colab_shim import drive, userdata
 
 try:
@@ -250,7 +250,11 @@ def capturar_conta(chave, cfg):
     )
     api = ListingsItems(credentials=credentials, marketplace=MARKETPLACE)
 
-    faltando = [a for a in asins if a not in qualidade or qualidade[a].get('erro')]
+    # --forcar: rebusca todos os ASINs (atualiza status/issues), ignorando o cache
+    if '--forcar' in sys.argv:
+        faltando = list(asins)
+    else:
+        faltando = [a for a in asins if a not in qualidade or qualidade[a].get('erro')]
     print(f'  {len(faltando)} a buscar agora, em lotes de {TAMANHO_LOTE}')
 
     lotes = list(em_lotes(faltando, TAMANHO_LOTE))

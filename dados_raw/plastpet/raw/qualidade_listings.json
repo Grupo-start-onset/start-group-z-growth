@@ -209,14 +209,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: material, item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "material"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0G672BGMX": {
     "sku": "2062",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: breed_recommendation, special_feature, material, item_length_width_thickness. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "breed_recommendation",
+          "item_length_width_thickness",
+          "material",
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0G66QD7HS": {
     "sku": "2060",
@@ -509,8 +539,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_ATTRIBUTE",
           "INVALID_IMAGE",
+          "INVALID_ATTRIBUTE",
           "LISTING"
         ],
         "enforcements": {
@@ -540,8 +570,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_ATTRIBUTE",
           "INVALID_IMAGE",
+          "INVALID_ATTRIBUTE",
           "LISTING"
         ],
         "enforcements": {
@@ -571,8 +601,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_ATTRIBUTE",
           "INVALID_IMAGE",
+          "INVALID_ATTRIBUTE",
           "LISTING"
         ],
         "enforcements": {
@@ -699,7 +729,23 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: breed_recommendation, special_feature, material, item_length_width_thickness. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "breed_recommendation",
+          "item_length_width_thickness",
+          "material",
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0G67JTH74": {
     "sku": "2052",

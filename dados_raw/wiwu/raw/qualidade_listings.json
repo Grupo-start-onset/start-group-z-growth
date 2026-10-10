@@ -248,6 +248,14 @@
     ],
     "issues": [
       {
+        "code": "100390",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a liBatConsumerElectronicsBr_BR_BR. O não fornecimento dessas documentações até 2026-11-16T01:01:27.494Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "ERROR",
+        "categories": [
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: headphones_ear_placement, headphones_form_factor, impedance. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -278,14 +286,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "100390",
-        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a liBatConsumerElectronicsBr_BR_BR. O não fornecimento dessas documentações até 2026-11-16T01:01:27.494Z pode resultar na supressão desse ASIN do site da Amazon.",
-        "severity": "ERROR",
-        "categories": [
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -294,13 +294,21 @@
     "status": [],
     "issues": [
       {
+        "code": "100390",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2026-04-13T04:26:22.302Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "ERROR",
+        "categories": [
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18320",
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
+          "MISSING_ATTRIBUTE",
           "INVALID_ATTRIBUTE",
           "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
           "MISSING_IMAGE",
           "PRODUCT"
         ],
@@ -314,14 +322,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "100390",
-        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2026-04-13T04:26:22.302Z pode resultar na supressão desse ASIN do site da Amazon.",
-        "severity": "ERROR",
-        "categories": [
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -621,13 +621,12 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: headphones_ear_placement, headphones_form_factor, impedance, noise_control. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: headphones_ear_placement, headphones_form_factor, impedance. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
           "headphones_ear_placement",
           "headphones_form_factor",
-          "impedance",
-          "noise_control"
+          "impedance"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -700,6 +699,21 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, compatible_phone_models, included_components. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "compatible_phone_models",
+          "connector_type",
+          "included_components"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "100390",
         "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2026-03-13T15:05:20.356Z pode resultar na supressão desse ASIN do site da Amazon.",
         "severity": "ERROR",
@@ -716,21 +730,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, compatible_phone_models, included_components. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "compatible_devices",
-          "compatible_phone_models",
-          "connector_type",
-          "included_components"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       },
       {
         "code": "100477",
@@ -759,9 +758,9 @@
     ],
     "issues": [
       {
-        "code": "100477",
-        "message": "Para vender este produto na loja Amazon, consulte a política da Amazon em https://sellercentral.amazon.com/help/hub/reference/external/G55N3JF2WQS7RVNE",
-        "severity": "WARNING",
+        "code": "100390",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2026-02-05T14:24:43.642Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "ERROR",
         "categories": [
           "PRODUCT"
         ],
@@ -777,9 +776,9 @@
         }
       },
       {
-        "code": "100390",
-        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2026-02-05T14:24:43.642Z pode resultar na supressão desse ASIN do site da Amazon.",
-        "severity": "ERROR",
+        "code": "100477",
+        "message": "Para vender este produto na loja Amazon, consulte a política da Amazon em https://sellercentral.amazon.com/help/hub/reference/external/G55N3JF2WQS7RVNE",
+        "severity": "WARNING",
         "categories": [
           "PRODUCT"
         ],
@@ -1475,14 +1474,6 @@
     ],
     "issues": [
       {
-        "code": "100390",
-        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a liBatConsumerElectronicsBr_BR_BR. O não fornecimento dessas documentações até 2026-12-04T16:54:57.808Z pode resultar na supressão desse ASIN do site da Amazon.",
-        "severity": "ERROR",
-        "categories": [
-          "PRODUCT"
-        ]
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: impedance. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -1491,6 +1482,14 @@
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100390",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a liBatConsumerElectronicsBr_BR_BR. O não fornecimento dessas documentações até 2026-12-04T16:54:57.808Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "ERROR",
+        "categories": [
           "PRODUCT"
         ]
       }
@@ -1823,15 +1822,6 @@
     ],
     "issues": [
       {
-        "code": "300404",
-        "message": "Não foi possível acessar a mídia no link s3://sparc-image-uploads-prod-na/fix-issue-image-upload/b4c9a6f5-7a5c-4fd2-a694-cd93f5ec9d46/711.png. Um código de status 404 HTTP foi recebido. Não foi possível encontrar a mídia no endereço fornecido. Verifique se o link está correto e a mídia está com o acesso público.",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ],
-        "sku": "711"
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: compatible_phone_models, compatible_devices, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -1844,6 +1834,15 @@
           "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
+      },
+      {
+        "code": "300404",
+        "message": "Não foi possível acessar a mídia no link s3://sparc-image-uploads-prod-na/fix-issue-image-upload/b4c9a6f5-7a5c-4fd2-a694-cd93f5ec9d46/711.png. Um código de status 404 HTTP foi recebido. Não foi possível encontrar a mídia no endereço fornecido. Verifique se o link está correto e a mídia está com o acesso público.",
+        "severity": "ERROR",
+        "categories": [
+          "LISTING"
+        ],
+        "sku": "711"
       }
     ]
   },
@@ -1852,28 +1851,14 @@
     "status": [],
     "issues": [
       {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: compatible_phone_models, compatible_devices, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "compatible_devices",
-          "compatible_phone_models",
-          "material"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
         "code": "18320",
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_ATTRIBUTE",
-          "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
           "MISSING_IMAGE",
+          "MISSING_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "INVALID_ATTRIBUTE",
           "PRODUCT"
         ],
         "enforcements": {
@@ -1886,6 +1871,20 @@
             "status": "NOT_EXEMPT"
           }
         }
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: compatible_phone_models, compatible_devices, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "compatible_phone_models",
+          "material"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
       }
     ]
   },
@@ -2118,6 +2117,21 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, compatible_phone_models, included_components. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "compatible_phone_models",
+          "connector_type",
+          "included_components"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "100390",
         "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2026-03-07T20:39:36.663Z pode resultar na supressão desse ASIN do site da Amazon.",
         "severity": "ERROR",
@@ -2152,21 +2166,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, compatible_phone_models, included_components. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "compatible_devices",
-          "compatible_phone_models",
-          "connector_type",
-          "included_components"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -2291,6 +2290,28 @@
     "status": [],
     "issues": [
       {
+        "code": "18320",
+        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
+        "severity": "ERROR",
+        "categories": [
+          "INVALID_IMAGE",
+          "INVALID_ATTRIBUTE",
+          "MISSING_IMAGE",
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: compatible_devices, material, item_hardness, item_length_width. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -2304,28 +2325,6 @@
           "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
-      },
-      {
-        "code": "18320",
-        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
-        "severity": "ERROR",
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "INVALID_ATTRIBUTE",
-          "MISSING_IMAGE",
-          "INVALID_IMAGE",
-          "PRODUCT"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "SEARCH_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
       }
     ]
   },
@@ -2402,9 +2401,9 @@
         "severity": "ERROR",
         "categories": [
           "MISSING_IMAGE",
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
           "MISSING_ATTRIBUTE",
+          "INVALID_IMAGE",
           "PRODUCT"
         ],
         "enforcements": {
@@ -2664,8 +2663,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -2777,9 +2776,9 @@
     ],
     "issues": [
       {
-        "code": "100477",
-        "message": "Para vender este produto na loja Amazon, consulte a política da Amazon em https://sellercentral.amazon.com/help/hub/reference/external/G55N3JF2WQS7RVNE",
-        "severity": "WARNING",
+        "code": "100390",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2025-10-09T09:10:33.188Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "ERROR",
         "categories": [
           "PRODUCT"
         ],
@@ -2811,9 +2810,9 @@
         ]
       },
       {
-        "code": "100390",
-        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a ps_radiofrequencyDevicesBatteriesChargersMAVERiCK_br. O não fornecimento dessas documentações até 2025-10-09T09:10:33.188Z pode resultar na supressão desse ASIN do site da Amazon.",
-        "severity": "ERROR",
+        "code": "100477",
+        "message": "Para vender este produto na loja Amazon, consulte a política da Amazon em https://sellercentral.amazon.com/help/hub/reference/external/G55N3JF2WQS7RVNE",
+        "severity": "WARNING",
         "categories": [
           "PRODUCT"
         ],
@@ -2940,28 +2939,6 @@
     "status": [],
     "issues": [
       {
-        "code": "18320",
-        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
-        "severity": "ERROR",
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
-          "MISSING_IMAGE",
-          "PRODUCT"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "SEARCH_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: compatible_devices, connectivity_technology, keyboard_description, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -2975,6 +2952,28 @@
           "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
+      },
+      {
+        "code": "18320",
+        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
+        "severity": "ERROR",
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "MISSING_IMAGE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
       }
     ]
   },
@@ -2984,6 +2983,18 @@
       "DISCOVERABLE"
     ],
     "issues": [
+      {
+        "code": "99022",
+        "message": "Com base nos dados em '[cable.length.decimal_value, cable.length.string_value]', o campo '\"unit\"' para o atributo 'Cabo' não tem valores suficientes. O mínimo necessário é de '1' valor(es). Forneça um valor válido.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "cable"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
       {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
@@ -2995,18 +3006,6 @@
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "Com base nos dados em '[cable.length.decimal_value, cable.length.string_value]', o campo '\"unit\"' para o atributo 'Cabo' não tem valores suficientes. O mínimo necessário é de '1' valor(es). Forneça um valor válido.",
-        "severity": "ERROR",
-        "attributeNames": [
-          "cable"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
           "PRODUCT"
         ]
       }
@@ -3049,6 +3048,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: metal_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "metal_type"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18799",
         "message": "Violação de patente",
         "severity": "ERROR",
@@ -3065,18 +3076,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: metal_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "metal_type"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -3115,13 +3114,27 @@
     "status": [],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: compatible_phone_models, compatible_devices, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "compatible_phone_models",
+          "material"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18320",
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
+          "MISSING_ATTRIBUTE",
           "INVALID_ATTRIBUTE",
           "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
           "MISSING_IMAGE",
           "PRODUCT"
         ],
@@ -3135,20 +3148,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: compatible_phone_models, compatible_devices, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "compatible_devices",
-          "compatible_phone_models",
-          "material"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -3184,9 +3183,9 @@
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
+          "MISSING_ATTRIBUTE",
           "INVALID_ATTRIBUTE",
           "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
           "MISSING_IMAGE",
           "PRODUCT"
         ],
@@ -3333,21 +3332,6 @@
         }
       },
       {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: compatible_devices, connectivity_technology, keyboard_description, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "compatible_devices",
-          "connectivity_technology",
-          "keyboard_description",
-          "recommended_uses_for_product"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
         "code": "100581",
         "message": "A imagem MAIN que você enviou para US/Global tem texto, logotipo, gráfico e marca d'água, o que não é permitido para esse tipo de produto, na loja BR. Como resultado, suas imagens não serão consideradas para exibição aos clientes, mas isso não levará à supressão do ASIN. Nenhuma ação é necessária no momento, mas se você optar por fazer o upload de uma imagem compatível, observe que sua exibição não é garantida. Para obter mais informações sobre as diretrizes de imagens, acesse a página Problemas de imagens.",
         "severity": "ERROR",
@@ -3369,6 +3353,21 @@
             "status": "NOT_EXEMPT"
           }
         }
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: compatible_devices, connectivity_technology, keyboard_description, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "connectivity_technology",
+          "keyboard_description",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
       }
     ]
   },
@@ -3476,10 +3475,17 @@
     "status": [],
     "issues": [
       {
-        "code": "100390",
-        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a portablePowerSupplyPowerBank_BR_BR_1776947819644. O não fornecimento dessas documentações até 2026-10-12T15:11:37.974Z pode resultar na supressão desse ASIN do site da Amazon.",
-        "severity": "ERROR",
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, compatible_phone_models, included_components. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "compatible_phone_models",
+          "connector_type",
+          "included_components"
+        ],
         "categories": [
+          "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
       },
@@ -3488,10 +3494,10 @@
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_ATTRIBUTE",
-          "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
           "MISSING_IMAGE",
+          "INVALID_ATTRIBUTE",
+          "MISSING_ATTRIBUTE",
+          "INVALID_IMAGE",
           "PRODUCT"
         ],
         "enforcements": {
@@ -3506,17 +3512,10 @@
         }
       },
       {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: connector_type, compatible_devices, compatible_phone_models, included_components. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "compatible_devices",
-          "compatible_phone_models",
-          "connector_type",
-          "included_components"
-        ],
+        "code": "100390",
+        "message": "Para vender este produto no marketplace da Amazon, você deve fornecer documentos r‏elacionados a portablePowerSupplyPowerBank_BR_BR_1776947819644. O não fornecimento dessas documentações até 2026-10-12T15:11:37.974Z pode resultar na supressão desse ASIN do site da Amazon.",
+        "severity": "ERROR",
         "categories": [
-          "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
       }
@@ -3976,10 +3975,10 @@
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_IMAGE",
-          "MISSING_ATTRIBUTE",
-          "INVALID_ATTRIBUTE",
           "MISSING_IMAGE",
+          "INVALID_ATTRIBUTE",
+          "MISSING_ATTRIBUTE",
+          "INVALID_IMAGE",
           "PRODUCT"
         ],
         "enforcements": {

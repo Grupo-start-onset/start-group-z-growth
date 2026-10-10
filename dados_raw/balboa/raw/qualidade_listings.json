@@ -120,6 +120,25 @@
     ],
     "issues": [
       {
+        "code": "18653",
+        "message": "Sua oferta usa um logotipo de marca registrada protegida de adidas sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
+        "severity": "ERROR",
+        "categories": [
+          "QUALIFICATION_REQUIRED",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "CATALOG_ITEM_REMOVED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: material, item_length_description. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -202,18 +221,6 @@
     ],
     "issues": [
       {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -231,6 +238,18 @@
             "status": "NOT_EXEMPT"
           }
         }
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
       }
     ]
   },
@@ -407,31 +426,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "100588",
-        "message": "A imagem MAIN que você enviou para US/Global tem um fundo branco irregular, o que não é permitido para esse tipo de produto, na loja BR. Como resultado, suas imagens não serão consideradas para exibição aos clientes, mas isso não levará à supressão do ASIN. Nenhuma ação é necessária no momento, mas se você optar por fazer o upload de uma imagem compatível, observe que sua exibição não é garantida. Para obter mais informações sobre as diretrizes de imagens, acesse a página Problemas de imagens.",
-        "severity": "ERROR",
-        "attributeNames": [
-          "media_locator"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "INVALID_IMAGE",
-          "LISTING"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "ATTRIBUTE_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      }
-    ]
+    "issues": []
   },
   "B0FZDGDLFB": {
     "sku": "60124RM.PTBC-P",
@@ -560,12 +555,11 @@
     ],
     "issues": [
       {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: material, pocket_description. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
+        "code": "100893",
+        "message": "A variação do seu produto não pode ser criada porque os atributos obrigatórios estão ausentes no ASIN child B0FZDMDV7N. Forneça [size] para vinculá-lo ao ASIN Parent B0FYSMCR1K.",
+        "severity": "ERROR",
         "attributeNames": [
-          "material",
-          "pocket_description"
+          "size"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -573,11 +567,12 @@
         ]
       },
       {
-        "code": "100893",
-        "message": "A variação do seu produto não pode ser criada porque os atributos obrigatórios estão ausentes no ASIN child B0FZDMDV7N. Forneça [size] para vinculá-lo ao ASIN Parent B0FYSMCR1K.",
-        "severity": "ERROR",
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: material, pocket_description. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
         "attributeNames": [
-          "size"
+          "material",
+          "pocket_description"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -732,20 +727,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CM1NL7": {
     "sku": "I14571MC.MAR-M",
@@ -863,20 +845,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CQP8YV": {
     "sku": "N14819RM.MAR-14",
@@ -1124,6 +1093,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -1141,18 +1122,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -1183,6 +1152,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -1200,18 +1181,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -1221,14 +1190,6 @@
       "DISCOVERABLE"
     ],
     "issues": [
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
       {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: neck.neck_style, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
@@ -1241,18 +1202,6 @@
           "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
       }
     ]
   },
@@ -1261,28 +1210,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CR6SNS": {
     "sku": "I14616BM.BCO-M",
@@ -1371,6 +1299,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -1388,18 +1328,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -1670,18 +1598,6 @@
     ],
     "issues": [
       {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -1691,14 +1607,6 @@
         "categories": [
           "MISSING_ATTRIBUTE",
           "PRODUCT"
-        ]
-      },
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
         ]
       }
     ]
@@ -1710,18 +1618,6 @@
     ],
     "issues": [
       {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -1731,14 +1627,6 @@
         "categories": [
           "MISSING_ATTRIBUTE",
           "PRODUCT"
-        ]
-      },
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
         ]
       }
     ]
@@ -2025,20 +1913,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CS1VN8": {
     "sku": "I14596PSG.BR-GG",
@@ -2147,23 +2022,15 @@
     ],
     "issues": [
       {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
         "attributeNames": [
-          "list_price"
+          "material"
         ],
         "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
         ]
       }
     ]
@@ -2185,26 +2052,6 @@
           "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
-      },
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
       }
     ]
   },
@@ -2224,26 +2071,6 @@
         "categories": [
           "MISSING_ATTRIBUTE",
           "PRODUCT"
-        ]
-      },
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
         ]
       }
     ]
@@ -2395,6 +2222,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -2412,18 +2251,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -2601,6 +2428,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -2618,18 +2457,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -2669,26 +2496,6 @@
         "categories": [
           "MISSING_ATTRIBUTE",
           "PRODUCT"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      },
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
         ]
       }
     ]
@@ -3058,6 +2865,19 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style, material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "material",
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de adidas sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -3075,19 +2895,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: material, item_length_description. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "item_length_description",
-          "material"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -3242,20 +3049,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CVNCVB": {
     "sku": "N14596PSG.BR-P",
@@ -3839,20 +3633,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CW9QHL": {
     "sku": "N14754RM.BCO-14",
@@ -4099,20 +3880,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1CWRZWK": {
     "sku": "I14821PSG.MA-10",
@@ -4566,6 +4334,18 @@
     ],
     "issues": [
       {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de NIKE sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -4583,18 +4363,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
       }
     ]
   },
@@ -4779,26 +4547,6 @@
     ],
     "issues": [
       {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -4818,26 +4566,6 @@
       "DISCOVERABLE"
     ],
     "issues": [
-      {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      },
       {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
@@ -4859,14 +4587,6 @@
     ],
     "issues": [
       {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
         "code": "18653",
         "message": "Sua oferta usa um logotipo de marca registrada protegida de adidas sem autorização. Remova o logotipo ou forneça comprovação de autorização.",
         "severity": "ERROR",
@@ -4884,18 +4604,6 @@
             "status": "NOT_EXEMPT"
           }
         }
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
       },
       {
         "code": "18448",
@@ -5163,20 +4871,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "neck"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0G1D2LRPN": {
     "sku": "I14616BM.VER-GG",
@@ -5272,26 +4967,6 @@
     ],
     "issues": [
       {
-        "code": "18002",
-        "message": "Valores de atributo inválidos encontrados: [{\"attributeName\":\"[list_price]\",\"reason\":\"Expected at least 1 of field:'\\\"value_with_tax\\\"' for attribute:'[list_price]'.\"}]",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ]
-      },
-      {
-        "code": "99022",
-        "message": "O campo '\"value_with_tax\"' para o atributo 'Preço sugerido sem impostos' não tem valores suficientes. O mínimo necessário é de '1' valor(es).",
-        "severity": "ERROR",
-        "attributeNames": [
-          "list_price"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "LISTING"
-        ]
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: material. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -5326,8 +5001,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5371,8 +5046,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5470,8 +5145,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5569,7 +5244,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: neck.neck_style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "neck"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0G1CM286D": {
     "sku": "N14586BC.AZV-M",
@@ -5801,29 +5489,6 @@
     "status": [],
     "issues": [
       {
-        "code": "100588",
-        "message": "A imagem MAIN que você enviou para US/Global tem um fundo branco irregular, o que não é permitido para esse tipo de produto, na loja BR. Como resultado, suas imagens não serão consideradas para exibição aos clientes, mas isso não levará à supressão do ASIN. Nenhuma ação é necessária no momento, mas se você optar por fazer o upload de uma imagem compatível, observe que sua exibição não é garantida. Para obter mais informações sobre as diretrizes de imagens, acesse a página Problemas de imagens.",
-        "severity": "ERROR",
-        "attributeNames": [
-          "media_locator"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "INVALID_IMAGE",
-          "LISTING"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "ATTRIBUTE_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      },
-      {
         "code": "18559",
         "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0H2HVMH1F. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
         "severity": "ERROR",
@@ -5860,6 +5525,29 @@
             "status": "NOT_EXEMPT"
           }
         }
+      },
+      {
+        "code": "100588",
+        "message": "A imagem MAIN que você enviou para US/Global tem um fundo branco irregular, o que não é permitido para esse tipo de produto, na loja BR. Como resultado, suas imagens não serão consideradas para exibição aos clientes, mas isso não levará à supressão do ASIN. Nenhuma ação é necessária no momento, mas se você optar por fazer o upload de uma imagem compatível, observe que sua exibição não é garantida. Para obter mais informações sobre as diretrizes de imagens, acesse a página Problemas de imagens.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "media_locator"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "LISTING"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
       }
     ]
   },
@@ -5877,8 +5565,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5908,8 +5596,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5939,8 +5627,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5970,8 +5658,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -6001,8 +5689,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -6039,8 +5727,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -6070,8 +5758,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -6101,8 +5789,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -6134,8 +5822,26 @@
         "message": "A imagem principal do produto deve ter um fundo branco puro. Envie uma imagem compatível para tornar sua oferta visível novamente.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "18559",
+        "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0H2HVMH1F. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
+        "severity": "ERROR",
+        "categories": [
           "PRODUCT"
         ],
         "enforcements": {
@@ -6157,32 +5863,14 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
           "actions": [
             {
               "action": "ATTRIBUTE_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      },
-      {
-        "code": "18559",
-        "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0H2HVMH1F. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
-        "severity": "ERROR",
-        "categories": [
-          "PRODUCT"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "SEARCH_SUPPRESSED"
             }
           ],
           "exemption": {
@@ -6201,8 +5889,26 @@
         "message": "A imagem principal do produto deve ter um fundo branco puro. Envie uma imagem compatível para tornar sua oferta visível novamente.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "18559",
+        "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0H2HVMH1F. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
+        "severity": "ERROR",
+        "categories": [
           "PRODUCT"
         ],
         "enforcements": {
@@ -6224,32 +5930,14 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
           "actions": [
             {
               "action": "ATTRIBUTE_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      },
-      {
-        "code": "18559",
-        "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0H2HVMH1F. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
-        "severity": "ERROR",
-        "categories": [
-          "PRODUCT"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "SEARCH_SUPPRESSED"
             }
           ],
           "exemption": {

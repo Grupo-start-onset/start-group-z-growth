@@ -53,7 +53,21 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0B196GHF1, ao ASIN parent B0HKGN6MMY porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0B195NBQZ": {
     "sku": "U2.0419017.Z9104",
@@ -67,7 +81,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B09LNBVNDF": {
     "sku": "U2.0192017.L0175",
@@ -156,14 +185,42 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0B194Z3VN": {
     "sku": "U2.0419020.Z9643",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQFT1NQ": {
     "sku": "U2.0419047.Z9716",
@@ -205,49 +262,166 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQPVB1T": {
     "sku": "U2.0419030.Z9221",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQPC15Z": {
     "sku": "U2.0419002.Z9104",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CDQPC15Z, ao ASIN parent B0HKGP4WTW porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQQ4Y5Y": {
     "sku": "U2.0419002.Z9220",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CDQQ4Y5Y, ao ASIN parent B0HKGP4WTW porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQRKJF4": {
     "sku": "U2.0419001.Z9220",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQPBNXP": {
     "sku": "U2.0419001.Z9232",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQM25K1": {
     "sku": "U2.0419043.Z9716",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQQFM69": {
     "sku": "U2.0419004.Z9232",
@@ -261,14 +435,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQQD969": {
     "sku": "U2.0419029.Z9221",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQMMH5N": {
     "sku": "U2.0419003.Z9104",
@@ -282,14 +486,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQFG13K": {
     "sku": "U2.0419044.Z9716",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQMF2G5": {
     "sku": "U2.0419003.Z9716",
@@ -317,7 +551,33 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: shelf_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "shelf_type"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CGVP2T2P, ao ASIN parent B0FSXZL9ST porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CFB7PQKG": {
     "sku": "U2.0359026.L0057",
@@ -407,28 +667,88 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_depth_width_height, special_feature, coffee_maker_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "coffee_maker_type",
+          "item_depth_width_height",
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CG82YPHS": {
     "sku": "U2.2507002.6R400",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_depth_width_height, special_feature, coffee_maker_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "coffee_maker_type",
+          "item_depth_width_height",
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQVRW1H": {
     "sku": "U2.0419003.Z9643",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQSH2PS": {
     "sku": "U2.0419003.Z9220",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQW72G3": {
     "sku": "U2.0419009.Z9202",
@@ -449,14 +769,43 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CDQSZ1RV": {
     "sku": "U2.0419001.Z9643",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CJW8VTHJ": {
     "sku": "U2.1502002.Z9400",
@@ -575,7 +924,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CH94FJHH": {
     "sku": "U2.0118007.L0400",
@@ -603,7 +965,33 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CQ5GTGV7, ao ASIN parent B0HMK9NRRS porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CRSY25SG": {
     "sku": "U2.0359011.L2057",
@@ -617,7 +1005,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CRSWL3JG": {
     "sku": "U2.0359002.L1057",
@@ -638,7 +1041,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CPTCW5CV": {
     "sku": "U2.0100003.Z9186",
@@ -728,14 +1146,42 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CQ5GBR21, ao ASIN parent B0HMK9NRRS porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CQ5GJJXT": {
     "sku": "U2.0118006.L0488",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CQ5GJJXT, ao ASIN parent B0HMK9XFS2 porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CRSYFFR5": {
     "sku": "U2.0359011.L1057",
@@ -801,11 +1247,10 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "opening_mechanism",
-          "recommended_uses_for_product"
+          "opening_mechanism"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -833,7 +1278,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product, item_depth_width_height, special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_depth_width_height",
+          "recommended_uses_for_product",
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CSGVBHRS": {
     "sku": "U2.0359006.L2057",
@@ -875,21 +1335,61 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CWB218ZX": {
     "sku": "U2.0118003.L1400",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CSHDKP7Q": {
     "sku": "U2.0359005.L2057",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0CSHDKP7Q, ao ASIN parent B0HMKBTM5B porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0CZ9RHRS7": {
     "sku": "U2.0427016.L2057",
@@ -931,7 +1431,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product, special_feature, finish_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "finish_type",
+          "special_feature",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D213QLSP": {
     "sku": "U2.0118020.L0238",
@@ -962,12 +1477,10 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "capacity",
-          "opening_mechanism",
-          "recommended_uses_for_product"
+          "opening_mechanism"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -1016,7 +1529,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product, special_feature, finish_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "finish_type",
+          "special_feature",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D2P5NFN5": {
     "sku": "U2.0192027.L2175",
@@ -1079,7 +1607,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_depth_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_depth_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D5YSVWMW": {
     "sku": "U2.0129019.Z9203",
@@ -1156,7 +1697,21 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: style, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D67G1C88": {
     "sku": "U2.0359005.L0057",
@@ -1177,28 +1732,80 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: blade.edge, blade.length. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "blade"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D5S66M7C": {
     "sku": "U2.0113012.Z9133",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: blade.edge, blade.length. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "blade"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D5ST57FP": {
     "sku": "U2.0113013.Z9133",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: blade.edge, blade.length. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "blade"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D5SSV531": {
     "sku": "U2.0113011.Z9133",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: blade.edge, blade.length. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "blade"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D67HNYRK": {
     "sku": "U2.0394009.Z9136",
@@ -1261,14 +1868,40 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D67JXQ5Q": {
     "sku": "U2.0394004.Z9136",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D67GVC8G": {
     "sku": "U2.0394005.Z9104",
@@ -1296,7 +1929,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D67ZBJM6": {
     "sku": "U2.0394008.Z9136",
@@ -1310,7 +1958,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D67ZDQHT": {
     "sku": "U2.0394004.Z9488",
@@ -1366,7 +2029,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "90244",
+        "message": "Não podemos aceitar o storing_spices que você solicitou para É Usado Para O Que. Para corrigir isso, selecione um valor aprovado na lista para sua categoria de produto e reenvie.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "is_used_for_what"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "90244",
+        "message": "Não podemos aceitar o adult que você solicitou para É Usado Por Quem. Para corrigir isso, selecione um valor aprovado na lista para sua categoria de produto e reenvie.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "is_used_by_who"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: bowl.material_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "bowl"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D6NHXM3W": {
     "sku": "U2.1502014.Z9057",
@@ -1415,7 +2115,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0D68375CD": {
     "sku": "U2.0359007.L1057",
@@ -1443,7 +2156,23 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: form_factor, compatible_devices, compatible_phone_models, mounting_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "compatible_devices",
+          "compatible_phone_models",
+          "form_factor",
+          "mounting_type"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0DFMYQX4G": {
     "sku": "U2.0360006.Z9213",
@@ -1495,6 +2224,19 @@
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0DJTF75PC, ao ASIN parent B0HMKCZ456 porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
           "PRODUCT"
         ]
       }
@@ -1560,7 +2302,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0DJFPSFW1": {
     "sku": "U2.0359030.L2057",
@@ -1747,7 +2504,21 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "100898",
+        "message": "Não foi possível adicionar o ASIN child variation, B0F3V476R3, ao ASIN parent B0HMKGT65L porque o valor da marca não era consistente em toda a família. Atualize o valor da marca e reenvie o relacionamento.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "brand",
+          "global_catalog_owner"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0F3V6WCJC": {
     "sku": "U2.0359039.L1057",
@@ -1775,28 +2546,81 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: blade.edge, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "blade",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0DY2VY7MN": {
     "sku": "U2.0106002.L2213",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0DY2RYFHG": {
     "sku": "U2.0106002.L2175",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0DY2FTM5Z": {
     "sku": "U2.0106002.L2530",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0DNRMY6VP": {
     "sku": "U2.0106007.L0145",
@@ -1970,7 +2794,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product, special_feature, finish_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "finish_type",
+          "special_feature",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0F7RS4HGH": {
     "sku": "U2.3007026.Z9716",
@@ -2012,7 +2851,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: number_of_drawers. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "number_of_drawers"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0F74NL5KS": {
     "sku": "U2.0129005.Z9213",
@@ -2517,7 +3369,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4PJGGS": {
     "sku": "U2.0192024.L0530",
@@ -2563,12 +3430,10 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "capacity",
-          "opening_mechanism",
-          "recommended_uses_for_product"
+          "opening_mechanism"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -2631,14 +3496,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4PHSGH": {
     "sku": "U2.0360022.Z9121",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product, special_feature, finish_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "finish_type",
+          "special_feature",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4NR229": {
     "sku": "U2.0218029.Z9202",
@@ -2899,7 +3794,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_shape",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4S6ZM6": {
     "sku": "U2.0359041.L0999",
@@ -2955,14 +3865,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4RZNXL": {
     "sku": "U2.0118046.L1999",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4TGPMM": {
     "sku": "U2.0192010.L1213",
@@ -2997,7 +3937,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, special_feature, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4V11X2": {
     "sku": "U2.0131007.L1999",
@@ -3115,7 +4070,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4TJRQ1": {
     "sku": "U2.0394004.Z9213",
@@ -3150,7 +4118,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: specific_uses_for_product, special_feature, finish_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "finish_type",
+          "special_feature",
+          "specific_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4V8TGJ": {
     "sku": "U2.0275004.Z9145",
@@ -3227,12 +4210,10 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "capacity",
-          "opening_mechanism",
-          "recommended_uses_for_product"
+          "opening_mechanism"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -3288,7 +4269,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4VB3S1": {
     "sku": "U2.3007025.Z9716",
@@ -3316,7 +4310,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, special_feature, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4WFH5J": {
     "sku": "U2.0159034.Z9145",
@@ -3337,7 +4346,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, special_feature, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4VQ7K8": {
     "sku": "U2.0359035.L0057",
@@ -3381,10 +4405,9 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "capacity",
           "opening_mechanism",
           "recommended_uses_for_product"
         ],
@@ -3512,7 +4535,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, special_feature, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4Z6RWZ": {
     "sku": "U2.0427003.05057",
@@ -3616,7 +4654,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_shape",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4YP367": {
     "sku": "U2.0234016.Z9999",
@@ -3687,7 +4740,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_shape",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD4Z9P94": {
     "sku": "U2.2507019.TI488",
@@ -3884,12 +4952,10 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: opening_mechanism. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "capacity",
-          "opening_mechanism",
-          "recommended_uses_for_product"
+          "opening_mechanism"
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
@@ -4019,7 +5085,7 @@
     "issues": [
       {
         "code": "90244",
-        "message": "Não podemos aceitar o kitchen que você solicitou para É Usado Onde. Para corrigir isso, selecione um valor aprovado na lista para sua categoria de produto e reenvie.",
+        "message": "Não podemos aceitar o pantry que você solicitou para É Usado Onde. Para corrigir isso, selecione um valor aprovado na lista para sua categoria de produto e reenvie.",
         "severity": "ERROR",
         "attributeNames": [
           "is_used_where"
@@ -4031,7 +5097,7 @@
       },
       {
         "code": "90244",
-        "message": "Não podemos aceitar o pantry que você solicitou para É Usado Onde. Para corrigir isso, selecione um valor aprovado na lista para sua categoria de produto e reenvie.",
+        "message": "Não podemos aceitar o kitchen que você solicitou para É Usado Onde. Para corrigir isso, selecione um valor aprovado na lista para sua categoria de produto e reenvie.",
         "severity": "ERROR",
         "attributeNames": [
           "is_used_where"
@@ -4083,7 +5149,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "special_feature"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD524GSM": {
     "sku": "U2.1502011.Z9136",
@@ -4180,28 +5259,88 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "recommended_uses_for_product",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD53J35T": {
     "sku": "U2.0426045.Z9999",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_shape",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD52NZKZ": {
     "sku": "U2.0118036.L1488",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD52NC2H": {
     "sku": "U2.0118044.L0400",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD53LGKS": {
     "sku": "U2.0111060.Z9400",
@@ -4257,7 +5396,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, special_feature, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD546N1D": {
     "sku": "U2.3006040.Z9716",
@@ -4278,7 +5432,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: special_feature, style, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_shape",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD55GFJY": {
     "sku": "U2.0400016.Z9107",
@@ -4592,7 +5761,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD56TP5C": {
     "sku": "U2.0234007.Z9202",
@@ -4634,14 +5818,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, item_shape, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "item_shape",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD56L5MD": {
     "sku": "U2.0427009.05057",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_thickness, recommended_uses_for_product, item_shape. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_thickness",
+          "item_shape",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD58G6H1": {
     "sku": "U2.0359038.L0057",
@@ -4789,7 +6003,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD57FTB1": {
     "sku": "U2.0426049.Z9999",
@@ -4857,17 +6084,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "20012",
-        "message": "Submitted image exceeds the maximum allowed dimension.",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ],
-        "sku": "U2.3006038.Z9716"
-      }
-    ]
+    "issues": []
   },
   "B0FD5B18DL": {
     "sku": "U2.0359015.L1057",
@@ -4965,41 +6182,6 @@
     "status": [],
     "issues": [
       {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "item_length_width_height",
-          "style"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
-        "code": "18320",
-        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
-        "severity": "ERROR",
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "INVALID_IMAGE",
-          "MISSING_IMAGE",
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "SEARCH_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      },
-      {
         "code": "100560",
         "message": "A imagem MAIN que você enviou para US/Global não representa com precisão o produto desse B0FD5BKN59 ou o identificador do produto que você enviou está incorreto na loja BR. Como resultado, suas imagens não serão exibidas aos clientes. Faça upload de uma nova imagem ou corrija o identificador do produto. Você pode consultar os requisitos de imagem do produto para obter mais informações.",
         "severity": "ERROR",
@@ -5007,8 +6189,8 @@
           "media_locator"
         ],
         "categories": [
-          "INVALID_IMAGE",
           "INVALID_ATTRIBUTE",
+          "INVALID_IMAGE",
           "LISTING"
         ],
         "enforcements": {
@@ -5032,6 +6214,41 @@
         ],
         "categories": [
           "LISTING"
+        ]
+      },
+      {
+        "code": "18320",
+        "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
+        "severity": "ERROR",
+        "categories": [
+          "INVALID_ATTRIBUTE",
+          "MISSING_ATTRIBUTE",
+          "INVALID_IMAGE",
+          "MISSING_IMAGE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
         ]
       }
     ]
@@ -5076,7 +6293,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5CZ5QH": {
     "sku": "U2.0234019.Z9104",
@@ -5118,7 +6350,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5CH2Y5": {
     "sku": "U2.2507014.LT400",
@@ -5139,7 +6386,20 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width_height"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5C9RGK": {
     "sku": "U2.0607014.Z9716",
@@ -5229,20 +6489,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: item_length_width_height. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "item_length_width_height"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0FD5FBZQR": {
     "sku": "U2.0192040.Z9238",
@@ -5321,7 +6568,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5DNWV2": {
     "sku": "U2.1502010.Z9147",
@@ -5356,7 +6618,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, special_feature, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "special_feature",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5DMM9D": {
     "sku": "U2.0218028.Z9202",
@@ -5411,7 +6688,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5GXZ3T": {
     "sku": "U2.0667018.L1999",
@@ -5475,14 +6767,44 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5RCG11": {
     "sku": "U2.0118037.L1999",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: capacity, opening_mechanism, recommended_uses_for_product. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "capacity",
+          "opening_mechanism",
+          "recommended_uses_for_product"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FD5RCG95": {
     "sku": "U2.3006048.Z9716",
@@ -5510,7 +6832,21 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: blade.edge, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "blade",
+          "style"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FDX6C1KD": {
     "sku": "U2.0399015.Z9148",
@@ -5524,7 +6860,22 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": []
+    "issues": [
+      {
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: room_type, item_shape, item_length_width. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "severity": "WARNING",
+        "attributeNames": [
+          "item_length_width",
+          "item_shape",
+          "room_type"
+        ],
+        "categories": [
+          "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      }
+    ]
   },
   "B0FDX7JWD6": {
     "sku": "U2.0426007.05057",
@@ -5769,20 +7120,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de HOME_BED_AND_BATH paraBED_LINEN_SET. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com HOME_BED_AND_BATH.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "product_type"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0CX6K6KRC": {
     "sku": "14.0196004.HKU28",
@@ -5796,20 +7134,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de FABRIC paraBED_LINEN_SET. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com FABRIC.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "product_type"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0D4VNMKRP": {
     "sku": "14.0195001.HT625",
@@ -5949,20 +7274,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de FABRIC paraBED_LINEN_SET. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com FABRIC.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "product_type"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0DY9DXY27": {
     "sku": "E8.0874006.C3399",
@@ -6100,17 +7412,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "20009",
-        "message": "Submitted image does not meet minimum dimension requirements. Please submit an image that meets minimum dimension requirements.",
-        "severity": "ERROR",
-        "categories": [
-          "LISTING"
-        ],
-        "sku": "U2.0306010.Z9530"
-      }
-    ]
+    "issues": []
   },
   "B0G2SLL493": {
     "sku": "14.0195001.HW625",
@@ -6166,31 +7468,7 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "100605",
-        "message": "Solicitação de custo de BRL 14.35 recusada. No momento, não é possível aceitar uma atualização de custo desta oferta.",
-        "severity": "ERROR",
-        "attributeNames": [
-          "cost"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "INVALID_PRICE",
-          "LISTING"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "ATTRIBUTE_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      }
-    ]
+    "issues": []
   },
   "B0H96P45KB": {
     "sku": "D7.5009001.HY136",
@@ -6283,14 +7561,16 @@
     ],
     "issues": [
       {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de HOME paraBED_LINEN_SET. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com HOME.",
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: material, number_of_pieces, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "product_type"
+          "material",
+          "number_of_pieces",
+          "style"
         ],
         "categories": [
-          "INVALID_ATTRIBUTE",
+          "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
       }
@@ -6303,14 +7583,16 @@
     ],
     "issues": [
       {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de HOME paraBED_LINEN_SET. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com HOME.",
+        "code": "18448",
+        "message": "Faltam alguns atributos principais em seu envio: material, number_of_pieces, style. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "product_type"
+          "material",
+          "number_of_pieces",
+          "style"
         ],
         "categories": [
-          "INVALID_ATTRIBUTE",
+          "MISSING_ATTRIBUTE",
           "PRODUCT"
         ]
       }

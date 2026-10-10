@@ -968,11 +968,10 @@
     "status": [],
     "issues": [
       {
-        "code": "18027",
-        "message": "Consideramos que a imagem principal contém texto, logotipo, gráfico ou marca d'água, o que não é permitido para este tipo de produto. Envie uma imagem que esteja em conformidade para remover a restrição. Consulte também os requisitos de imagem do produto.",
+        "code": "18559",
+        "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0GFJ5DXFS. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_IMAGE",
           "PRODUCT"
         ],
         "enforcements": {
@@ -987,10 +986,11 @@
         }
       },
       {
-        "code": "18559",
-        "message": "Esse ASIN foi suprimido devido a problemas com seu ASIN parent B0GFJ5DXFS. Resolva os problemas com seu ASIN parent para corrigir esse ASIN.",
+        "code": "18027",
+        "message": "Consideramos que a imagem principal contém texto, logotipo, gráfico ou marca d'água, o que não é permitido para este tipo de produto. Envie uma imagem que esteja em conformidade para remover a restrição. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
+          "INVALID_IMAGE",
           "PRODUCT"
         ],
         "enforcements": {
@@ -1082,25 +1082,6 @@
     "status": [],
     "issues": [
       {
-        "code": "18027",
-        "message": "Consideramos que a imagem principal contém texto, logotipo, gráfico ou marca d'água, o que não é permitido para este tipo de produto. Envie uma imagem que esteja em conformidade para remover a restrição. Consulte também os requisitos de imagem do produto.",
-        "severity": "ERROR",
-        "categories": [
-          "INVALID_IMAGE",
-          "PRODUCT"
-        ],
-        "enforcements": {
-          "actions": [
-            {
-              "action": "SEARCH_SUPPRESSED"
-            }
-          ],
-          "exemption": {
-            "status": "NOT_EXEMPT"
-          }
-        }
-      },
-      {
         "code": "100581",
         "message": "A imagem MAIN que você enviou para US/Global tem texto, logotipo, gráfico e marca d'água, o que não é permitido para esse tipo de produto, na loja BR. Como resultado, suas imagens não serão consideradas para exibição aos clientes, mas isso não levará à supressão do ASIN. Nenhuma ação é necessária no momento, mas se você optar por fazer o upload de uma imagem compatível, observe que sua exibição não é garantida. Para obter mais informações sobre as diretrizes de imagens, acesse a página Problemas de imagens.",
         "severity": "ERROR",
@@ -1116,6 +1097,25 @@
           "actions": [
             {
               "action": "ATTRIBUTE_SUPPRESSED"
+            }
+          ],
+          "exemption": {
+            "status": "NOT_EXEMPT"
+          }
+        }
+      },
+      {
+        "code": "18027",
+        "message": "Consideramos que a imagem principal contém texto, logotipo, gráfico ou marca d'água, o que não é permitido para este tipo de produto. Envie uma imagem que esteja em conformidade para remover a restrição. Consulte também os requisitos de imagem do produto.",
+        "severity": "ERROR",
+        "categories": [
+          "INVALID_IMAGE",
+          "PRODUCT"
+        ],
+        "enforcements": {
+          "actions": [
+            {
+              "action": "SEARCH_SUPPRESSED"
             }
           ],
           "exemption": {
@@ -1337,10 +1337,10 @@
         "message": "A imagem principal está ausente ou incorreta. Envie uma imagem que esteja em conformidade para remover a supressão. Consulte também os requisitos de imagem do produto.",
         "severity": "ERROR",
         "categories": [
-          "INVALID_IMAGE",
-          "INVALID_ATTRIBUTE",
-          "MISSING_ATTRIBUTE",
           "MISSING_IMAGE",
+          "INVALID_IMAGE",
+          "MISSING_ATTRIBUTE",
+          "INVALID_ATTRIBUTE",
           "PRODUCT"
         ],
         "enforcements": {
@@ -1732,165 +1732,49 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD8N33HM": {
     "sku": "20330-chumbo",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de BACKPACK paraSPORT_EQUIPMENT_BAG_CASE. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com BACKPACK.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "product_type"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD87T214": {
     "sku": "20328-chumbo",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD8RRT8L": {
     "sku": "20325-preto",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD87BBDG": {
     "sku": "20323-verde",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de BACKPACK paraICE_CHEST. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com BACKPACK.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "product_type"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: container.type, capacity. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "capacity",
-          "container"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD8FST5G": {
     "sku": "20318-preto",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD84KVPW": {
     "sku": "20329-chumbo",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD8MHF1J": {
     "sku": "20326-Azul",
@@ -1917,93 +1801,28 @@
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD8PMW9Z": {
     "sku": "20325-azul",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD88RH76": {
     "sku": "20323-preto",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18367",
-        "message": "Ter o tipo de produto mais relevante para um produto melhora a experiência do vendedor e do cliente. Portanto, seu tipo de produto foi atualizado de BACKPACK paraICE_CHEST. Se você acredita que o tipo de produto original selecionado está correto, poderá alterar os atributos do SKU, como título, descrição do produto e marcadores, para uma melhor correspondência com BACKPACK.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "product_type"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: container.type, capacity. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "capacity",
-          "container"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0HD8DVLWX": {
     "sku": "20326-Preto",
     "status": [
       "DISCOVERABLE"
     ],
-    "issues": [
-      {
-        "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
-        "severity": "WARNING",
-        "attributeNames": [
-          "special_feature"
-        ],
-        "categories": [
-          "MISSING_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      }
-    ]
+    "issues": []
   },
   "B0H4ML2Y3G": {
     "sku": "BR10512",

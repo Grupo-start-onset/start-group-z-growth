@@ -7,12 +7,10 @@
     "issues": [
       {
         "code": "18448",
-        "message": "Faltam alguns atributos principais em seu envio: container.type, product_benefit, item_form, hair_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
+        "message": "Faltam alguns atributos principais em seu envio: product_benefit, hair_type. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
         "attributeNames": [
-          "container",
           "hair_type",
-          "item_form",
           "product_benefit"
         ],
         "categories": [
@@ -1511,18 +1509,6 @@
     ],
     "issues": [
       {
-        "code": "99016",
-        "message": "Um máximo de 1 ocorrência(s) é/são permitidas para o atributo Formato do item, mas atualmente ocorre 2 vezes.",
-        "severity": "ERROR",
-        "attributeNames": [
-          "item_form"
-        ],
-        "categories": [
-          "INVALID_ATTRIBUTE",
-          "PRODUCT"
-        ]
-      },
-      {
         "code": "18448",
         "message": "Faltam alguns atributos principais em seu envio: item_volume, item_dimensions, age_range_description, special_feature. A falta desses atributos não impede que seu produto seja exibido na Amazon. No entanto, isso afeta a qualidade geral do seu anúncio.",
         "severity": "WARNING",
@@ -1534,6 +1520,18 @@
         ],
         "categories": [
           "MISSING_ATTRIBUTE",
+          "PRODUCT"
+        ]
+      },
+      {
+        "code": "99016",
+        "message": "Um máximo de 1 ocorrência(s) é/são permitidas para o atributo Formato do item, mas atualmente ocorre 2 vezes.",
+        "severity": "ERROR",
+        "attributeNames": [
+          "item_form"
+        ],
+        "categories": [
+          "INVALID_ATTRIBUTE",
           "PRODUCT"
         ]
       }
