@@ -4,11 +4,13 @@ on:
   schedule:
     # Horarios em UTC. Brasil = UTC-3 o ano todo. 4x/dia (sugestao do proprio
     # script), espalhados ao longo do dia e fora dos horarios do pipeline
-    # completo (04:00 e 18:00 BRT), pra nao competir por quota da API.
-    - cron: '0 10 * * *'  # 07:00 BRT
-    - cron: '0 14 * * *'  # 11:00 BRT
-    - cron: '0 18 * * *'  # 15:00 BRT
-    - cron: '0 22 * * *'  # 19:00 BRT
+    # completo (04:17 e 18:17 BRT), pra nao competir por quota da API.
+    # Minuto :17 de proposito: na hora cheia (:00) o agendador do GitHub fica
+    # congestionado e atrasava as rodadas em 3 a 7 horas.
+    - cron: '17 10 * * *'  # 07:17 BRT
+    - cron: '17 14 * * *'  # 11:17 BRT
+    - cron: '17 18 * * *'  # 15:17 BRT
+    - cron: '17 22 * * *'  # 19:17 BRT
   workflow_dispatch: {}
 
 permissions:

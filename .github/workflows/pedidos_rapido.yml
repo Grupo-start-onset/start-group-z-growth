@@ -4,7 +4,7 @@ on:
   schedule:
     # 03:10 BRT = 06:10 UTC. So captura pedidos (PO) e dispara email de PO
     # novo -- nao roda captura mensal/semanal/previsao/marcas nem publica o
-    # dashboard inteiro (isso fica para as rodadas de 04:00 e 18:00 em
+    # dashboard inteiro (isso fica para as rodadas de 04:17 e 18:17 em
     # pipeline.yml). Ideia: um check rapido de madrugada, bem mais leve.
     - cron: '10 6 * * *'
   workflow_dispatch: {}
