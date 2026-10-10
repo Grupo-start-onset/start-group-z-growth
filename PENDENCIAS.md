@@ -155,3 +155,48 @@ na documentação oficial da SP-API (o rate limit documentado é por segundo,
 ex: 5 req/s pra Listings Items API, sem teto diário). O usuário disse que o
 número veio de um colega — combinamos de seguir só a documentação oficial daqui
 pra frente, mas vale confirmar a origem do número caso reapareça.
+
+## 7. Sessão de 06–10/10/2026 — conteúdo, variações e atributos (resumo + pendências)
+
+### Feito (tudo aplicado via SP-API e conferido ao vivo)
+- **Petiko**: 37/37 com título <75 + destaque; 3 itens reclassificados para PET_FEEDER;
+  3 atributos de cor corrigidos (divergiam do título/model_name).
+- **OZITP / KastKing**: 125 itens com título curto + destaque; variações criadas para
+  106 linhas (4 famílias, tamanho em kg/m métrico) e 16 carretilhas/molinetes
+  (7 famílias: mão direita/esquerda e tamanho).
+- **OZITP / Mar Negro**: 12 bolsas/mochilas com conteúdo novo; 2 famílias de variação por cor.
+- **New Pet**: 39 itens com conteúdo e atributos; 13 famílias de variação (32 filhos).
+- **Jolitex**: diagnóstico ao vivo mostrou 953/1.173 já OK; 219/220 corrigidos (58 títulos
+  + destaque, 161 bullets em caixa alta); 54 famílias de variação criadas (137 filhos).
+- **Rio Master**: altura no título de 75 árvores de Natal (fonte: site + catálogo de Natal
+  2025); atributos de árvore (galhos, luz, base, dimensões) em 75; medidas do catálogo de
+  Natal (tamanho/dimensões/diâmetro) preenchidas em 1.707 anúncios.
+- **Balboa (Ligga Sports)**: 446/446 com título <75 + destaque (base: catálogo "COLEÇÃO
+  COMPLETA ATUALIZADO 06_05_2026"); 55 anúncios com bullets reescritos; 23 list_price
+  convertidos para value_with_tax; 9 filhos com atributo de tamanho.
+
+### Pendente
+- **Pet Clean — eliminadores de odor em "Peitorais"** (7 ASINs: B099KTD8Q7, B091ZF5G3J,
+  B08B2JVHRM, B089ZSH42B, B08B2GH7Z6, B099DK1G8Z, B08B2SF89F). Categoria travada (101168).
+  Chamado pronto: `docs/chamados/petclean_2026-10-10_eliminadores_odor_categoria.md`.
+  Após o suporte liberar: productType PET_SUPPLIES, categoria "Limpeza e Ambiente",
+  nó "Eliminadores de Odor e Manchas", e conferir ao vivo.
+- **Balboa — 45 anúncios do tipo genérico PRODUCT**: aceitaram título/destaque/bullets
+  enviados como SHIRT/SWEATSHIRT/COAT, mas ainda aparecem como PRODUCT. Rechecar; se
+  persistir, buscar outro caminho (ou chamado).
+- **Balboa — destaques de moletom começando com "Juvenil, …"** (herdado do título antigo):
+  limpeza cosmética opcional.
+- **Jolitex — B0FD54CQFL (Faqueiro Baviera)**: EAN 07908891639640 duplicado com B0FFBKZX1G
+  bloqueia qualquer PATCH; precisa de chamado com certificado GS1.
+- **Jolitex — par U2.3006009** (pote "Lines" 600 ml × 1,4 L sem nome): confirmar se é o
+  mesmo produto antes de criar variação.
+- **Rio Master — toalhas SM3463/SM3464/SM3468**: catálogo traz "210m"/"240m" (erro de
+  digitação); confirmar 2,10 m / 2,40 m e aplicar.
+- **Rio Master — CX150G**: galhos divergentes (anúncio 547 × catálogo 574 × site 456).
+- **Rio Master — 10 árvores sem altura em nenhuma fonte** (CX6981, CX1507, OMG0995,
+  OMG0996, OMG0999, OMG1002, OMG1005, OMG1006, OMG1007, OMG1009).
+- **Rio Master — dimensões das árvores grandes**: catálogo só tem altura; falta diâmetro.
+- **Rio Master — remoção de "Ref. XXXX" em ~376 títulos**: rodada interrompida em
+  sessão anterior; rechecar ao vivo quantos ainda têm "Ref.".
+- **KastKing — destaque de B0BJVTRN3R (KLIBRDHM-150YBK40)**: falhou por erro transitório;
+  reaplicar.
