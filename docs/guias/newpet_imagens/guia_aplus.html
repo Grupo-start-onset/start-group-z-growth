@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Guia de Imagens New Pet</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+  :root {
+    --ink: #1d1d1f; --muted: #5b5b63; --line: #dcdce2; --soft: #f4f4f7;
+    --accent: #e8711c; --accent-soft: #fdf0e6; --ok: #1f7a3f; --ok-soft: #e7f4ec;
+    --bad: #b3261e; --bad-soft: #fbeaea; --info: #1f4f8a; --info-soft: #e8eff8;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Inter", "Liberation Sans", sans-serif; color: var(--ink); font-size: 9.3pt; line-height: 1.4; margin: 0; background: #fff; }
+  h1 { font-family: "Inter Display", "Inter", sans-serif; font-size: 26pt; line-height: 1.1; margin: 0 0 6mm; letter-spacing: -0.02em; }
+  h2 { font-family: "Inter Display", "Inter", sans-serif; font-size: 16pt; margin: 0 0 3mm; letter-spacing: -0.01em; }
+  h2 .n { color: var(--accent); margin-right: 2mm; }
+  h3 { font-size: 11pt; margin: 4mm 0 1.5mm; }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+  li { margin-bottom: 1mm; }
+  .page { page-break-after: auto; }
+  .brk { page-break-before: always; }
+  h2 { page-break-after: avoid; } h3 { page-break-after: avoid; }
+  .page:last-child { page-break-after: auto; }
+  .lead { font-size: 11pt; color: var(--muted); }
+  .small { font-size: 8.5pt; color: var(--muted); }
+  code, .mono { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; }
+  .mono b { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; }
+  th { text-align: left; background: var(--soft); font-weight: 600; padding: 1.5mm 2mm; border-bottom: 1px solid var(--line); }
+  td { padding: 1.3mm 2mm; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr { page-break-inside: avoid; }
+  .box { border-radius: 3mm; padding: 3.5mm 4mm; margin: 3mm 0; page-break-inside: avoid; }
+  .box.warn { background: var(--accent-soft); border-left: 1.2mm solid var(--accent); }
+  .box.ok { background: var(--ok-soft); border-left: 1.2mm solid var(--ok); }
+  .box.bad { background: var(--bad-soft); border-left: 1.2mm solid var(--bad); }
+  .box.info { background: var(--info-soft); border-left: 1.2mm solid var(--info); }
+  .box b.t { display: block; margin-bottom: 1mm; }
+  .tag { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 0.4mm 2mm; border-radius: 10mm; letter-spacing: .03em; }
+  .tag.req { background: var(--bad-soft); color: var(--bad); }
+  .tag.rec { background: var(--accent-soft); color: #a44d0c; }
+  .tag.opt { background: var(--soft); color: var(--muted); }
+
+  /* capa */
+  .cover { height: 255mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover .kicker { color: var(--accent); font-weight: 700; letter-spacing: .12em; font-size: 9pt; text-transform: uppercase; }
+  .cover h1 { font-size: 34pt; margin-top: 4mm; }
+  .cover .imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .cover .imgs img { width: 100%; border-radius: 2mm; border: 1px solid var(--line); }
+  .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .summary div { background: var(--soft); border-radius: 3mm; padding: 3.5mm; }
+  .summary b { display: block; font-size: 18pt; color: var(--accent); font-family: "Inter Display", sans-serif; }
+
+  /* galeria */
+  .slot { display: grid; grid-template-columns: 34mm 1fr; gap: 4mm; padding: 2.5mm 0; border-bottom: 1px solid var(--line); page-break-inside: avoid; }
+  .slot img, .slot .ph { width: 34mm; height: 34mm; border-radius: 2mm; border: 1px solid var(--line); object-fit: cover; }
+  .ph { background: repeating-linear-gradient(45deg, #f7f7fa, #f7f7fa 3mm, #efeff4 3mm, #efeff4 6mm); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 8pt; color: var(--muted); padding: 3mm; font-weight: 600; }
+  .slot h3 { margin: 0 0 1mm; }
+  .slot .file { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; background: var(--soft); padding: 0.5mm 2mm; border-radius: 1mm; }
+  .slot ul { margin-bottom: 0; }
+
+  /* módulos A+ */
+  .mod { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm 4mm; margin: 2.5mm 0; page-break-inside: avoid; }
+  .mod .hd { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .mod .hd b { font-size: 10pt; }
+  .mod .hd span { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; color: var(--accent); white-space: nowrap; }
+  .wire { display: flex; gap: 1.5mm; margin: 2mm 0; }
+  .wire div { background: #ebebf0; border-radius: 1mm; display: flex; align-items: center; justify-content: center; font-size: 7pt; color: var(--muted); font-weight: 600; text-align: center; }
+  .wire .txt { background: transparent; border: 1px dashed #c9c9d1; }
+  .examples { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 3mm 0; }
+  .examples figure { margin: 0; border: 1px solid var(--line); border-radius: 2mm; overflow: hidden; page-break-inside: avoid; }
+  .examples img { width: 100%; display: block; }
+  .examples figcaption { font-size: 8pt; padding: 1.5mm 2.5mm; color: var(--muted); }
+
+  /* drive mock */
+  .drive { border: 1px solid var(--line); border-radius: 3mm; overflow: hidden; font-size: 8.5pt; page-break-inside: avoid; }
+  .drive .bar { background: var(--soft); padding: 2mm 3mm; font-weight: 600; border-bottom: 1px solid var(--line); }
+  .drive .row { padding: 1.3mm 3mm; border-bottom: 1px solid #eee; font-family: "DejaVu Sans Mono", monospace; display: flex; justify-content: space-between; }
+  .drive .row span { color: var(--muted); font-family: "Inter", sans-serif; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .check li { list-style: none; margin-left: -5mm; padding-left: 6mm; position: relative; }
+  .check li::before { content: ""; position: absolute; left: 0; top: 0.8mm; width: 3mm; height: 3mm; border: 1.2px solid #8a8a93; border-radius: 0.6mm; }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps > li { counter-increment: s; position: relative; padding-left: 9mm; margin-bottom: 2.5mm; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: -0.3mm; width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<style>
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 4mm; }
+  .flow div { background: var(--soft); border-radius: 3mm; padding: 3mm; font-size: 8.8pt; }
+  .flow b { display: block; color: var(--accent); font-size: 14pt; font-family: "Inter Display", sans-serif; }
+</style>
+<body>
+
+<section class="cover">
+  <div>
+    <div class="kicker">Grupo START · Guia 2 de 2</div>
+    <h1>Conteúdo A+<br>New Pet</h1>
+    <p class="lead">Quais imagens precisamos para o Conteúdo A+, a área visual "Do fabricante" que aparece abaixo da descrição, na página do produto.</p>
+    <p class="small">Segunda etapa: comecem depois das imagens do anúncio (Guia 1). Mesma lógica de nomes e de pasta. Versão de outubro de 2026.</p>
+  </div>
+  <div class="examples" style="grid-template-columns:1fr 1fr">
+    <figure><img src="img/np9.jpg" alt=""><figcaption>Banner com texto</figcaption></figure>
+    <figure><img src="img/np8.jpg" alt=""><figcaption>Imagem com texto sobreposto</figcaption></figure>
+  </div>
+  <div>
+    <h3 style="margin-top:0">O que pedimos</h3>
+    <div class="summary">
+      <div><b>A ou B</b>modelo de A+<br><span class="small">o mesmo para todos ou um por linha</span></div>
+      <div><b>6–7</b>imagens por linha<br><span class="small">tamanhos de um mesmo produto repetem o A+</span></div>
+      <div><b>+1</b>imagem por produto<br><span class="small">pacote na vertical, para a tabela comparativa</span></div>
+    </div>
+    <p class="small" style="margin-top:4mm"><b>Textos são com a START</b>: títulos, parágrafos e especificações do A+ são escritos por nós, a partir das informações do produto. De vocês, só as imagens.</p>
+  </div>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">1</span>Como funciona</h2>
+  <p>O A+ é montado em <b>módulos</b>: blocos de imagem com um campo de texto ao lado ou embaixo. Cada módulo exige um tamanho de imagem exato. Vocês produzem as imagens; nós escrevemos os textos e montamos.</p>
+  <div class="flow">
+    <div><b>1</b>Escolham o modelo (A ou B) na planilha do A+, para todos os produtos ou por linha.</div>
+    <div><b>2</b>A aba ARQUIVOS mostra quais imagens cada produto precisa, com o nome pronto e o tamanho.</div>
+    <div><b>3</b>Salvem as imagens na pasta <span class="mono">NEWPET - IMAGENS A+</span> e marquem "Na pasta".</div>
+    <div><b>4</b>Nós escrevemos os textos, montamos o A+ e enviamos uma prova para aprovação.</div>
+  </div>
+
+  <h3>Exemplos de módulos</h3>
+  <div class="examples">
+    <figure><img src="img/np6.jpg" alt=""><figcaption>Imagem única com destaques (300 × 300)</figcaption></figure>
+    <figure><img src="img/np7.jpg" alt=""><figcaption>Imagem única com especificações (300 × 300)</figcaption></figure>
+  </div>
+
+  <h3>Regras das imagens</h3>
+  <ul>
+    <li><b>Tamanho exato</b> de cada módulo (ou maior, na mesma proporção). Proporção diferente é cortada ou recusada pela Amazon.</li>
+    <li>JPG ou PNG, cores RGB, nas mesmas cores e estilo das imagens do anúncio.</li>
+    <li><b>Sem parágrafos dentro da imagem</b>: no máximo um título curto. O texto explicativo entra no campo do módulo e é escrito pela START.</li>
+    <li>Mesmas proibições do anúncio: sem preço, promoção, frete, promessa de saúde ou outra marca.</li>
+  </ul>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">2</span>Modelo A · Essencial</h2>
+  <p class="small">Recomendado para começar. 7 imagens por linha + 1 imagem de comparação por produto.</p>
+
+  <div class="mod"><div class="hd"><b>Módulo 1 · Banner da linha</b><span>AP01 · 970 × 600</span></div>
+    <div class="wire"><div style="width:100%;height:16mm">IMAGEM 970 × 600</div></div>
+    <p class="small" style="margin:0">Embalagem + pet + ingredientes, com o nome da linha. Texto embaixo: START.</p></div>
+
+  <div class="mod"><div class="hd"><b>Módulo 2 · Imagem com texto sobreposto</b><span>AP02 · 970 × 300</span></div>
+    <div class="wire"><div style="width:68%;height:9mm">IMAGEM 970 × 300</div><div class="txt" style="width:32%;height:9mm">texto START</div></div>
+    <p class="small" style="margin:0">O principal diferencial. <b>Deixar o lado direito limpo</b>: a Amazon coloca o texto por cima.</p></div>
+
+  <div class="mod"><div class="hd"><b>Módulo 3 · Quatro benefícios</b><span>AP03 a AP06 · 220 × 200 cada</span></div>
+    <div class="wire"><div style="flex:1;height:10mm">AP03</div><div style="flex:1;height:10mm">AP04</div><div style="flex:1;height:10mm">AP05</div><div style="flex:1;height:10mm">AP06</div></div>
+    <p class="small" style="margin:0">Uma foto ou ilustração por benefício (ex.: articulações, pelagem, digestão, sabor).</p></div>
+
+  <div class="mod"><div class="hd"><b>Módulo 4 · Imagem com especificações</b><span>AP07 · 300 × 300</span></div>
+    <div class="wire"><div style="width:22%;height:14mm">AP07</div><div class="txt" style="width:39%;height:14mm">texto START</div><div class="txt" style="width:39%;height:14mm">ficha START</div></div>
+    <p class="small" style="margin:0">Foto do grão ou do pacote. A ficha técnica é montada pela START.</p></div>
+
+  <div class="mod"><div class="hd"><b>Módulo 5 · Tabela comparativa</b><span>COMP · 150 × 300 (vertical)</span></div>
+    <div class="wire"><div style="flex:1;height:16mm">COMP<br>produto 1</div><div style="flex:1;height:16mm">COMP<br>produto 2</div><div style="flex:1;height:16mm">COMP<br>produto 3</div><div style="flex:1;height:16mm">COMP<br>produto 4</div></div>
+    <p class="small" style="margin:0">Compara produtos da New Pet e leva o cliente de um para outro. <b>Cada produto</b> envia uma imagem do pacote na vertical, sem fundo colorido. A START monta a tabela.</p></div>
+
+  <h2 style="margin-top:6mm"><span class="n">3</span>Modelo B · Destaques</h2>
+  <p class="small">Mais editorial, para linhas com ingrediente ou história forte. 6 imagens por linha + 1 de comparação por produto.</p>
+  <table>
+    <tr><th>Módulo</th><th>Arquivo</th><th>Tamanho</th><th>O que mostrar</th></tr>
+    <tr><td>1 · Banner</td><td class="mono">AP01</td><td>970 × 600</td><td>Cena principal da linha</td></tr>
+    <tr><td>2 · Imagem com destaques</td><td class="mono">AP02</td><td>300 × 300</td><td>Pacote ou grão em destaque</td></tr>
+    <tr><td>3 · Três imagens</td><td class="mono">AP03 a AP05</td><td>300 × 300 cada</td><td>Ingredientes (ex.: frango, arroz, linhaça)</td></tr>
+    <tr><td>4 · Texto sobreposto</td><td class="mono">AP06</td><td>970 × 300</td><td>Momento de uso, lado direito limpo</td></tr>
+    <tr><td>5 · Tabela comparativa</td><td class="mono">COMP</td><td>150 × 300</td><td>Igual ao modelo A</td></tr>
+  </table>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">4</span>Um A+ para vários tamanhos</h2>
+  <p>Os tamanhos de um mesmo produto (ex.: New Dots Adultos 1 kg, 5 kg, 10,1 kg e 15 kg) usam <b>o mesmo A+</b>. A planilha já vem assim:</p>
+  <ul>
+    <li>As imagens AP são pedidas só para o <b>maior tamanho</b> de cada família. Os outros tamanhos aparecem com "NÃO (usa o A+ do EAN …)".</li>
+    <li>A imagem <b>COMP</b> é pedida para todos, porque cada pacote mostra o próprio peso.</li>
+    <li>Para um tamanho ter A+ próprio, basta apagar o EAN da coluna "A+ igual ao EAN" na aba PRODUTOS. A lista de arquivos se atualiza sozinha.</li>
+  </ul>
+
+  <h2 style="margin-top:6mm"><span class="n">5</span>Pasta e planilha</h2>
+  <ol class="steps">
+    <li>Crie a pasta <span class="mono">NEWPET - IMAGENS A+</span>, <b>separada</b> da pasta do anúncio, e compartilhe com <span class="mono">comercial@onsetsell.com</span> como Leitor.</li>
+    <li>Coloque nela a <b>planilha do A+ que enviamos</b> (<span class="mono">NEWPET - PLANILHA IMAGENS A+</span>).</li>
+    <li>Na aba PRODUTOS, escolham o <b>Modelo de A+</b> (A ou B) de cada produto e confiram o A+ compartilhado.</li>
+    <li>Salvem as imagens direto na pasta, sem subpastas, com o nome copiado da aba ARQUIVOS (ex.: <span class="mono">7898968541504.AP01.jpg</span>), e marquem "Na pasta".</li>
+    <li>Avisem quando os produtos do lote estiverem com Completo? = SIM.</li>
+  </ol>
+
+  <h3>Checklist</h3>
+  <ul class="check">
+    <li>Modelo (A ou B) escolhido para cada produto</li>
+    <li>Imagens no tamanho exato do módulo, sem parágrafos dentro da imagem</li>
+    <li>Lado direito limpo nas imagens de texto sobreposto</li>
+    <li>Imagem COMP (150 × 300) de cada produto</li>
+    <li>Nomes copiados da aba ARQUIVOS, pasta sem subpastas</li>
+  </ul>
+
+  <div class="box ok" style="margin-top:5mm"><b class="t">Comecem por uma linha</b>
+  Mandem o A+ de <b>uma linha</b> primeiro (ex.: New Dots Adultos). Montamos, aprovamos juntos e então vocês replicam para as demais.</div>
+
+  <p class="small" style="margin-top:8mm">Grupo START · Fale conosco: (11) 93770-1712 · comercial@onsetsell.com · grupostart.me</p>
+</section>
+
+</body>
+</html>

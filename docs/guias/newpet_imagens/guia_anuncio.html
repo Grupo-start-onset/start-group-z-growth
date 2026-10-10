@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Guia de Imagens New Pet</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+  :root {
+    --ink: #1d1d1f; --muted: #5b5b63; --line: #dcdce2; --soft: #f4f4f7;
+    --accent: #e8711c; --accent-soft: #fdf0e6; --ok: #1f7a3f; --ok-soft: #e7f4ec;
+    --bad: #b3261e; --bad-soft: #fbeaea; --info: #1f4f8a; --info-soft: #e8eff8;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Inter", "Liberation Sans", sans-serif; color: var(--ink); font-size: 9.3pt; line-height: 1.4; margin: 0; background: #fff; }
+  h1 { font-family: "Inter Display", "Inter", sans-serif; font-size: 26pt; line-height: 1.1; margin: 0 0 6mm; letter-spacing: -0.02em; }
+  h2 { font-family: "Inter Display", "Inter", sans-serif; font-size: 16pt; margin: 0 0 3mm; letter-spacing: -0.01em; }
+  h2 .n { color: var(--accent); margin-right: 2mm; }
+  h3 { font-size: 11pt; margin: 4mm 0 1.5mm; }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+  li { margin-bottom: 1mm; }
+  .page { page-break-after: auto; }
+  .brk { page-break-before: always; }
+  h2 { page-break-after: avoid; } h3 { page-break-after: avoid; }
+  .page:last-child { page-break-after: auto; }
+  .lead { font-size: 11pt; color: var(--muted); }
+  .small { font-size: 8.5pt; color: var(--muted); }
+  code, .mono { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; }
+  .mono b { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; }
+  th { text-align: left; background: var(--soft); font-weight: 600; padding: 1.5mm 2mm; border-bottom: 1px solid var(--line); }
+  td { padding: 1.3mm 2mm; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr { page-break-inside: avoid; }
+  .box { border-radius: 3mm; padding: 3.5mm 4mm; margin: 3mm 0; page-break-inside: avoid; }
+  .box.warn { background: var(--accent-soft); border-left: 1.2mm solid var(--accent); }
+  .box.ok { background: var(--ok-soft); border-left: 1.2mm solid var(--ok); }
+  .box.bad { background: var(--bad-soft); border-left: 1.2mm solid var(--bad); }
+  .box.info { background: var(--info-soft); border-left: 1.2mm solid var(--info); }
+  .box b.t { display: block; margin-bottom: 1mm; }
+  .tag { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 0.4mm 2mm; border-radius: 10mm; letter-spacing: .03em; }
+  .tag.req { background: var(--bad-soft); color: var(--bad); }
+  .tag.rec { background: var(--accent-soft); color: #a44d0c; }
+  .tag.opt { background: var(--soft); color: var(--muted); }
+
+  /* capa */
+  .cover { height: 255mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover .kicker { color: var(--accent); font-weight: 700; letter-spacing: .12em; font-size: 9pt; text-transform: uppercase; }
+  .cover h1 { font-size: 34pt; margin-top: 4mm; }
+  .cover .imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .cover .imgs img { width: 100%; border-radius: 2mm; border: 1px solid var(--line); }
+  .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .summary div { background: var(--soft); border-radius: 3mm; padding: 3.5mm; }
+  .summary b { display: block; font-size: 18pt; color: var(--accent); font-family: "Inter Display", sans-serif; }
+
+  /* galeria */
+  .slot { display: grid; grid-template-columns: 34mm 1fr; gap: 4mm; padding: 2.5mm 0; border-bottom: 1px solid var(--line); page-break-inside: avoid; }
+  .slot img, .slot .ph { width: 34mm; height: 34mm; border-radius: 2mm; border: 1px solid var(--line); object-fit: cover; }
+  .ph { background: repeating-linear-gradient(45deg, #f7f7fa, #f7f7fa 3mm, #efeff4 3mm, #efeff4 6mm); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 8pt; color: var(--muted); padding: 3mm; font-weight: 600; }
+  .slot h3 { margin: 0 0 1mm; }
+  .slot .file { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; background: var(--soft); padding: 0.5mm 2mm; border-radius: 1mm; }
+  .slot ul { margin-bottom: 0; }
+
+  /* módulos A+ */
+  .mod { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm 4mm; margin: 2.5mm 0; page-break-inside: avoid; }
+  .mod .hd { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .mod .hd b { font-size: 10pt; }
+  .mod .hd span { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; color: var(--accent); white-space: nowrap; }
+  .wire { display: flex; gap: 1.5mm; margin: 2mm 0; }
+  .wire div { background: #ebebf0; border-radius: 1mm; display: flex; align-items: center; justify-content: center; font-size: 7pt; color: var(--muted); font-weight: 600; text-align: center; }
+  .wire .txt { background: transparent; border: 1px dashed #c9c9d1; }
+  .examples { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 3mm 0; }
+  .examples figure { margin: 0; border: 1px solid var(--line); border-radius: 2mm; overflow: hidden; page-break-inside: avoid; }
+  .examples img { width: 100%; display: block; }
+  .examples figcaption { font-size: 8pt; padding: 1.5mm 2.5mm; color: var(--muted); }
+
+  /* drive mock */
+  .drive { border: 1px solid var(--line); border-radius: 3mm; overflow: hidden; font-size: 8.5pt; page-break-inside: avoid; }
+  .drive .bar { background: var(--soft); padding: 2mm 3mm; font-weight: 600; border-bottom: 1px solid var(--line); }
+  .drive .row { padding: 1.3mm 3mm; border-bottom: 1px solid #eee; font-family: "DejaVu Sans Mono", monospace; display: flex; justify-content: space-between; }
+  .drive .row span { color: var(--muted); font-family: "Inter", sans-serif; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .check li { list-style: none; margin-left: -5mm; padding-left: 6mm; position: relative; }
+  .check li::before { content: ""; position: absolute; left: 0; top: 0.8mm; width: 3mm; height: 3mm; border: 1.2px solid #8a8a93; border-radius: 0.6mm; }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps > li { counter-increment: s; position: relative; padding-left: 9mm; margin-bottom: 2.5mm; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: -0.3mm; width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 8.5pt; display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<style>
+  .slot { grid-template-columns: 44mm 1fr; }
+  .slot img, .slot .ph { width: 44mm; height: 44mm; }
+  .slot .src { font-size: 7.5pt; color: var(--muted); margin-top: 1mm; text-align: center; }
+  .refgrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; margin: 2mm 0 1mm; }
+  .refgrid img { width: 100%; border: 1px solid var(--line); border-radius: 1mm; display: block; }
+  .reflabel { font-size: 8pt; font-weight: 600; margin-top: 3mm; }
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 4mm; }
+  .flow div { background: var(--soft); border-radius: 3mm; padding: 3mm; font-size: 8.8pt; }
+  .flow b { display: block; color: var(--accent); font-size: 14pt; font-family: "Inter Display", sans-serif; }
+</style>
+<body>
+
+<section class="cover">
+  <div>
+    <div class="kicker">Grupo START · Guia 1 de 2</div>
+    <h1>Imagens do anúncio<br>New Pet</h1>
+    <p class="lead">Quais imagens precisamos para a galeria de cada produto na Amazon, como nomear os arquivos e como montar a pasta no Google Drive.</p>
+    <p class="small">O Conteúdo A+ (a área "Do fabricante", mais abaixo na página do produto) fica para uma segunda etapa, com um guia próprio. Versão de outubro de 2026.</p>
+  </div>
+  <div class="imgs">
+    <img src="img/np2.jpg" alt="">
+    <img src="img/np1.jpg" alt="">
+    <img src="img/np3.jpg" alt="">
+  </div>
+  <div>
+    <h3 style="margin-top:0">O que pedimos</h3>
+    <div class="summary">
+      <div><b>6 + 3</b>imagens por produto<br><span class="small">6 obrigatórias e 3 recomendadas</span></div>
+      <div><b>1</b>pasta no Google Drive<br><span class="small">sem subpastas</span></div>
+      <div><b>1</b>planilha pronta<br><span class="small">enviada pela START, com os 60 produtos e o nome de cada arquivo</span></div>
+    </div>
+    <p class="small" style="margin-top:4mm"><b>Textos são com a START</b>: título, bullets e descrição do anúncio são escritos por nós. De vocês precisamos só das imagens, incluindo o texto desenhado dentro delas.</p>
+  </div>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">1</span>Como funciona</h2>
+  <div class="flow">
+    <div><b>1</b>Abram a planilha que enviamos: ela lista cada produto e o <b>nome exato</b> de cada imagem.</div>
+    <div><b>2</b>Produzam as imagens seguindo as 9 posições deste guia.</div>
+    <div><b>3</b>Salvem cada imagem com o nome da planilha, na pasta do Drive, e marquem "Na pasta".</div>
+    <div><b>4</b>Nós conferimos, mostramos uma prova para aprovação e publicamos na Amazon.</div>
+  </div>
+
+  <h3>Por que o nome do arquivo é tão importante</h3>
+  <p>Nosso sistema lê a pasta e envia as imagens para a Amazon automaticamente. Ele identifica o produto <b>pelo nome do arquivo</b>, que começa pelo EAN (o código de barras da embalagem). Nome errado é imagem no produto errado.</p>
+  <p class="mono" style="font-size:12pt; background: var(--soft); padding: 3mm 4mm; border-radius: 2mm;"><b>EAN</b>.<b>CÓDIGO</b>.jpg &nbsp;&nbsp;→&nbsp;&nbsp; 7898968541504.MAIN.jpg</p>
+  <ul>
+    <li><b>Não é preciso montar nomes</b>: a aba ARQUIVOS da planilha já traz o nome pronto de cada imagem. É só copiar.</li>
+    <li>Cada tamanho é um produto diferente: New Dots 1 kg, 5 kg e 15 kg têm EANs diferentes, e a foto precisa mostrar o peso daquele EAN.</li>
+  </ul>
+
+  <h3>Erros que travam o envio</h3>
+  <table>
+    <tr><th>Errado</th><th>Certo</th><th>Problema</th></tr>
+    <tr><td class="mono">New Dots 15kg frente.jpg</td><td class="mono">7898968541504.MAIN.jpg</td><td>Sem EAN, não dá para identificar o produto</td></tr>
+    <tr><td class="mono">7898968541504_MAIN.jpg</td><td class="mono">7898968541504.MAIN.jpg</td><td>Separador tem que ser ponto</td></tr>
+    <tr><td class="mono">7898968541504.MAIN (1).jpg</td><td class="mono">7898968541504.MAIN.jpg</td><td>Cópia duplicada criada pelo Drive</td></tr>
+    <tr><td class="mono">7898968541504.PT1.jpg</td><td class="mono">7898968541504.PT01.jpg</td><td>Número sempre com 2 dígitos</td></tr>
+  </table>
+
+  <h2 style="margin-top:6mm"><span class="n">2</span>Padrão técnico</h2>
+  <table>
+    <tr><th style="width:45mm">Item</th><th>Padrão</th></tr>
+    <tr><td>Tamanho</td><td><b>2000 × 2000 px</b>, quadrado (mínimo 1600 × 1600)</td></tr>
+    <tr><td>Arquivo</td><td>JPG, cores RGB (não CMYK), até 10 MB</td></tr>
+    <tr><td>Embalagem</td><td>Sempre a <b>embalagem atual</b>, a mesma que o cliente recebe</td></tr>
+  </table>
+  <div class="box warn"><b class="t">Regras da Amazon para ração</b>
+    <ul style="margin:0">
+      <li><b>Capa (MAIN)</b>: fundo branco puro, embalagem ocupando 85% ou mais, sem selos, textos ou ícones adicionados.</li>
+      <li><b>Só benefícios que estão na embalagem</b>. Nada de "cura", "trata" ou "previne doenças".</li>
+      <li><b>Números iguais aos da embalagem</b> (quantidade diária, níveis de garantia, peso).</li>
+      <li>Sem preço, promoção, frete grátis ou comparação com outra marca pelo nome.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">3</span>Anúncios de referência</h2>
+  <p class="lead">Dois anúncios de ração bem construídos na Amazon Brasil servem de modelo. As imagens deles aparecem neste guia apenas como exemplo do que esperamos.</p>
+
+  <div class="reflabel">Pedigree Nutrição Essencial Adultos 10,1 kg</div>
+  <div class="refgrid">
+    <img src="img/p_main.jpg" alt=""><img src="img/p_pt01.jpg" alt=""><img src="img/p_pt02.jpg" alt=""><img src="img/p_pt03.jpg" alt=""><img src="img/p_pt04.jpg" alt=""><img src="img/p_pt05.jpg" alt=""><img src="img/p_pt06.jpg" alt="">
+  </div>
+  <div class="reflabel">Quatree Adultos Carne 15 kg</div>
+  <div class="refgrid">
+    <img src="img/q_main.jpg" alt=""><img src="img/q_pt01.jpg" alt=""><img src="img/q_pt02.jpg" alt=""><img src="img/q_pt03.jpg" alt=""><img src="img/q_pt04.jpg" alt=""><img src="img/q_pt05.jpg" alt="">
+  </div>
+
+  <h3>O que eles fazem bem</h3>
+  <ul>
+    <li><b>Mesmas cores da embalagem</b> em todas as imagens. Na New Pet, seguir as cores de cada linha (ex.: New Dots em laranja e preto).</li>
+    <li><b>Um assunto por imagem</b>, com título grande que se lê no celular.</li>
+    <li><b>Fotos reais</b> do grão, da carne e do pote.</li>
+    <li><b>Tabelas desenhadas</b> para quantidade diária e transição, em vez de foto do verso.</li>
+  </ul>
+  <div class="box info"><b class="t">Onde a New Pet pode ir além</b>
+  Nenhum dos dois mostra o tamanho do grão em milímetros nem os níveis de garantia de forma legível, que são as dúvidas mais comuns de quem compra ração.</div>
+</section>
+
+<section class="page brk">
+  <h2><span class="n">4</span>As 9 imagens de cada produto</h2>
+  <p class="lead">Na ordem em que o comprador vê. As 6 <b>obrigatórias</b> já permitem publicar; as 3 <b>recomendadas</b> completam o anúncio.</p>
+
+  <div class="slot">
+    <div><img src="img/p_main.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
+    <div>
+      <h3>1 · Capa <span class="tag req">OBRIGATÓRIA</span></h3>
+      <span class="file">EAN.MAIN.jpg</span>
+      <ul>
+        <li>Embalagem de frente (ou levemente em ângulo), fundo branco puro, sem nada adicionado.</li>
+        <li>Nome da linha, sabor e <b>peso</b> legíveis mesmo pequenos: é a imagem que aparece na busca.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/p_pt01.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
+    <div>
+      <h3>2 · O grande diferencial <span class="tag req">OBRIGATÓRIA</span></h3>
+      <span class="file">EAN.PT01.jpg</span>
+      <ul>
+        <li>A principal promessa da linha em destaque, com foto do grão e do ingrediente (ex.: "Com carne fresca").</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/q_pt01.jpg" alt=""><div class="src">Exemplo: Quatree</div></div>
+    <div>
+      <h3>3 · Benefícios com ícones <span class="tag req">OBRIGATÓRIA</span></h3>
+      <span class="file">EAN.PT02.jpg</span>
+      <ul>
+        <li>4 a 6 benefícios impressos na embalagem, cada um com ícone e frase curta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/q_pt02.jpg" alt=""><div class="src">Exemplo: Quatree</div></div>
+    <div>
+      <h3>4 · Formato e tamanho do grão <span class="tag req">OBRIGATÓRIA</span></h3>
+      <span class="file">EAN.PT03.jpg</span>
+      <ul>
+        <li>Close dos grãos reais, <b>com a medida em mm</b> e uma referência de tamanho (régua ou moeda).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/p_pt04.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
+    <div>
+      <h3>5 · Quanto servir por dia <span class="tag req">OBRIGATÓRIA</span></h3>
+      <span class="file">EAN.PT04.jpg</span>
+      <ul>
+        <li>Tabela peso do pet × gramas por dia, em letra grande, com os números <b>idênticos</b> aos da embalagem.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="slot">
+    <div><img src="img/q_pt03.jpg" alt=""><div class="src">Exemplo: Quatree</div></div>
+    <div>
+      <h3>6 · Transição alimentar <span class="tag rec">RECOMENDADA</span></h3>
+      <span class="file">EAN.PT05.jpg</span>
+      <ul>
+        <li>Como trocar da ração antiga para a New Pet, dia a dia, igual ao verso da embalagem.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/p_pt03.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
+    <div>
+      <h3>7 · Composição e níveis de garantia <span class="tag req">OBRIGATÓRIA</span></h3>
+      <span class="file">EAN.PT06.jpg</span>
+      <ul>
+        <li>Níveis de garantia (proteína, gordura, fibra etc.) em tabela de letra grande, e a composição.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/p_pt02.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
+    <div>
+      <h3>8 · Emocional <span class="tag rec">RECOMENDADA</span></h3>
+      <span class="file">EAN.PT07.jpg</span>
+      <ul>
+        <li>Pet do porte e idade certos, feliz, com o pote cheio. Foto em casa ou cena nas cores da marca.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slot">
+    <div><img src="img/p_pt06.jpg" alt=""><div class="src">Exemplo: Pedigree</div></div>
+    <div>
+      <h3>9 · Linha da marca <span class="tag rec">RECOMENDADA</span></h3>
+      <span class="file">EAN.PT08.jpg</span>
+      <ul>
+        <li>"Conheça também": outros produtos da New Pet. Se a embalagem mudou há pouco, mostrar <b>anterior × nova</b>, como a Quatree.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box info" style="margin-top:4mm"><b class="t">Petiscos e produtos de higiene</b>
+  Seguem as mesmas 9 posições, adaptadas: no lugar do grão, o detalhe do produto com medidas; no lugar da quantidade diária, o modo de uso. A aba ARQUIVOS da planilha já mostra o que vai em cada posição de cada produto.</div>
+</section>
+
+<section class="page" style="margin-top:8mm">
+  <h2><span class="n">5</span>Como montar o Google Drive</h2>
+  <ol class="steps">
+    <li><b>Crie uma pasta</b> chamada <span class="mono">NEWPET - IMAGENS ANUNCIO</span>, só para isso.</li>
+    <li><b>Coloque a planilha que enviamos dentro dela</b> e abra com Google Planilhas. Não criem outra planilha.</li>
+    <li><b>Salve todas as imagens direto nessa pasta</b>, sem subpastas. O sistema não enxerga o que está dentro de subpastas.</li>
+    <li><b>Compartilhe a pasta</b> com <span class="mono">comercial@onsetsell.com</span> como <b>Leitor</b>.</li>
+    <li><b>Marque "Na pasta"</b> na aba ARQUIVOS e nos avise quando um lote estiver completo.</li>
+  </ol>
+
+  <div class="two">
+    <div class="drive">
+      <div class="bar" style="color:var(--ok)">✔ Certo: tudo na mesma pasta</div>
+      <div class="row">NEWPET - PLANILHA IMAGENS ANUNCIO <span>planilha</span></div>
+      <div class="row">7898968541504.MAIN.jpg <span>2000×2000</span></div>
+      <div class="row">7898968541504.PT01.jpg <span>2000×2000</span></div>
+      <div class="row">7898968541504.PT02.jpg <span>2000×2000</span></div>
+      <div class="row">… até PT08 <span></span></div>
+      <div class="row">7908591301144.MAIN.jpg <span>2000×2000</span></div>
+    </div>
+    <div class="drive">
+      <div class="bar" style="color:var(--bad)">✘ Errado</div>
+      <div class="row">📁 New Dots 15kg <span>invisível</span></div>
+      <div class="row">foto frente.jpg <span>sem EAN</span></div>
+      <div class="row">7898968541504.MAIN (1).jpg <span>duplicado</span></div>
+      <div class="row">imagens_newpet.zip <span>não lido</span></div>
+      <div class="row">Arte capa.psd <span>não lido</span></div>
+      <div class="row">↪ Atalho para MAIN.jpg <span>atalho</span></div>
+    </div>
+  </div>
+
+  <h3>Para trocar uma imagem</h3>
+  <p>Botão direito no arquivo antigo → <i>Gerenciar versões</i> → <i>Enviar nova versão</i>. O nome continua o mesmo. Ou apague o antigo <b>antes</b> de subir o novo, para o Drive não criar "(1)".</p>
+
+  <h3>A planilha</h3>
+  <table>
+    <tr><th style="width:32mm">Aba</th><th>O que tem</th></tr>
+    <tr><td><b>ARQUIVOS</b></td><td>As 9 imagens de cada produto, com o <b>nome pronto</b>, o que mostrar e o Status (Pendente / Na pasta). É onde vocês trabalham.</td></tr>
+    <tr><td><b>PRODUTOS</b></td><td>Os 60 produtos à venda, puxados do cadastro da Amazon, com o andamento automático e a coluna <b>Completo?</b></td></tr>
+    <tr><td><b>O QUE MOSTRAR</b></td><td>O conteúdo de cada posição, para ração e para petiscos e higiene</td></tr>
+  </table>
+  <p class="small">Amarelo = vocês preenchem. Cinza = cadastro e fórmulas, não alterar. Se algum produto à venda não estiver na planilha, avisem antes de produzir.</p>
+</section>
+
+<section class="page" style="margin-top:8mm">
+  <h2><span class="n">6</span>Checklist antes de nos avisar</h2>
+  <ul class="check">
+    <li>Pasta única, sem subpastas, compartilhada com comercial@onsetsell.com</li>
+    <li>Nomes copiados da aba ARQUIVOS, sem "(1)", "cópia" ou "final"</li>
+    <li>Capa em fundo branco puro, sem selos ou textos adicionados</li>
+    <li>Imagens em 2000 × 2000 px, JPG, RGB</li>
+    <li>Peso da embalagem na foto igual ao do produto daquele EAN</li>
+    <li>Números iguais aos da embalagem (quantidade diária, níveis de garantia)</li>
+    <li>Status "Na pasta" marcado e coluna Completo? = SIM nos produtos do lote</li>
+  </ul>
+
+  <h3>Nossa parte, depois que vocês avisam</h3>
+  <ol class="steps">
+    <li>Conferimos se cada arquivo corresponde a um EAN do cadastro e se nada ficou faltando.</li>
+    <li>Enviamos uma <b>prova visual</b> por produto (nome, peso e imagens lado a lado) para vocês aprovarem.</li>
+    <li>Publicamos primeiro poucos produtos, conferimos no site e então enviamos o restante.</li>
+    <li>Mandamos o relatório do que a Amazon aceitou e do que precisa ser ajustado.</li>
+  </ol>
+
+  <div class="box ok" style="margin-top:5mm"><b class="t">Comecem por um produto</b>
+  Mandem as imagens de <b>um produto</b> primeiro. Validamos juntos e só então vocês replicam para os demais.</div>
+
+  <p class="small" style="margin-top:8mm">Grupo START · Fale conosco: (11) 93770-1712 · comercial@onsetsell.com · grupostart.me</p>
+</section>
+
+</body>
+</html>
